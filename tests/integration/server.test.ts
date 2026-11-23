@@ -247,6 +247,10 @@ describe('serwer: nagłówki, pliki statyczne, obce strony', () => {
       expect([h.wersja, h.ai.provider]).toEqual([null, 'OpenAI']);
       expect(a.port).toBe(3999);
       expect(a.host).toBe('127.0.0.1');
+      const l = app({ LOCAL_PORT: String(PORT + 1) }).listen();
+      await new Promise(ok => l.once('listening', ok));
+      expect(logs.at(-1)).toBe(`Fototapety – podział na bryty: http://127.0.0.1:${PORT + 1}`);
+      l.close();
     } finally {
       srv.close();
     }

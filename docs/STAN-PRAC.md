@@ -9,7 +9,7 @@ Aktualizacja: 2026-11-23
 | 2    | Domena: walidacja i ostrzeżenia                                                                                                                     | PR #4        |
 | 3    | Domena: materiały (PR #5), wycena (PR #6), jakość (PR #7), ściana (PR #8), próbka (PR #9), wizualizacja (PR #10), teksty AI (PR #11)                | do zrobienia |
 | 4    | Wyjście: JPG DPI (PR #12), ZIP (PR #13), tekst PDF (PR #14), arkusz (PR #15), PDF produkcyjny (PR #16), zlecenie CDR (PR #17), PDF montażu (PR #18) | gotowe w PR  |
-| 5    | Serwer: bezpieczeństwo (PR #19), logowanie (PR #20), AI na atrapach (PR #21), CDR, serwer HTTP                                                      | do zrobienia |
+| 5    | Serwer: bezpieczeństwo (PR #19), logowanie (PR #20), AI na atrapach (PR #21), Corel + serwer HTTP (PR #22)                                          | do zrobienia |
 | 6    | Strona w TS (ten sam wygląd)                                                                                                                        | do zrobienia |
 | 7    | Porównanie e2e stary vs nowy                                                                                                                        | do zrobienia |
 
@@ -20,5 +20,6 @@ Aktualizacja: 2026-11-23
 - Martwy kod w starym programie: lista `MATERIALS` w `bryty.js` (nadpisywana przez `materialy.js`),
   `steps()/drawSteps()` i numeracja stron „strona i/n” w `montaz.js` (zawsze 1 strona), flaga `scaled` w PDF (zawsze false), jedna gałąź w `jakosc.js`.
 - Klucze API tylko ze zmiennych środowiskowych (stary program czytał też pliki `klucz-*.txt` obok serwera) – zgodnie z zasadą „sekrety tylko w env”; zmienione komunikaty o braku klucza.
+- Corel: gdy skrypt nie zapisał pliku, a proces nie zgłosił błędu, stary serwer pokazywał klientowi „null” – teraz „CorelDRAW nie zapisał pliku.”.
 - Cena Sand Dot GW 279,05 zł – DO WALIDACJI (możliwa literówka w cenniku).
 - PR #6 starego repo (schemat montażu: zakład 5 cm) nie jest scalony – wzorcem jest `main`.

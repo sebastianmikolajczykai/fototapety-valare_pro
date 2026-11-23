@@ -26,6 +26,8 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       include: ['src/domain/**', 'src/output/**', 'src/server/**'],
+      // Start procesu (3 linie) – sprawdzany w tests/integration/server-process.test.ts (osobny proces).
+      exclude: ['src/server/main.ts', 'src/server/*.ps1'],
       thresholds: { lines: 80, branches: 70 },
       reporter: ['text-summary', 'text'],
     },
