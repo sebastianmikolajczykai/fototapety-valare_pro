@@ -302,6 +302,49 @@ const SCENARIOS: {
     generate: false,
     probe: "JSON.parse(localStorage.getItem('fototapety.ustawienia.v3'))",
   },
+  {
+    name: 'kroki: materiał wymaga 4 brytów – przycisk „Ustaw 4 bryty”',
+    s: {
+      fields: {
+        wallW: '500',
+        wallH: '270',
+        mL: '3',
+        mR: '3',
+        overlap: '6',
+        count: '2',
+        material: '131|mural-canvas-ct',
+      },
+      radios: { split: 'equal', join: 'overlap' },
+      clicks: ['#needSet'],
+    },
+    generate: false,
+    probe:
+      "[document.activeElement && (document.activeElement.id || document.activeElement.className), [...document.querySelectorAll('.panel > .step')].map(s => s.className)]",
+    expectText: ['potrzeba co najmniej 4 bryty'],
+  },
+  {
+    name: 'kroki: zwijanie kroku kliknięciem, Enter na nagłówku, „Dalej” przenosi fokus do następnego kroku',
+    s: {
+      clicks: ['.panel > .step:nth-of-type(2) > .step-head', '.panel > .step:first-of-type > button.next'],
+      keys: [{ selector: '.panel > .step:nth-of-type(4) > .step-head', key: 'Enter' }],
+    },
+    generate: false,
+    probe:
+      "[document.activeElement && (document.activeElement.id || document.activeElement.className), [...document.querySelectorAll('.panel > .step')].map(s => s.className)]",
+  },
+  {
+    name: 'kroki: własne szerokości – pole szersze niż druk oznaczone, reszta w podpowiedzi',
+    s: {
+      fields: { wallW: '350', count: '3', material: '131|mural-canvas-ct' },
+      radios: { split: 'custom' },
+      widths: ['140', '100', ''],
+      clicks: ['.panel > .step:nth-of-type(3) > button.next'],
+    },
+    generate: false,
+    probe:
+      "[document.activeElement && (document.activeElement.id || document.activeElement.className), [...document.querySelectorAll('.panel > .step')].map(s => s.className)]",
+    expectText: ['class="over"', 'Do pokrycia: 356 cm'],
+  },
 ];
 
 /** Stan formularza (wartości pól, zaznaczenia) – porównanie po ponownym otwarciu strony. */
@@ -361,6 +404,8 @@ describe.skipIf(!enabled)('stary vs nowy program', () => {
         out[kind] = {
           text: await visibleText(page),
           html: await pageHtml(page),
+          // Style i inne wstawki w <head> (np. CSS modułów) – różnica w wyglądzie, której nie widać w treści.
+          head: await page.evaluate(() => document.head.innerHTML),
           disabled,
           material,
           canvases,
