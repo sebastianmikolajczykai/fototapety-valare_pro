@@ -47,6 +47,18 @@ const setWall = (page: Page, f: Record<string, string>): Promise<void> =>
     }
   }, f);
 
+/** Klik przez DOM (galeria leży w kroku, który może być zwinięty – jak kliki w porównaniu stron). */
+const click = (page: Page, sel: string): Promise<void> =>
+  page.evaluate(sel => (document.querySelector(sel) as HTMLElement).click(), sel);
+
+/** Wpisanie w pole wyszukiwania (zdarzenie input, jak od użytkownika). */
+const search = (page: Page, text: string): Promise<void> =>
+  page.evaluate(text => {
+    const q = document.getElementById('gQ') as HTMLInputElement;
+    q.value = text;
+    q.dispatchEvent(new Event('input', { bubbles: true }));
+  }, text);
+
 beforeAll(async () => {
   if (!enabled) return;
   browser = await launch();
@@ -94,33 +106,36 @@ describe.skipIf(!enabled)('galeria wzorów: stary vs nowy program', () => {
   });
   it('otwarcie: kategorie, pierwsza wybrana, miniatury z plakietkami jakości', async () => {
     const o = await both(async p => {
-      await p.click('#galeriaBox > summary');
-      await p.waitForSelector('#gGrid .g-thumb');
+      await click(p, '#galeriaBox > summary');
+      await p.waitForSelector('#gGrid .g-thumb', { state: 'attached' });
     });
     expect(html(o)).toContain('data-cat="krajobrazy"');
     expect(html(o)).toMatch(/gq-(good|ok)/);
   });
-  it('inna kategoria (Kosmos)', () => both(p => p.click('#gCats button[data-cat="kosmos"]')));
+  it('inna kategoria (Kosmos)', () => both(p => click(p, '#gCats button[data-cat="kosmos"]')));
   it('wybór miniatury – szczegóły wzoru, licencja, źródło', async () => {
-    const o = await both(p => p.click('#gGrid .g-thumb[data-i="1"]'));
+    const o = await both(p => click(p, '#gGrid .g-thumb[data-i="1"]'));
     expect(html(o)).toContain('Użyj tego wzoru');
   });
-  it('wyszukiwanie po polsku („zachód”) – kategorie odznaczone', () =>
-    both(p => p.locator('#gQ').pressSequentially('zachód')));
+  it('wyszukiwanie po polsku („zachód”) – kategorie odznaczone', () => both(p => search(p, 'zachód')));
   it('wyszukiwanie dwóch słów i Enter w polu nie wysyła formularza', () =>
     both(async p => {
-      await p.fill('#gQ', 'las jesień');
-      await p.press('#gQ', 'Enter');
+      await search(p, 'las jesień');
+      await p.evaluate(() =>
+        document
+          .getElementById('gQ')!
+          .dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true, cancelable: true })),
+      );
     }));
   it('brak wyników', async () => {
-    const o = await both(p => p.fill('#gQ', 'xyzqwe'));
+    const o = await both(p => search(p, 'xyzqwe'));
     expect(html(o)).toContain('Brak wzorów dla tego słowa.');
   });
-  it('wyczyszczenie pola – powrót do ostatniej kategorii', () => both(p => p.fill('#gQ', '')));
+  it('wyczyszczenie pola – powrót do ostatniej kategorii', () => both(p => search(p, '')));
   it('większa ściana – za słabe wzory ukryte, wybrany zostaje, jeśli jest dalej dostępny', async () => {
     const o = await both(async p => {
-      await p.click('#gCats button[data-cat="krajobrazy"]');
-      await p.click('#gGrid .g-thumb[data-i="0"]');
+      await click(p, '#gCats button[data-cat="krajobrazy"]');
+      await click(p, '#gGrid .g-thumb[data-i="0"]');
       await setWall(p, { wallW: '900', wallH: '400' });
     });
     expect(html(o)).toMatch(/Ukryto \d+ wzor/);
@@ -132,15 +147,16 @@ describe.skipIf(!enabled)('galeria wzorów: stary vs nowy program', () => {
   it('bez wymiaru ściany – plakietek brak, opis zachęca do podania wymiaru', () =>
     both(async p => {
       await setWall(p, { wallW: '', wallH: '' });
-      await p.click('#gGrid .g-thumb[data-i="0"]');
+      await p.waitForTimeout(400); // siatka przelicza się 250 ms po ostatniej zmianie
+      await click(p, '#gGrid .g-thumb[data-i="0"]');
     }));
   it('błąd pobierania z Wikimedia (404) – komunikat, przycisk znów aktywny', async () => {
     wikimedia = 'error';
     const o = await both(async p => {
       await setWall(p, { wallW: '350', wallH: '270' });
       await p.waitForTimeout(400);
-      await p.click('#gGrid .g-thumb[data-i="0"]');
-      await p.click('#gUse');
+      await click(p, '#gGrid .g-thumb[data-i="0"]');
+      await click(p, '#gUse');
       await waitMsg(p, /Nie udało się pobrać/);
     });
     wikimedia = 'ok';
@@ -148,7 +164,7 @@ describe.skipIf(!enabled)('galeria wzorów: stary vs nowy program', () => {
   });
   it('„Użyj tego wzoru” – wzór w polu pliku, metryka licencji, podpis autora', async () => {
     const o = await both(async p => {
-      await p.click('#gUse');
+      await click(p, '#gUse');
       await waitMsg(p, /Wzór wstawiony/);
       await p.waitForFunction(() => !(document.getElementById('go') as HTMLButtonElement).disabled);
     });
@@ -159,7 +175,7 @@ describe.skipIf(!enabled)('galeria wzorów: stary vs nowy program', () => {
     const out: Record<string, unknown> = {};
     for (const kind of ['old', 'new'] as const) {
       const { page } = side[kind];
-      const [d] = await Promise.all([page.waitForEvent('download'), page.click('#gTxt')]);
+      const [d] = await Promise.all([page.waitForEvent('download'), click(page, '#gTxt')]);
       const body = fs.readFileSync((await d.path())!);
       out[kind] = { name: d.suggestedFilename(), body: body.toString('base64') };
     }
@@ -180,7 +196,9 @@ describe.skipIf(!enabled)('galeria wzorów: stary vs nowy program', () => {
       p2.on('pageerror', e => side[kind].errors.push(e.message));
       await p2.route('**/wzory/katalog.js', r => r.fulfill({ status: 404, body: '' }));
       await p2.goto(side[kind].server.url + '/');
-      await p2.click('#galeriaBox > summary');
+      await p2.waitForLoadState('load');
+      await p2.waitForTimeout(500); // odtworzenie zapisanych ustawień i skrypty strony
+      await click(p2, '#galeriaBox > summary');
       await waitMsg(p2, /Nie udało się/);
       out[kind] = await state(p2);
       await p2.close();

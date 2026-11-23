@@ -70,7 +70,7 @@ describe('galeria wzorów (stary galeria.js) – czysta logika', () => {
     const out = prepCatalog(k);
     expect(out).toBe(k); // ten sam obiekt (jak w starym programie)
     expect(out.wzory.map(a => a.id)).toEqual(['a1', 'a2', 'a3', 'b5']);
-    expect(out.wzory[3]!.tytul).toBe('Ok title');
+    expect(out.wzory[3]!.tytul).toBe('Ok'); // „title” przed QS: też jest odcinane
   });
 
   it('galleryQuality: px na metr ściany z naddatkami, poziom wg progów; bez ściany – null', () => {
