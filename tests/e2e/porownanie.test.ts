@@ -5,6 +5,7 @@ import type { Browser, Page } from 'playwright';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import {
   applySettings,
+  canvasHashes,
   generate,
   launch,
   loadTestImage,
@@ -112,6 +113,30 @@ const SCENARIOS: { name: string; s: FormSettings; generate: boolean; expectText?
     s: { fields: { wallW: '120', count: '1', material: '100|sand-dot-gw-107' }, radios: { split: 'equal' } },
     generate: false,
   },
+  {
+    name: 'jakość: progi 9000 / 3000 px/m dają „Za słaba” i ostrzeżenie pod ustawieniami',
+    s: {
+      fields: { wallW: '400', wallH: '270', count: '3', material: '', jqGood: '9000', jqMin: '3000' },
+      radios: { split: 'equal' },
+    },
+    generate: false,
+    expectText: ['Jakość zdjęcia: za słaba', 'jq-badge jq-bad'],
+  },
+  {
+    name: 'jakość: próg „za słaba” wyższy niż „dobra” zostaje obcięty; podgląd fragmentu 200%',
+    s: { fields: { jqGood: '1500', jqMin: '4000' }, checks: { jqX2: true } },
+    generate: false,
+    expectText: ['minimum 1500 px/m', '<span style="left:66.66666666666666%">1500</span>'],
+  },
+  {
+    name: 'jakość: przeciągnięcie fragmentu 1:1 przesuwa zieloną ramkę na podglądzie',
+    s: {
+      fields: { jqGood: '2500', jqMin: '1000' },
+      checks: { jqX2: false },
+      drag: { selector: '#jakoscCanvas', dx: 150, dy: 60 },
+    },
+    generate: false,
+  },
 ];
 
 const enabled = !!OLD_REPO;
@@ -155,7 +180,8 @@ describe.skipIf(!enabled)('stary vs nowy program', () => {
           const M = (window as unknown as { Materialy?: { wybrany(): unknown } }).Materialy;
           return M ? M.wybrany() : 'brak window.Materialy';
         });
-        out[kind] = { text: await visibleText(page), html: await pageHtml(page), disabled, material, result };
+        const canvases = await canvasHashes(page);
+        out[kind] = { text: await visibleText(page), html: await pageHtml(page), disabled, material, canvases, result };
       }
       expect(out.new).toEqual(out.old);
       for (const t of sc.expectText ?? []) expect((out.new as { html: string }).html).toContain(t);

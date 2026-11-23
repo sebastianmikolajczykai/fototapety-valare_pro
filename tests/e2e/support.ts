@@ -99,6 +99,8 @@ export interface FormSettings {
   clicks?: string[];
   /** Klawisz na elemencie (np. Enter na karcie materiału). */
   keys?: { selector: string; key: string }[];
+  /** Przeciągnięcie myszą od środka elementu o (dx, dy) px. */
+  drag?: { selector: string; dx: number; dy: number };
 }
 
 /** Ustawienia formularza przez DOM (zdarzenie input jak od użytkownika). */
@@ -134,6 +136,17 @@ export async function applySettings(page: Page, s: FormSettings): Promise<void> 
         .querySelector(k.selector)!
         .dispatchEvent(new KeyboardEvent('keydown', { key: k.key, bubbles: true, cancelable: true }));
   }, s);
+  if (s.drag) {
+    const el = page.locator(s.drag.selector);
+    await el.scrollIntoViewIfNeeded();
+    const b = (await el.boundingBox())!;
+    const x = b.x + b.width / 2;
+    const y = b.y + b.height / 2;
+    await page.mouse.move(x, y);
+    await page.mouse.down();
+    await page.mouse.move(x + s.drag.dx, y + s.drag.dy, { steps: 5 });
+    await page.mouse.up();
+  }
 }
 
 export interface GeneratedFile {
@@ -212,3 +225,17 @@ export const visibleText = (page: Page): Promise<string> => page.evaluate(() => 
 /** Cały HTML strony (także zwiniętych kroków); adresy blob: zastąpione stałym tekstem (są losowe). */
 export const pageHtml = (page: Page): Promise<string> =>
   page.evaluate(() => document.body.innerHTML.replace(/blob:[^"')\s]+/g, 'blob:X'));
+
+/** Skróty SHA-256 zawartości płócien strony (podgląd, fragment 1:1) – porównanie tego, co narysowane. */
+export async function canvasHashes(page: Page): Promise<Record<string, string>> {
+  return page.evaluate(async () => {
+    const out: Record<string, string> = {};
+    for (const c of document.querySelectorAll('canvas')) {
+      if (!c.id) continue;
+      const data = new TextEncoder().encode(`${c.width}x${c.height}:` + c.toDataURL());
+      const h = await crypto.subtle.digest('SHA-256', data);
+      out[c.id] = [...new Uint8Array(h)].map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+    return out;
+  });
+}
