@@ -303,7 +303,7 @@ const SCENARIOS: {
     probe: "JSON.parse(localStorage.getItem('fototapety.ustawienia.v3'))",
   },
   {
-    name: 'kroki: materiał wymaga 4 brytów – przycisk „Ustaw 4 brytów”',
+    name: 'kroki: materiał wymaga 4 brytów – przycisk „Ustaw 4 bryty”',
     s: {
       fields: {
         wallW: '500',
@@ -320,7 +320,7 @@ const SCENARIOS: {
     generate: false,
     probe:
       "[document.activeElement && (document.activeElement.id || document.activeElement.className), [...document.querySelectorAll('.panel > .step')].map(s => s.className)]",
-    expectText: ['potrzeba co najmniej 4 brytów'],
+    expectText: ['potrzeba co najmniej 4 bryty'],
   },
   {
     name: 'kroki: zwijanie kroku kliknięciem, Enter na nagłówku, „Dalej” przenosi fokus do następnego kroku',

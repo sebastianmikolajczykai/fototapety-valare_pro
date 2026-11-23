@@ -18,24 +18,30 @@ describe('przebieg krok po kroku – teksty pomocy (stary kroki.js)', () => {
   it('liczba brytów wymagana przez materiał i przycisk „Ustaw N brytów”', () => {
     expect(needInfo(P005)).toEqual({
       text: 'Materiał drukuje maks. 131 cm, więc przy 356 cm z naddatkami potrzeba co najmniej 3 bryty. Teraz każdy bryt ma 122,7 cm.',
+      need: 3,
       setTo: null,
     });
     expect(needInfo({ ...P005, wallW: 500, count: 2 })).toEqual({
-      text: 'Materiał drukuje maks. 131 cm, więc przy 506 cm z naddatkami potrzeba co najmniej 4 brytów. Teraz każdy bryt ma 256 cm.',
+      text: 'Materiał drukuje maks. 131 cm, więc przy 506 cm z naddatkami potrzeba co najmniej 4 bryty. Teraz każdy bryt ma 256 cm.',
+      need: 4,
       setTo: 4,
     });
     expect(needInfo({ ...P005, split: 'custom', count: 3 }).text).toBe(
       'Materiał drukuje maks. 131 cm, więc przy 356 cm z naddatkami potrzeba co najmniej 3 bryty.',
     );
   });
-  it('bez materiału: zachęta do wyboru; „inny materiał” bez szerokości albo węższy niż zakład: bez tekstu', () => {
+  it('bez materiału: zachęta do wyboru; materiał węższy niż zakład albo brak ściany: bez tekstu', () => {
     expect(needInfo({ ...P005, maxPrint: Infinity })).toEqual({
       text: 'Wybierz materiał w kroku 1, żeby program pilnował maksymalnej szerokości brytu.',
+      need: null,
       setTo: null,
     });
-    expect(needInfo({ ...P005, maxPrint: NaN })).toEqual({ text: '', setTo: null });
-    expect(needInfo({ ...P005, maxPrint: 5 })).toEqual({ text: '', setTo: null });
-    expect(needInfo({ ...P005, wallW: NaN })).toEqual({ text: '', setTo: null });
+    // „Inny materiał” z pustym polem (NaN) – jak brak materiału.
+    expect(needInfo({ ...P005, maxPrint: NaN }).text).toBe(
+      'Wybierz materiał w kroku 1, żeby program pilnował maksymalnej szerokości brytu.',
+    );
+    expect(needInfo({ ...P005, maxPrint: 5 })).toEqual({ text: '', need: null, setTo: null });
+    expect(needInfo({ ...P005, wallW: NaN })).toEqual({ text: '', need: null, setTo: null });
   });
   it('podpowiedź pod własnymi szerokościami', () => {
     expect(widthsHint(P005, 3)).toBe(
