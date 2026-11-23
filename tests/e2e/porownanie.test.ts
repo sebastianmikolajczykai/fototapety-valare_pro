@@ -11,6 +11,7 @@ import {
   generateSample,
   launch,
   loadTestImage,
+  FIXED_NOW,
   OLD_REPO,
   openPage,
   pageHtml,
@@ -283,7 +284,34 @@ const SCENARIOS: {
       '(() => { const p = params(); const L = layout(p); return { data: Sciana.data(p, L), suggest: Sciana.suggest(p, L), warnings: Sciana.warnings(p, L), items: Sciana.items, min: [Sciana.CORNER_MIN_CM, Sciana.OPENING_MIN_CM] }; })()',
     expectText: ['Obecny podział już omija narożniki i otwory.'],
   },
+  {
+    name: 'pamięć: ustawienia zapisane w przeglądarce (własne szerokości, materiał po nazwie, thru cut)',
+    s: {
+      fields: {
+        wallW: '380',
+        wallH: '255',
+        count: '3',
+        material: '100|texile-stick-gw-107',
+        dpi: '200',
+        order: 'Nie zapisywać',
+      },
+      radios: { split: 'custom', join: 'overlap' },
+      checks: { thru: true },
+      widths: ['100', '95', ''],
+    },
+    generate: false,
+    probe: "JSON.parse(localStorage.getItem('fototapety.ustawienia.v3'))",
+  },
 ];
+
+/** Stan formularza (wartości pól, zaznaczenia) – porównanie po ponownym otwarciu strony. */
+const formState = (page: Page): Promise<unknown> =>
+  page.evaluate(() =>
+    [...document.querySelectorAll<HTMLInputElement>('.panel input, .panel select')].map(e => [
+      e.id || e.name,
+      e.type === 'checkbox' || e.type === 'radio' ? e.checked : e.value,
+    ]),
+  );
 
 const enabled = !!OLD_REPO;
 let browser: Browser;
@@ -345,6 +373,35 @@ describe.skipIf(!enabled)('stary vs nowy program', () => {
       expect(out.new).toEqual(out.old);
       for (const t of sc.expectText ?? []) expect((out.new as { html: string }).html).toContain(t);
     });
+  it('pamięć: po ponownym otwarciu strony wracają zapisane ustawienia (bez nazwy zlecenia)', async () => {
+    const out: Record<string, unknown> = {};
+    for (const kind of ['old', 'new'] as const) {
+      const p2 = await side[kind].page.context().newPage();
+      await p2.clock.setFixedTime(new Date(FIXED_NOW));
+      p2.on('pageerror', e => side[kind].errors.push(e.message));
+      await p2.goto(side[kind].server.url + '/');
+      await p2.waitForTimeout(300);
+      out[kind] = { form: await formState(p2), html: await pageHtml(p2) };
+      await p2.close();
+    }
+    expect(out.new).toEqual(out.old);
+    expect(JSON.stringify(out.new)).toContain('texile-stick-gw-107');
+  });
+  it('pamięć: „Przywróć ustawienia domyślne” kasuje zapis i wraca do wartości z formularza', async () => {
+    const out: Record<string, unknown> = {};
+    for (const kind of ['old', 'new'] as const) {
+      const { page } = side[kind];
+      await page.evaluate(() => (document.getElementById('resetSettings') as HTMLButtonElement).click());
+      await page.waitForTimeout(300);
+      out[kind] = {
+        form: await formState(page),
+        html: await pageHtml(page),
+        saved: await page.evaluate(() => localStorage.getItem('fototapety.ustawienia.v3')),
+      };
+    }
+    expect(out.new).toEqual(out.old);
+    expect((out.new as { html: string }).html).toContain('Przywrócono ustawienia domyślne.');
+  });
   it('brak błędów JavaScript po obu stronach', () => {
     expect(side.new.errors).toEqual(side.old.errors);
     expect(side.new.errors).toEqual([]);
