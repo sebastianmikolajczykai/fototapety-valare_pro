@@ -37,7 +37,7 @@ export async function startServer(kind: 'new' | 'old', port: number): Promise<Ru
   const env = {
     PATH: process.env.PATH,
     LOCAL_PORT: String(port),
-    ...(kind === 'new' ? { PUBLIC_DIR: path.resolve('public') } : {}),
+    ...(kind === 'new' ? { PUBLIC_DIR: path.resolve('dist/public') } : {}),
   };
   let out = '';
   const proc: ChildProcess = spawn(process.execPath, [file], { env, stdio: ['ignore', 'pipe', 'pipe'] });

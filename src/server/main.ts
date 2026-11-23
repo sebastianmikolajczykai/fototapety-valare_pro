@@ -4,7 +4,7 @@
 import { fileURLToPath } from 'node:url';
 import { FototapetyServer } from './app';
 
-const root = process.env.PUBLIC_DIR || fileURLToPath(new URL('../../public', import.meta.url));
+const root = process.env.PUBLIC_DIR || fileURLToPath(new URL('../public', import.meta.url));
 FototapetyServer.fromEnv(process.env, root).listen();
 
 // Ostatnia siatka bezpieczeństwa: zgubiony błąd w tle zapisujemy w logu zamiast wyłączać serwer.
