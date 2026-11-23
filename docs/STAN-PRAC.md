@@ -10,8 +10,8 @@ Aktualizacja: 2026-11-23
 | 3    | Domena: materiały (PR #5), wycena (PR #6), jakość (PR #7), ściana (PR #8), próbka (PR #9), wizualizacja (PR #10), teksty AI (PR #11)                | do zrobienia |
 | 4    | Wyjście: JPG DPI (PR #12), ZIP (PR #13), tekst PDF (PR #14), arkusz (PR #15), PDF produkcyjny (PR #16), zlecenie CDR (PR #17), PDF montażu (PR #18) | gotowe w PR  |
 | 5    | Serwer: bezpieczeństwo (PR #19), logowanie (PR #20), AI na atrapach (PR #21), Corel + serwer HTTP (PR #22)                                          | gotowe w PR  |
-| 6    | Strona: pliki starego programu w public/ (PR #23), skrypty → TS: wycena (PR #24)                                                                    | do zrobienia |
-| 7    | Porównanie e2e stary vs nowy (PR #23, rozbudowa z każdym PR strony)                                                                                 | do zrobienia |
+| 6    | Strona: pliki starego programu w public/ (PR #23), skrypty → TS: wycena (PR #24), materiały (PR #25)                                                | w toku       |
+| 7    | Porównanie e2e stary vs nowy (PR #23, rozbudowa z każdym PR strony)                                                                                 | w toku       |
 
 ## Ustalenia z audytu starego programu (do raportu)
 
@@ -22,4 +22,6 @@ Aktualizacja: 2026-11-23
 - Klucze API tylko ze zmiennych środowiskowych (stary program czytał też pliki `klucz-*.txt` obok serwera) – zgodnie z zasadą „sekrety tylko w env”; zmienione komunikaty o braku klucza.
 - Corel: gdy skrypt nie zapisał pliku, a proces nie zgłosił błędu, stary serwer pokazywał klientowi „null” – teraz „CorelDRAW nie zapisał pliku.”.
 - Cena Sand Dot GW 279,05 zł – DO WALIDACJI (możliwa literówka w cenniku).
+- `window.Materialy` w nowym programie nie wystawia surowej listy `PRODUKTY` (żaden skrypt strony jej nie używa);
+  reszta obiektu (`lista`, `GRUPY`, `TERMINY`, `ZRODLO`, `wybrany`, `init`, `sync`) – bez zmian.
 - PR #6 starego repo (schemat montażu: zakład 5 cm) nie jest scalony – wzorcem jest `main`.
