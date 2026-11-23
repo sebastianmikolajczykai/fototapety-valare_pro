@@ -1,0 +1,9 @@
+# Dziennik TDD (RED → GREEN)
+
+Każdy moduł: najpierw test, potem pusta implementacja (`throw new Error('nie zaimplementowano')`), uruchomienie
+(test MUSI paść), potem implementacja (test przechodzi). Tu zapisane wyniki przebiegów RED i GREEN.
+
+| Moduł         | RED (padło)                                                                                                                                                                                                  | GREEN (przeszło) |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- |
+| domain/format | 4 testy padły („nie zaimplementowano”)                                                                                                                                                                       | 4/4              |
+| domain/units  | 6 testów padło („nie zaimplementowano”); po implementacji 2 dalej padły – błędne założenie w teście (6 cm przy 150 DPI = 355 px w górę, a 354 to zaokrąglenie zakładu w układzie); test poprawiony do faktów | 6/6              |

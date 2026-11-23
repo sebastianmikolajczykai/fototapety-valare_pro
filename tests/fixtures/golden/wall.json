@@ -1,0 +1,5246 @@
+[
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 120,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 1 i 2 (113,7 cm od lewej) wypada bliżej niż 20 cm od narożnika (narożnik 1). Montażysta nie zawinie tak wąskiego kawałka – zmień podział."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 120
+     }
+    ],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": true
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    93,
+    94,
+    93,
+    94
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 120,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 1 i 2 (105,3 cm od lewej) wypada bliżej niż 20 cm od narożnika (narożnik 1). Montażysta nie zawinie tak wąskiego kawałka – zmień podział."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 120
+     }
+    ],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 105.33333333333333,
+      "to": 111.33333333333333,
+      "conflict": true
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 213.66666666666666,
+      "to": 219.66666666666666,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    103,
+    120,
+    120
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "butt",
+   "overlap": 1,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 120,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 1 i 2 (107 cm od lewej) wypada bliżej niż 20 cm od narożnika (narożnik 1). Montażysta nie zawinie tak wąskiego kawałka – zmień podział."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 120
+     }
+    ],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 107,
+      "to": 108,
+      "conflict": true
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 217,
+      "to": 218,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    103,
+    115,
+    115
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "custom",
+   "count": 3,
+   "widths": [
+    100,
+    120,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 120,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "<span class=\"ok\">Łączenia (91, 205 cm od lewej krawędzi ściany) omijają narożniki i otwory.</span>"
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 120
+     }
+    ],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 91,
+      "to": 97,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 205,
+      "to": 211,
+      "conflict": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": {
+    "$n": "Inf"
+   },
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 120,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 1 i 2 (113,7 cm od lewej) wypada bliżej niż 20 cm od narożnika (narożnik 1). Montażysta nie zawinie tak wąskiego kawałka – zmień podział."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 120
+     }
+    ],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": true
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    93,
+    94,
+    93,
+    94
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 2,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 194,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 120,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "<span class=\"ok\">Łączenia (172 cm od lewej krawędzi ściany) omijają narożniki i otwory.</span>"
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 120
+     }
+    ],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 172,
+      "to": 178,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    181,
+    181
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 118,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 1 i 2 (113,7 cm od lewej) wypada bliżej niż 20 cm od narożnika (narożnik 1). Montażysta nie zawinie tak wąskiego kawałka – zmień podział."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 118
+     }
+    ],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": true
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    93,
+    94,
+    93,
+    94
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 118,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 1 i 2 (105,3 cm od lewej) wypada bliżej niż 20 cm od narożnika (narożnik 1). Montażysta nie zawinie tak wąskiego kawałka – zmień podział."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 118
+     }
+    ],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 105.33333333333333,
+      "to": 111.33333333333333,
+      "conflict": true
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 213.66666666666666,
+      "to": 219.66666666666666,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    101,
+    121,
+    121
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "butt",
+   "overlap": 1,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 118,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 1 i 2 (107 cm od lewej) wypada bliżej niż 20 cm od narożnika (narożnik 1). Montażysta nie zawinie tak wąskiego kawałka – zmień podział."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 118
+     }
+    ],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 107,
+      "to": 108,
+      "conflict": true
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 217,
+      "to": 218,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    101,
+    116,
+    116
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "custom",
+   "count": 3,
+   "widths": [
+    100,
+    120,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 118,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "<span class=\"ok\">Łączenia (91, 205 cm od lewej krawędzi ściany) omijają narożniki i otwory.</span>"
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 118
+     }
+    ],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 91,
+      "to": 97,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 205,
+      "to": 211,
+      "conflict": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": {
+    "$n": "Inf"
+   },
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 118,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 1 i 2 (113,7 cm od lewej) wypada bliżej niż 20 cm od narożnika (narożnik 1). Montażysta nie zawinie tak wąskiego kawałka – zmień podział."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 118
+     }
+    ],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": true
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    93,
+    94,
+    93,
+    94
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 2,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 194,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 118,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "<span class=\"ok\">Łączenia (172 cm od lewej krawędzi ściany) omijają narożniki i otwory.</span>"
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 118
+     }
+    ],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 172,
+      "to": 178,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    181,
+    181
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "door",
+    "x": 100,
+    "w": 90,
+    "y": 0,
+    "h": 200
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 1 i 2 (113,7 cm od lewej) wypada w otworze lub bliżej niż 5 cm od jego krawędzi (drzwi 1) – zmień podział."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [
+     {
+      "label": "Drzwi 1",
+      "type": "door",
+      "x": 100,
+      "w": 90,
+      "y": 0,
+      "h": 200
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": true
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    93,
+    117,
+    82,
+    82
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "door",
+    "x": 100,
+    "w": 90,
+    "y": 0,
+    "h": 200
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 1 i 2 (105,3 cm od lewej) wypada w otworze lub bliżej niż 5 cm od jego krawędzi (drzwi 1) – zmień podział."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [
+     {
+      "label": "Drzwi 1",
+      "type": "door",
+      "x": 100,
+      "w": 90,
+      "y": 0,
+      "h": 200
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 105.33333333333333,
+      "to": 111.33333333333333,
+      "conflict": true
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 213.66666666666666,
+      "to": 219.66666666666666,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    98,
+    122,
+    123
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "butt",
+   "overlap": 1,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "door",
+    "x": 100,
+    "w": 90,
+    "y": 0,
+    "h": 200
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 1 i 2 (107 cm od lewej) wypada w otworze lub bliżej niż 5 cm od jego krawędzi (drzwi 1) – zmień podział."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [
+     {
+      "label": "Drzwi 1",
+      "type": "door",
+      "x": 100,
+      "w": 90,
+      "y": 0,
+      "h": 200
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 107,
+      "to": 108,
+      "conflict": true
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 217,
+      "to": 218,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    98,
+    117,
+    118
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "custom",
+   "count": 3,
+   "widths": [
+    100,
+    120,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "door",
+    "x": 100,
+    "w": 90,
+    "y": 0,
+    "h": 200
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 1 i 2 (91 cm od lewej) wypada w otworze lub bliżej niż 5 cm od jego krawędzi (drzwi 1) – zmień podział."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [
+     {
+      "label": "Drzwi 1",
+      "type": "door",
+      "x": 100,
+      "w": 90,
+      "y": 0,
+      "h": 200
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 91,
+      "to": 97,
+      "conflict": true
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 205,
+      "to": 211,
+      "conflict": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": {
+    "$n": "Inf"
+   },
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "door",
+    "x": 100,
+    "w": 90,
+    "y": 0,
+    "h": 200
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 1 i 2 (113,7 cm od lewej) wypada w otworze lub bliżej niż 5 cm od jego krawędzi (drzwi 1) – zmień podział."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [
+     {
+      "label": "Drzwi 1",
+      "type": "door",
+      "x": 100,
+      "w": 90,
+      "y": 0,
+      "h": 200
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": true
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    93,
+    117,
+    82,
+    82
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 2,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 194,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "door",
+    "x": 100,
+    "w": 90,
+    "y": 0,
+    "h": 200
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 1 i 2 (172 cm od lewej) wypada w otworze lub bliżej niż 5 cm od jego krawędzi (drzwi 1) – zmień podział."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [
+     {
+      "label": "Drzwi 1",
+      "type": "door",
+      "x": 100,
+      "w": 90,
+      "y": 0,
+      "h": 200
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 172,
+      "to": 178,
+      "conflict": true
+     }
+    ]
+   },
+   "suggest": [
+    98,
+    135,
+    135
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "window",
+    "x": 200,
+    "w": 120,
+    "y": 90,
+    "h": 120
+   },
+   {
+    "type": "corner",
+    "x": 60,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 2 i 3 (230,3 cm od lewej) wypada w otworze lub bliżej niż 5 cm od jego krawędzi (okno 1) – zmień podział."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 60
+     }
+    ],
+    "openings": [
+     {
+      "label": "Okno 1",
+      "type": "window",
+      "x": 200,
+      "w": 120,
+      "y": 90,
+      "h": 120
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": true
+     }
+    ]
+   },
+   "suggest": null
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "window",
+    "x": 200,
+    "w": 120,
+    "y": 90,
+    "h": 120
+   },
+   {
+    "type": "corner",
+    "x": 60,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 2 i 3 (213,7 cm od lewej) wypada w otworze lub bliżej niż 5 cm od jego krawędzi (okno 1) – zmień podział."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 60
+     }
+    ],
+    "openings": [
+     {
+      "label": "Okno 1",
+      "type": "window",
+      "x": 200,
+      "w": 120,
+      "y": 90,
+      "h": 120
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 105.33333333333333,
+      "to": 111.33333333333333,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 213.66666666666666,
+      "to": 219.66666666666666,
+      "conflict": true
+     }
+    ]
+   },
+   "suggest": null
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "butt",
+   "overlap": 1,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "window",
+    "x": 200,
+    "w": 120,
+    "y": 90,
+    "h": 120
+   },
+   {
+    "type": "corner",
+    "x": 60,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 2 i 3 (217 cm od lewej) wypada w otworze lub bliżej niż 5 cm od jego krawędzi (okno 1) – zmień podział."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 60
+     }
+    ],
+    "openings": [
+     {
+      "label": "Okno 1",
+      "type": "window",
+      "x": 200,
+      "w": 120,
+      "y": 90,
+      "h": 120
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 107,
+      "to": 108,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 217,
+      "to": 218,
+      "conflict": true
+     }
+    ]
+   },
+   "suggest": null
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "custom",
+   "count": 3,
+   "widths": [
+    100,
+    120,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "window",
+    "x": 200,
+    "w": 120,
+    "y": 90,
+    "h": 120
+   },
+   {
+    "type": "corner",
+    "x": 60,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 2 i 3 (205 cm od lewej) wypada w otworze lub bliżej niż 5 cm od jego krawędzi (okno 1) – zmień podział."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 60
+     }
+    ],
+    "openings": [
+     {
+      "label": "Okno 1",
+      "type": "window",
+      "x": 200,
+      "w": 120,
+      "y": 90,
+      "h": 120
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 91,
+      "to": 97,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 205,
+      "to": 211,
+      "conflict": true
+     }
+    ]
+   }
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": {
+    "$n": "Inf"
+   },
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "window",
+    "x": 200,
+    "w": 120,
+    "y": 90,
+    "h": 120
+   },
+   {
+    "type": "corner",
+    "x": 60,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 2 i 3 (230,3 cm od lewej) wypada w otworze lub bliżej niż 5 cm od jego krawędzi (okno 1) – zmień podział."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 60
+     }
+    ],
+    "openings": [
+     {
+      "label": "Okno 1",
+      "type": "window",
+      "x": 200,
+      "w": 120,
+      "y": 90,
+      "h": 120
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": true
+     }
+    ]
+   },
+   "suggest": null
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 2,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 194,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "window",
+    "x": 200,
+    "w": 120,
+    "y": 90,
+    "h": 120
+   },
+   {
+    "type": "corner",
+    "x": 60,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "<span class=\"ok\">Łączenia (172 cm od lewej krawędzi ściany) omijają narożniki i otwory.</span>"
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 60
+     }
+    ],
+    "openings": [
+     {
+      "label": "Okno 1",
+      "type": "window",
+      "x": 200,
+      "w": 120,
+      "y": 90,
+      "h": 120
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 172,
+      "to": 178,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    181,
+    181
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "door",
+    "x": {
+     "$n": "NaN"
+    },
+    "w": 90,
+    "y": 0,
+    "h": 200
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Drzwi 1: wpisz położenie od lewej krawędzi ściany."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    123,
+    122,
+    123
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "door",
+    "x": {
+     "$n": "NaN"
+    },
+    "w": 90,
+    "y": 0,
+    "h": 200
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Drzwi 1: wpisz położenie od lewej krawędzi ściany."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 105.33333333333333,
+      "to": 111.33333333333333,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 213.66666666666666,
+      "to": 219.66666666666666,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    114,
+    114,
+    115
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "butt",
+   "overlap": 1,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "door",
+    "x": {
+     "$n": "NaN"
+    },
+    "w": 90,
+    "y": 0,
+    "h": 200
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Drzwi 1: wpisz położenie od lewej krawędzi ściany."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 107,
+      "to": 108,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 217,
+      "to": 218,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    111,
+    111,
+    111
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "custom",
+   "count": 3,
+   "widths": [
+    100,
+    120,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "door",
+    "x": {
+     "$n": "NaN"
+    },
+    "w": 90,
+    "y": 0,
+    "h": 200
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Drzwi 1: wpisz położenie od lewej krawędzi ściany."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 91,
+      "to": 97,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 205,
+      "to": 211,
+      "conflict": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": {
+    "$n": "Inf"
+   },
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "door",
+    "x": {
+     "$n": "NaN"
+    },
+    "w": 90,
+    "y": 0,
+    "h": 200
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Drzwi 1: wpisz położenie od lewej krawędzi ściany."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    93,
+    94,
+    93,
+    94
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 2,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 194,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "door",
+    "x": {
+     "$n": "NaN"
+    },
+    "w": 90,
+    "y": 0,
+    "h": 200
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Drzwi 1: wpisz położenie od lewej krawędzi ściany."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 172,
+      "to": 178,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    181,
+    181
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "door",
+    "x": 10,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": 0,
+    "h": 200
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Drzwi 1: wpisz szerokość."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    123,
+    122,
+    123
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "door",
+    "x": 10,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": 0,
+    "h": 200
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Drzwi 1: wpisz szerokość."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 105.33333333333333,
+      "to": 111.33333333333333,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 213.66666666666666,
+      "to": 219.66666666666666,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    114,
+    114,
+    115
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "butt",
+   "overlap": 1,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "door",
+    "x": 10,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": 0,
+    "h": 200
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Drzwi 1: wpisz szerokość."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 107,
+      "to": 108,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 217,
+      "to": 218,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    111,
+    111,
+    111
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "custom",
+   "count": 3,
+   "widths": [
+    100,
+    120,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "door",
+    "x": 10,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": 0,
+    "h": 200
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Drzwi 1: wpisz szerokość."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 91,
+      "to": 97,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 205,
+      "to": 211,
+      "conflict": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": {
+    "$n": "Inf"
+   },
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "door",
+    "x": 10,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": 0,
+    "h": 200
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Drzwi 1: wpisz szerokość."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    93,
+    94,
+    93,
+    94
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 2,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 194,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "door",
+    "x": 10,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": 0,
+    "h": 200
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Drzwi 1: wpisz szerokość."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 172,
+      "to": 178,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    181,
+    181
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "window",
+    "x": 300,
+    "w": 100,
+    "y": 0,
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Okno 1 wychodzi poza ścianę (350 cm)."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [
+     {
+      "label": "Okno 1",
+      "type": "window",
+      "x": 300,
+      "w": 100,
+      "y": 0,
+      "h": null
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    123,
+    122,
+    123
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "window",
+    "x": 300,
+    "w": 100,
+    "y": 0,
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Okno 1 wychodzi poza ścianę (325 cm)."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [
+     {
+      "label": "Okno 1",
+      "type": "window",
+      "x": 300,
+      "w": 100,
+      "y": 0,
+      "h": null
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 105.33333333333333,
+      "to": 111.33333333333333,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 213.66666666666666,
+      "to": 219.66666666666666,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    114,
+    114,
+    115
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "butt",
+   "overlap": 1,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "window",
+    "x": 300,
+    "w": 100,
+    "y": 0,
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Okno 1 wychodzi poza ścianę (325 cm)."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [
+     {
+      "label": "Okno 1",
+      "type": "window",
+      "x": 300,
+      "w": 100,
+      "y": 0,
+      "h": null
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 107,
+      "to": 108,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 217,
+      "to": 218,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    111,
+    111,
+    111
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "custom",
+   "count": 3,
+   "widths": [
+    100,
+    120,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "window",
+    "x": 300,
+    "w": 100,
+    "y": 0,
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Okno 1 wychodzi poza ścianę (350 cm)."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [
+     {
+      "label": "Okno 1",
+      "type": "window",
+      "x": 300,
+      "w": 100,
+      "y": 0,
+      "h": null
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 91,
+      "to": 97,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 205,
+      "to": 211,
+      "conflict": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": {
+    "$n": "Inf"
+   },
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "window",
+    "x": 300,
+    "w": 100,
+    "y": 0,
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Okno 1 wychodzi poza ścianę (350 cm)."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [
+     {
+      "label": "Okno 1",
+      "type": "window",
+      "x": 300,
+      "w": 100,
+      "y": 0,
+      "h": null
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    93,
+    94,
+    93,
+    94
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 2,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 194,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "window",
+    "x": 300,
+    "w": 100,
+    "y": 0,
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Okno 1 wychodzi poza ścianę (350 cm)."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [
+     {
+      "label": "Okno 1",
+      "type": "window",
+      "x": 300,
+      "w": 100,
+      "y": 0,
+      "h": null
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 172,
+      "to": 178,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    181,
+    181
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "window",
+    "x": 100,
+    "w": 50,
+    "y": 200,
+    "h": 100
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Okno 1 wychodzi poza ścianę u góry (wysokość 270 cm).",
+    "Łączenie brytów 1 i 2 (113,7 cm od lewej) wypada w otworze lub bliżej niż 5 cm od jego krawędzi (okno 1) – zmień podział."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [
+     {
+      "label": "Okno 1",
+      "type": "window",
+      "x": 100,
+      "w": 50,
+      "y": 200,
+      "h": 100
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": true
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    93,
+    94,
+    93,
+    94
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "window",
+    "x": 100,
+    "w": 50,
+    "y": 200,
+    "h": 100
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Okno 1 wychodzi poza ścianę u góry (wysokość 245 cm).",
+    "Łączenie brytów 1 i 2 (105,3 cm od lewej) wypada w otworze lub bliżej niż 5 cm od jego krawędzi (okno 1) – zmień podział."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [
+     {
+      "label": "Okno 1",
+      "type": "window",
+      "x": 100,
+      "w": 50,
+      "y": 200,
+      "h": 100
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 105.33333333333333,
+      "to": 111.33333333333333,
+      "conflict": true
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 213.66666666666666,
+      "to": 219.66666666666666,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    98,
+    122,
+    123
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "butt",
+   "overlap": 1,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "window",
+    "x": 100,
+    "w": 50,
+    "y": 200,
+    "h": 100
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Okno 1 wychodzi poza ścianę u góry (wysokość 245 cm).",
+    "Łączenie brytów 1 i 2 (107 cm od lewej) wypada w otworze lub bliżej niż 5 cm od jego krawędzi (okno 1) – zmień podział."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [
+     {
+      "label": "Okno 1",
+      "type": "window",
+      "x": 100,
+      "w": 50,
+      "y": 200,
+      "h": 100
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 107,
+      "to": 108,
+      "conflict": true
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 217,
+      "to": 218,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    98,
+    117,
+    118
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "custom",
+   "count": 3,
+   "widths": [
+    100,
+    120,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "window",
+    "x": 100,
+    "w": 50,
+    "y": 200,
+    "h": 100
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Okno 1 wychodzi poza ścianę u góry (wysokość 270 cm).",
+    "Łączenie brytów 1 i 2 (91 cm od lewej) wypada w otworze lub bliżej niż 5 cm od jego krawędzi (okno 1) – zmień podział."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [
+     {
+      "label": "Okno 1",
+      "type": "window",
+      "x": 100,
+      "w": 50,
+      "y": 200,
+      "h": 100
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 91,
+      "to": 97,
+      "conflict": true
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 205,
+      "to": 211,
+      "conflict": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": {
+    "$n": "Inf"
+   },
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "window",
+    "x": 100,
+    "w": 50,
+    "y": 200,
+    "h": 100
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Okno 1 wychodzi poza ścianę u góry (wysokość 270 cm).",
+    "Łączenie brytów 1 i 2 (113,7 cm od lewej) wypada w otworze lub bliżej niż 5 cm od jego krawędzi (okno 1) – zmień podział."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [
+     {
+      "label": "Okno 1",
+      "type": "window",
+      "x": 100,
+      "w": 50,
+      "y": 200,
+      "h": 100
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": true
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    93,
+    94,
+    93,
+    94
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 2,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 194,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "window",
+    "x": 100,
+    "w": 50,
+    "y": 200,
+    "h": 100
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Okno 1 wychodzi poza ścianę u góry (wysokość 270 cm)."
+   ],
+   "data": {
+    "corners": [],
+    "openings": [
+     {
+      "label": "Okno 1",
+      "type": "window",
+      "x": 100,
+      "w": 50,
+      "y": 200,
+      "h": 100
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 172,
+      "to": 178,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    181,
+    181
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 400,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Narożnik 1 wychodzi poza ścianę (350 cm)."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 400
+     }
+    ],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    123,
+    122,
+    123
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 400,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Narożnik 1 wychodzi poza ścianę (325 cm)."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 400
+     }
+    ],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 105.33333333333333,
+      "to": 111.33333333333333,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 213.66666666666666,
+      "to": 219.66666666666666,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    114,
+    114,
+    115
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "butt",
+   "overlap": 1,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 400,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Narożnik 1 wychodzi poza ścianę (325 cm)."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 400
+     }
+    ],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 107,
+      "to": 108,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 217,
+      "to": 218,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    111,
+    111,
+    111
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "custom",
+   "count": 3,
+   "widths": [
+    100,
+    120,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 400,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Narożnik 1 wychodzi poza ścianę (350 cm)."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 400
+     }
+    ],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 91,
+      "to": 97,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 205,
+      "to": 211,
+      "conflict": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": {
+    "$n": "Inf"
+   },
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 400,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Narożnik 1 wychodzi poza ścianę (350 cm)."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 400
+     }
+    ],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    93,
+    94,
+    93,
+    94
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 2,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 194,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 400,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Narożnik 1 wychodzi poza ścianę (350 cm)."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 400
+     }
+    ],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 172,
+      "to": 178,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    181,
+    181
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 50,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   },
+   {
+    "type": "corner",
+    "x": 170,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   },
+   {
+    "type": "door",
+    "x": 250,
+    "w": 80,
+    "y": 0,
+    "h": 210
+   }
+  ],
+  "out": {
+   "warnings": [
+    "<span class=\"ok\">Łączenia (113,7, 230,3 cm od lewej krawędzi ściany) omijają narożniki i otwory.</span>"
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 50
+     },
+     {
+      "label": "Narożnik 2",
+      "x": 170
+     }
+    ],
+    "openings": [
+     {
+      "label": "Drzwi 1",
+      "type": "door",
+      "x": 250,
+      "w": 80,
+      "y": 0,
+      "h": 210
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    123,
+    122,
+    123
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 50,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   },
+   {
+    "type": "corner",
+    "x": 170,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   },
+   {
+    "type": "door",
+    "x": 250,
+    "w": 80,
+    "y": 0,
+    "h": 210
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Drzwi 1 wychodzi poza ścianę (325 cm)."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 50
+     },
+     {
+      "label": "Narożnik 2",
+      "x": 170
+     }
+    ],
+    "openings": [
+     {
+      "label": "Drzwi 1",
+      "type": "door",
+      "x": 250,
+      "w": 80,
+      "y": 0,
+      "h": 210
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 105.33333333333333,
+      "to": 111.33333333333333,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 213.66666666666666,
+      "to": 219.66666666666666,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    114,
+    114,
+    115
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "butt",
+   "overlap": 1,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 50,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   },
+   {
+    "type": "corner",
+    "x": 170,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   },
+   {
+    "type": "door",
+    "x": 250,
+    "w": 80,
+    "y": 0,
+    "h": 210
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Drzwi 1 wychodzi poza ścianę (325 cm)."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 50
+     },
+     {
+      "label": "Narożnik 2",
+      "x": 170
+     }
+    ],
+    "openings": [
+     {
+      "label": "Drzwi 1",
+      "type": "door",
+      "x": 250,
+      "w": 80,
+      "y": 0,
+      "h": 210
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 107,
+      "to": 108,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 217,
+      "to": 218,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    111,
+    111,
+    111
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "custom",
+   "count": 3,
+   "widths": [
+    100,
+    120,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 50,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   },
+   {
+    "type": "corner",
+    "x": 170,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   },
+   {
+    "type": "door",
+    "x": 250,
+    "w": 80,
+    "y": 0,
+    "h": 210
+   }
+  ],
+  "out": {
+   "warnings": [
+    "<span class=\"ok\">Łączenia (91, 205 cm od lewej krawędzi ściany) omijają narożniki i otwory.</span>"
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 50
+     },
+     {
+      "label": "Narożnik 2",
+      "x": 170
+     }
+    ],
+    "openings": [
+     {
+      "label": "Drzwi 1",
+      "type": "door",
+      "x": 250,
+      "w": 80,
+      "y": 0,
+      "h": 210
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 91,
+      "to": 97,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 205,
+      "to": 211,
+      "conflict": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": {
+    "$n": "Inf"
+   },
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 50,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   },
+   {
+    "type": "corner",
+    "x": 170,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   },
+   {
+    "type": "door",
+    "x": 250,
+    "w": 80,
+    "y": 0,
+    "h": 210
+   }
+  ],
+  "out": {
+   "warnings": [
+    "<span class=\"ok\">Łączenia (113,7, 230,3 cm od lewej krawędzi ściany) omijają narożniki i otwory.</span>"
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 50
+     },
+     {
+      "label": "Narożnik 2",
+      "x": 170
+     }
+    ],
+    "openings": [
+     {
+      "label": "Drzwi 1",
+      "type": "door",
+      "x": 250,
+      "w": 80,
+      "y": 0,
+      "h": 210
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    93,
+    112,
+    55,
+    114
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 2,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 194,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [
+   {
+    "type": "corner",
+    "x": 50,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   },
+   {
+    "type": "corner",
+    "x": 170,
+    "w": {
+     "$n": "NaN"
+    },
+    "y": {
+     "$n": "NaN"
+    },
+    "h": {
+     "$n": "NaN"
+    }
+   },
+   {
+    "type": "door",
+    "x": 250,
+    "w": 80,
+    "y": 0,
+    "h": 210
+   }
+  ],
+  "out": {
+   "warnings": [
+    "Łączenie brytów 1 i 2 (172 cm od lewej) wypada bliżej niż 20 cm od narożnika (narożnik 2). Montażysta nie zawinie tak wąskiego kawałka – zmień podział."
+   ],
+   "data": {
+    "corners": [
+     {
+      "label": "Narożnik 1",
+      "x": 50
+     },
+     {
+      "label": "Narożnik 2",
+      "x": 170
+     }
+    ],
+    "openings": [
+     {
+      "label": "Drzwi 1",
+      "type": "door",
+      "x": 250,
+      "w": 80,
+      "y": 0,
+      "h": 210
+     }
+    ],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 172,
+      "to": 178,
+      "conflict": true
+     }
+    ]
+   },
+   "suggest": [
+    123,
+    122,
+    123
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [],
+  "out": {
+   "warnings": [],
+   "data": {
+    "corners": [],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    123,
+    122,
+    123
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [],
+  "out": {
+   "warnings": [],
+   "data": {
+    "corners": [],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 105.33333333333333,
+      "to": 111.33333333333333,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 213.66666666666666,
+      "to": 219.66666666666666,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    114,
+    114,
+    115
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "butt",
+   "overlap": 1,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [],
+  "out": {
+   "warnings": [],
+   "data": {
+    "corners": [],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 107,
+      "to": 108,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 217,
+      "to": 218,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    111,
+    111,
+    111
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "custom",
+   "count": 3,
+   "widths": [
+    100,
+    120,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [],
+  "out": {
+   "warnings": [],
+   "data": {
+    "corners": [],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 91,
+      "to": 97,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 205,
+      "to": 211,
+      "conflict": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": {
+    "$n": "Inf"
+   },
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [],
+  "out": {
+   "warnings": [],
+   "data": {
+    "corners": [],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 113.66666666666667,
+      "to": 119.66666666666667,
+      "conflict": false
+     },
+     {
+      "between": [
+       2,
+       3
+      ],
+      "from": 230.33333333333334,
+      "to": 236.33333333333334,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    93,
+    94,
+    93,
+    94
+   ]
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 2,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 194,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "items": [],
+  "out": {
+   "warnings": [],
+   "data": {
+    "corners": [],
+    "openings": [],
+    "seams": [
+     {
+      "between": [
+       1,
+       2
+      ],
+      "from": 172,
+      "to": 178,
+      "conflict": false
+     }
+    ]
+   },
+   "suggest": [
+    181,
+    181
+   ]
+  }
+ }
+]

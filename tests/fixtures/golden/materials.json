@@ -1,0 +1,523 @@
+{
+ "lista": [
+  {
+   "id": "mural-canvas-ct",
+   "nazwa": "Mural Canvas CT",
+   "grupa": "Premium",
+   "aspekt": "mat / błysk",
+   "gramatura": 290,
+   "struktura": "płótno",
+   "palnosc": "B-s2, d0",
+   "naZamowienie": false,
+   "waterproof": true,
+   "opis": "Winylowa tapeta na nośniku z tkaniny o strukturze płótna. Maskuje niedoskonałości zdjęcia i łączenia; fotorealistyczna jakość druku w pełnym zakresie kolorów.",
+   "produkt": "mural-canvas-ct",
+   "szerMaterialu": 137,
+   "szerDruku": 131,
+   "cenaBruttoM2": 279,
+   "cenaNettoM2": 226.83,
+   "terminDni": 10
+  },
+  {
+   "id": "burlap-blend-ct",
+   "nazwa": "Burlap Blend CT",
+   "grupa": "Premium",
+   "aspekt": "mat",
+   "gramatura": 290,
+   "struktura": "worek jutowy",
+   "palnosc": "B-s2, d0",
+   "naZamowienie": false,
+   "waterproof": true,
+   "opis": "Winylowa tapeta na nośniku z tkaniny o strukturze worka jutowego. Maskuje niedoskonałości zdjęcia i łączenia; fotorealistyczna jakość druku.",
+   "produkt": "burlap-blend-ct",
+   "szerMaterialu": 137,
+   "szerDruku": 131,
+   "cenaBruttoM2": 279,
+   "cenaNettoM2": 226.83,
+   "terminDni": 10
+  },
+  {
+   "id": "dune-dust-ct",
+   "nazwa": "Dune Dust CT",
+   "grupa": "Premium",
+   "aspekt": "mat",
+   "gramatura": 290,
+   "struktura": "drobny piasek",
+   "palnosc": "B-s2, d0",
+   "naZamowienie": false,
+   "waterproof": true,
+   "opis": "Winylowa tapeta na nośniku z tkaniny o strukturze drobnego piasku. Maskuje niedoskonałości zdjęcia i łączenia; fotorealistyczna jakość druku.",
+   "produkt": "dune-dust-ct",
+   "szerMaterialu": 137,
+   "szerDruku": 131,
+   "cenaBruttoM2": 279,
+   "cenaNettoM2": 226.83,
+   "terminDni": 10
+  },
+  {
+   "id": "rock-stone-ct",
+   "nazwa": "Rock Stone CT",
+   "grupa": "Premium",
+   "aspekt": "mat / błysk",
+   "gramatura": 290,
+   "struktura": "tynk",
+   "palnosc": "B-s2, d0",
+   "naZamowienie": false,
+   "waterproof": true,
+   "opis": "Winylowa tapeta na nośniku z tkaniny o strukturze tynku. Maskuje niedoskonałości zdjęcia i łączenia; fotorealistyczna jakość druku.",
+   "produkt": "rock-stone-ct",
+   "szerMaterialu": 137,
+   "szerDruku": 131,
+   "cenaBruttoM2": 279,
+   "cenaNettoM2": 226.83,
+   "terminDni": 10
+  },
+  {
+   "id": "woven-bamboo-nw",
+   "nazwa": "Woven Bamboo NW",
+   "grupa": "Premium",
+   "aspekt": "mat",
+   "gramatura": 290,
+   "struktura": "pleciony bambus",
+   "palnosc": "B-s1, d0",
+   "naZamowienie": true,
+   "waterproof": false,
+   "opis": "Ekologiczna tapeta o strukturze plecionego bambusa. Maskuje niedoskonałości zdjęcia i łączenia; dobra jakość druku.",
+   "produkt": "woven-bamboo-nw",
+   "szerMaterialu": 137,
+   "szerDruku": 131,
+   "cenaBruttoM2": 319,
+   "cenaNettoM2": 259.35,
+   "terminDni": 21
+  },
+  {
+   "id": "diamante-ct",
+   "nazwa": "Diamante CT",
+   "grupa": "Premium",
+   "aspekt": "błysk",
+   "gramatura": 350,
+   "struktura": "skórka pomarańczy",
+   "palnosc": "B-s2, d0",
+   "naZamowienie": true,
+   "waterproof": false,
+   "opis": "Ekskluzywna tapeta na nośniku tekstylnym o strukturze skórki pomarańczy z kryształkami. Do nowoczesnych wnętrz; wymaga dobrania odpowiedniego zdjęcia.",
+   "produkt": "diamante-ct",
+   "szerMaterialu": 136,
+   "szerDruku": 130,
+   "cenaBruttoM2": 499,
+   "cenaNettoM2": 405.69,
+   "terminDni": 21
+  },
+  {
+   "id": "fabric-canvas-nw",
+   "nazwa": "Fabric Canvas NW",
+   "grupa": "Standard",
+   "aspekt": "mat / błysk",
+   "gramatura": 350,
+   "struktura": "płótno",
+   "palnosc": "B-s1, d0",
+   "naZamowienie": false,
+   "waterproof": false,
+   "opis": "Winylowa tapeta na nośniku flizelinowym o strukturze płótna. Maskuje niedoskonałości zdjęcia i łączenia; fotorealistyczna jakość druku.",
+   "produkt": "fabric-canvas-nw",
+   "szerMaterialu": 130,
+   "szerDruku": 124,
+   "cenaBruttoM2": 259,
+   "cenaNettoM2": 210.57,
+   "terminDni": 10
+  },
+  {
+   "id": "granular-sand-nw",
+   "nazwa": "Granular Sand NW",
+   "grupa": "Standard",
+   "aspekt": "mat / błysk",
+   "gramatura": 350,
+   "struktura": "piasek",
+   "palnosc": "B-s1, d0",
+   "naZamowienie": false,
+   "waterproof": false,
+   "opis": "Winylowa tapeta na nośniku flizelinowym o strukturze piasku. Maskuje niedoskonałości zdjęcia i łączenia; fotorealistyczna jakość druku.",
+   "produkt": "granular-sand-nw",
+   "szerMaterialu": 130,
+   "szerDruku": 124,
+   "cenaBruttoM2": 259,
+   "cenaNettoM2": 210.57,
+   "terminDni": 10
+  },
+  {
+   "id": "canvas-nw",
+   "nazwa": "Canvas NW",
+   "grupa": "Standard",
+   "aspekt": "mat / błysk",
+   "gramatura": 350,
+   "struktura": "płótno",
+   "palnosc": "B-s2, d0",
+   "naZamowienie": false,
+   "waterproof": false,
+   "opis": "Winylowa tapeta na nośniku flizelinowym o strukturze płótna. Maskuje niedoskonałości zdjęcia i łączenia; fotorealistyczna jakość druku.",
+   "produkt": "canvas-nw",
+   "szerMaterialu": 138,
+   "szerDruku": 132,
+   "cenaBruttoM2": 249,
+   "cenaNettoM2": 202.44,
+   "terminDni": 10
+  },
+  {
+   "id": "concrete-nw",
+   "nazwa": "Concrete NW",
+   "grupa": "Standard",
+   "aspekt": "mat",
+   "gramatura": 350,
+   "struktura": "beton",
+   "palnosc": "B-s2, d0",
+   "naZamowienie": false,
+   "waterproof": false,
+   "opis": "Winylowa tapeta na nośniku flizelinowym o strukturze betonu. Maskuje niedoskonałości zdjęcia i łączenia; fotorealistyczna jakość druku.",
+   "produkt": "concrete-nw",
+   "szerMaterialu": 137,
+   "szerDruku": 131,
+   "cenaBruttoM2": 249,
+   "cenaNettoM2": 202.44,
+   "terminDni": 10
+  },
+  {
+   "id": "linen-nw",
+   "nazwa": "Linen NW",
+   "grupa": "Standard",
+   "aspekt": "mat",
+   "gramatura": 350,
+   "struktura": "materiał jutowy",
+   "palnosc": "B-s2, d0",
+   "naZamowienie": false,
+   "waterproof": false,
+   "opis": "Winylowa tapeta na nośniku flizelinowym o strukturze materiału jutowego. Maskuje niedoskonałości zdjęcia i łączenia; fotorealistyczna jakość druku.",
+   "produkt": "linen-nw",
+   "szerMaterialu": 138,
+   "szerDruku": 132,
+   "cenaBruttoM2": 249,
+   "cenaNettoM2": 202.44,
+   "terminDni": 10
+  },
+  {
+   "id": "linen-nw-jednobarwna-druk",
+   "nazwa": "Linen NW jednobarwna + druk",
+   "grupa": "Standard",
+   "aspekt": "mat",
+   "gramatura": 350,
+   "struktura": "materiał jutowy",
+   "palnosc": "B-s2, d0",
+   "naZamowienie": true,
+   "waterproof": false,
+   "opis": "Linen NW w jednym z 17 kolorów, druk pigmentem kolorowym lub białym. Przed zamówieniem zawsze próba wydruku; okleiny na jednej ścianie z jednej partii produkcyjnej. (Sama jednobarwna, bez druku: 99,00 zł/m².)",
+   "produkt": "linen-nw-jednobarwna-druk",
+   "szerMaterialu": 138,
+   "szerDruku": 132,
+   "cenaBruttoM2": 249,
+   "cenaNettoM2": 202.44,
+   "terminDni": 21
+  },
+  {
+   "id": "sand-dot-gw-107",
+   "nazwa": "Sand Dot GW 107",
+   "grupa": "Własny klej",
+   "aspekt": "mat / błysk",
+   "gramatura": null,
+   "struktura": "drobny piasek",
+   "palnosc": "B-s1, d0",
+   "naZamowienie": false,
+   "waterproof": false,
+   "opis": "Folia samoprzylepna o strukturze drobnego piasku na podłogi, ściany i meble wewnątrz, bez laminowania. Możliwa poprawka przy naklejaniu; druk UVgel odporny na ścieranie. (Wersja wycinana po obrysie ZUND: 325,00 zł/m², na zamówienie.)",
+   "produkt": "sand-dot-gw",
+   "szerMaterialu": 107,
+   "szerDruku": 100,
+   "cenaBruttoM2": 279.05,
+   "cenaNettoM2": 226.83,
+   "terminDni": 10
+  },
+  {
+   "id": "sand-dot-gw-137",
+   "nazwa": "Sand Dot GW 137",
+   "grupa": "Własny klej",
+   "aspekt": "mat / błysk",
+   "gramatura": null,
+   "struktura": "drobny piasek",
+   "palnosc": "B-s1, d0",
+   "naZamowienie": false,
+   "waterproof": false,
+   "opis": "Folia samoprzylepna o strukturze drobnego piasku na podłogi, ściany i meble wewnątrz, bez laminowania. Możliwa poprawka przy naklejaniu; druk UVgel odporny na ścieranie. (Wersja wycinana po obrysie ZUND: 325,00 zł/m², na zamówienie.)",
+   "produkt": "sand-dot-gw",
+   "szerMaterialu": 137,
+   "szerDruku": 131,
+   "cenaBruttoM2": 279.05,
+   "cenaNettoM2": 226.83,
+   "terminDni": 10
+  },
+  {
+   "id": "sand-dot-gw-160",
+   "nazwa": "Sand Dot GW 160",
+   "grupa": "Własny klej",
+   "aspekt": "mat / błysk",
+   "gramatura": null,
+   "struktura": "drobny piasek",
+   "palnosc": "B-s1, d0",
+   "naZamowienie": false,
+   "waterproof": false,
+   "opis": "Folia samoprzylepna o strukturze drobnego piasku na podłogi, ściany i meble wewnątrz, bez laminowania. Możliwa poprawka przy naklejaniu; druk UVgel odporny na ścieranie. (Wersja wycinana po obrysie ZUND: 325,00 zł/m², na zamówienie.)",
+   "produkt": "sand-dot-gw",
+   "szerMaterialu": 160,
+   "szerDruku": 154,
+   "cenaBruttoM2": 279.05,
+   "cenaNettoM2": 226.83,
+   "terminDni": 10
+  },
+  {
+   "id": "texile-stick-gw-107",
+   "nazwa": "Texile Stick GW 107",
+   "grupa": "Własny klej",
+   "aspekt": "mat / błysk",
+   "gramatura": 145,
+   "struktura": "delikatne płótno",
+   "palnosc": "B-s2, d0",
+   "naZamowienie": false,
+   "waterproof": false,
+   "opis": "Poliestrowa repozycjonowalna tkanina samoprzylepna. Łatwa aplikacja bez ekipy; łączenie na styk lub na zakładkę; po usunięciu nie niszczy powierzchni. Do wnętrz.",
+   "produkt": "texile-stick-gw",
+   "szerMaterialu": 107,
+   "szerDruku": 100,
+   "cenaBruttoM2": 279,
+   "cenaNettoM2": 226.83,
+   "terminDni": 10
+  },
+  {
+   "id": "texile-stick-gw-127",
+   "nazwa": "Texile Stick GW 127",
+   "grupa": "Własny klej",
+   "aspekt": "mat / błysk",
+   "gramatura": 145,
+   "struktura": "delikatne płótno",
+   "palnosc": "B-s2, d0",
+   "naZamowienie": false,
+   "waterproof": false,
+   "opis": "Poliestrowa repozycjonowalna tkanina samoprzylepna. Łatwa aplikacja bez ekipy; łączenie na styk lub na zakładkę; po usunięciu nie niszczy powierzchni. Do wnętrz.",
+   "produkt": "texile-stick-gw",
+   "szerMaterialu": 127,
+   "szerDruku": 121,
+   "cenaBruttoM2": 279,
+   "cenaNettoM2": 226.83,
+   "terminDni": 10
+  },
+  {
+   "id": "texile-stick-gw-152",
+   "nazwa": "Texile Stick GW 152",
+   "grupa": "Własny klej",
+   "aspekt": "mat / błysk",
+   "gramatura": 145,
+   "struktura": "delikatne płótno",
+   "palnosc": "B-s2, d0",
+   "naZamowienie": false,
+   "waterproof": false,
+   "opis": "Poliestrowa repozycjonowalna tkanina samoprzylepna. Łatwa aplikacja bez ekipy; łączenie na styk lub na zakładkę; po usunięciu nie niszczy powierzchni. Do wnętrz.",
+   "produkt": "texile-stick-gw",
+   "szerMaterialu": 152,
+   "szerDruku": 146,
+   "cenaBruttoM2": 279,
+   "cenaNettoM2": 226.83,
+   "terminDni": 10
+  },
+  {
+   "id": "canvas-gw",
+   "nazwa": "Canvas GW",
+   "grupa": "Własny klej",
+   "aspekt": "mat / błysk",
+   "gramatura": 360,
+   "struktura": "płótno",
+   "palnosc": "B-s2, d0",
+   "naZamowienie": true,
+   "waterproof": false,
+   "opis": "Samoprzylepna tapeta PCV o strukturze płótna z klejem permanentnym. Do jednobrytowych dekoracji (pokoje dziecięce, hotele, recepcje) i reprodukcji obrazów.",
+   "produkt": "canvas-gw",
+   "szerMaterialu": 137,
+   "szerDruku": 131,
+   "cenaBruttoM2": 279,
+   "cenaNettoM2": 226.83,
+   "terminDni": 21
+  },
+  {
+   "id": "soft-skin",
+   "nazwa": "Soft Skin",
+   "grupa": "Uzupełniające",
+   "aspekt": "mat",
+   "gramatura": 550,
+   "struktura": "skóra",
+   "palnosc": "BS 5852-1",
+   "naZamowienie": true,
+   "waterproof": false,
+   "opis": "Materiał o strukturze skóry do tapicerstwa tradycyjnego i medycznego. Odporny na zadrapania, atest PZH.",
+   "produkt": "soft-skin",
+   "szerMaterialu": 141,
+   "szerDruku": 135,
+   "cenaBruttoM2": 309,
+   "cenaNettoM2": 251.22,
+   "terminDni": 21
+  },
+  {
+   "id": "luxe-lino",
+   "nazwa": "Luxe Lino (podłoga)",
+   "grupa": "Uzupełniające",
+   "aspekt": "satyna",
+   "gramatura": 1485,
+   "struktura": "piaskowiec",
+   "palnosc": "Cn-s1",
+   "naZamowienie": true,
+   "waterproof": false,
+   "opis": "Winylowy materiał na podłogę (reklama pozioma, wykończenie wnętrz). Certyfikat antypoślizgowości; zmywalność zależy od zadruku i zabezpieczenia.",
+   "produkt": "luxe-lino",
+   "szerMaterialu": 200,
+   "szerDruku": 194,
+   "cenaBruttoM2": 315,
+   "cenaNettoM2": 256.1,
+   "terminDni": 21
+  },
+  {
+   "id": "tapeta-waterproof-out",
+   "nazwa": "Tapeta Waterproof Out",
+   "grupa": "Uzupełniające",
+   "aspekt": "mat",
+   "gramatura": null,
+   "struktura": "skórka pomarańczy",
+   "palnosc": "B-s1, d0",
+   "naZamowienie": true,
+   "waterproof": false,
+   "opis": "Tapeta z włókna szklanego bez PCV do wilgotnych pomieszczeń, wewnątrz i na zewnątrz (system WATERproof, np. kabiny prysznicowe). Najlepiej z pełnym systemem WATERproof IN/OUT.",
+   "produkt": "tapeta-waterproof-out",
+   "szerMaterialu": 100,
+   "szerDruku": 94,
+   "cenaBruttoM2": 310,
+   "cenaNettoM2": 252.03,
+   "terminDni": 21
+  }
+ ],
+ "grupy": [
+  "Premium",
+  "Standard",
+  "Własny klej",
+  "Uzupełniające"
+ ],
+ "terminy": {
+  "standard": {
+   "dni": 10,
+   "doplata": 0
+  },
+  "przyspieszony": {
+   "dni": 7,
+   "doplata": 0.15
+  },
+  "ekspres": {
+   "dni": 3,
+   "doplata": 0.3
+  },
+  "naZamowienie": {
+   "dni": 21,
+   "uwaga": "Jeżeli materiał jest na stanie magazynowym, termin jak dla materiałów standardowych."
+  }
+ },
+ "zrodlo": "CENNIK_VALARE.pdf, edycja 2024/1, ważny od 15.05.2024",
+ "options": [
+  {
+   "value": "",
+   "text": "– nie wybrano (bez kontroli szerokości) –"
+  },
+  {
+   "value": "131|mural-canvas-ct",
+   "text": "Mural Canvas CT – druk 131 cm"
+  },
+  {
+   "value": "131|burlap-blend-ct",
+   "text": "Burlap Blend CT – druk 131 cm"
+  },
+  {
+   "value": "131|dune-dust-ct",
+   "text": "Dune Dust CT – druk 131 cm"
+  },
+  {
+   "value": "131|rock-stone-ct",
+   "text": "Rock Stone CT – druk 131 cm"
+  },
+  {
+   "value": "131|woven-bamboo-nw",
+   "text": "Woven Bamboo NW – druk 131 cm"
+  },
+  {
+   "value": "130|diamante-ct",
+   "text": "Diamante CT – druk 130 cm"
+  },
+  {
+   "value": "124|fabric-canvas-nw",
+   "text": "Fabric Canvas NW – druk 124 cm"
+  },
+  {
+   "value": "124|granular-sand-nw",
+   "text": "Granular Sand NW – druk 124 cm"
+  },
+  {
+   "value": "132|canvas-nw",
+   "text": "Canvas NW – druk 132 cm"
+  },
+  {
+   "value": "131|concrete-nw",
+   "text": "Concrete NW – druk 131 cm"
+  },
+  {
+   "value": "132|linen-nw",
+   "text": "Linen NW – druk 132 cm"
+  },
+  {
+   "value": "132|linen-nw-jednobarwna-druk",
+   "text": "Linen NW jednobarwna + druk – druk 132 cm"
+  },
+  {
+   "value": "100|sand-dot-gw-107",
+   "text": "Sand Dot GW 107 – druk 100 cm"
+  },
+  {
+   "value": "131|sand-dot-gw-137",
+   "text": "Sand Dot GW 137 – druk 131 cm"
+  },
+  {
+   "value": "154|sand-dot-gw-160",
+   "text": "Sand Dot GW 160 – druk 154 cm"
+  },
+  {
+   "value": "100|texile-stick-gw-107",
+   "text": "Texile Stick GW 107 – druk 100 cm"
+  },
+  {
+   "value": "121|texile-stick-gw-127",
+   "text": "Texile Stick GW 127 – druk 121 cm"
+  },
+  {
+   "value": "146|texile-stick-gw-152",
+   "text": "Texile Stick GW 152 – druk 146 cm"
+  },
+  {
+   "value": "131|canvas-gw",
+   "text": "Canvas GW – druk 131 cm"
+  },
+  {
+   "value": "135|soft-skin",
+   "text": "Soft Skin – druk 135 cm"
+  },
+  {
+   "value": "194|luxe-lino",
+   "text": "Luxe Lino (podłoga) – druk 194 cm"
+  },
+  {
+   "value": "94|tapeta-waterproof-out",
+   "text": "Tapeta Waterproof Out – druk 94 cm"
+  },
+  {
+   "value": "own",
+   "text": "Inny materiał (wpisz maks. szerokość)"
+  }
+ ]
+}

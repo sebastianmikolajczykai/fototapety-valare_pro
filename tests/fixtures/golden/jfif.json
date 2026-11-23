@@ -1,0 +1,27 @@
+[
+ {
+  "b64": "/9j/4AAQSkZJRgABAQAAAQABAABEQU5F",
+  "dpi": 150,
+  "out": "/9j/4AAQSkZJRgABAQEAlgCWAABEQU5F"
+ },
+ {
+  "b64": "/9j/4AAQSkZJRgABAQAAAQABAABEQU5F",
+  "dpi": 300,
+  "out": "/9j/4AAQSkZJRgABAQEBLAEsAABEQU5F"
+ },
+ {
+  "b64": "/9j/4AAQSkZJRgABAQAAAQABAAA=",
+  "dpi": 100,
+  "out": "/9j/4AAQSkZJRgABAQEAZABkAAA="
+ },
+ {
+  "b64": "/9j/4QAQRXhpZgAAcmVzdC1vZi1maWxl",
+  "dpi": 150,
+  "out": "/9j/4QAQRXhpZgAAcmVzdC1vZi1maWxl"
+ },
+ {
+  "b64": "a3LzdGtp",
+  "dpi": 150,
+  "out": "a3LzdGtp"
+ }
+]

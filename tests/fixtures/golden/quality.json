@@ -1,0 +1,80 @@
+{
+ "defaults": {
+  "good": 2500,
+  "min": 1000
+ },
+ "assess": [
+  {
+   "v": 0,
+   "z": 1,
+   "out": {
+    "level": "bad",
+    "zoomGood": 0
+   }
+  },
+  {
+   "v": 999.9,
+   "z": 1,
+   "out": {
+    "level": "bad",
+    "zoomGood": 0.39996
+   }
+  },
+  {
+   "v": 1000,
+   "z": 1,
+   "out": {
+    "level": "ok",
+    "zoomGood": 0.4
+   }
+  },
+  {
+   "v": 1500,
+   "z": 1.5,
+   "out": {
+    "level": "ok",
+    "zoomGood": 0.9
+   }
+  },
+  {
+   "v": 2499,
+   "z": 1,
+   "out": {
+    "level": "ok",
+    "zoomGood": 0.9996
+   }
+  },
+  {
+   "v": 2500,
+   "z": 1,
+   "out": {
+    "level": "good",
+    "zoomGood": 1
+   }
+  },
+  {
+   "v": 5905,
+   "z": 2,
+   "out": {
+    "level": "good",
+    "zoomGood": 4.724
+   }
+  },
+  {
+   "v": 12000,
+   "z": 3,
+   "out": {
+    "level": "good",
+    "zoomGood": 14.4
+   }
+  },
+  {
+   "v": 400,
+   "z": 3,
+   "out": {
+    "level": "bad",
+    "zoomGood": 0.48
+   }
+  }
+ ]
+}
