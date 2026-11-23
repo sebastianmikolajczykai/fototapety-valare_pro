@@ -5,7 +5,7 @@ Aktualizacja: 2026-11-23
 | Etap | Zakres                                                                                                              | Stan                            |
 | ---- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
 | 0    | Szkielet: TS strict, ESLint, Prettier, Vitest + pokrycie, CI, wzorce „golden” ze starego programu, `units`/`format` | PR #2                           |
-| 1    | Domena: podział na bryty (`layout`)                                                                                 | do zrobienia                    |
+| 1    | Domena: podział na bryty (`layout`) + złoty wzorzec recenzenta                                                      | PR #3                           |
 | 2    | Domena: walidacja i ostrzeżenia                                                                                     | do zrobienia (testy RED gotowe) |
 | 3    | Domena: materiały, wycena, jakość, ściana, próbka, wizualizacja, teksty AI                                          | do zrobienia                    |
 | 4    | Wyjście: JPG DPI, ZIP, PDF produkcyjny, zlecenie CDR, PDF montażu                                                   | do zrobienia                    |
