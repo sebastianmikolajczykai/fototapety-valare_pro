@@ -452,6 +452,8 @@ describe.skipIf(!enabled)('stary vs nowy program', () => {
         out[kind] = {
           text: await visibleText(page),
           html: await pageHtml(page),
+          // Style i inne wstawki w <head> (np. CSS modułów) – różnica w wyglądzie, której nie widać w treści.
+          head: await page.evaluate(() => document.head.innerHTML),
           disabled,
           material,
           canvases,

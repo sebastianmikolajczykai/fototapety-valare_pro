@@ -20,6 +20,7 @@ import {
 } from '../domain/guide';
 import { page } from './lib/legacy';
 
+// Wygląd kroków (znacznik <style> skopiowany 1:1 ze starego programu).
 const CSS = `<style id="krokiCss">
     .panel > .step > .step-head { cursor: pointer; user-select: none; margin-bottom: 0; }
     .panel > .step > .step-head::after { content: "−"; order: 2; margin-left: auto; font-size: 18px; line-height: 1; color: var(--v-ink); }
@@ -234,7 +235,7 @@ export class StepGuide {
   }
 
   start(): void {
-    this.doc.head.insertAdjacentHTML('beforeend', `<style id="krokiCss">${CSS}</style>`);
+    this.doc.head.insertAdjacentHTML('beforeend', CSS);
     const { panel } = this;
     panel.addEventListener('click', e => this.onClick(e.target as Element));
     panel.addEventListener('keydown', e => {
