@@ -393,6 +393,32 @@ const SCENARIOS: {
     probe:
       '[document.activeElement && (document.activeElement.id || document.activeElement.className), document.body.style.overflow]',
   },
+  {
+    name: 'wygląd: domyślna nazwa zlecenia idzie za wymiarem ściany; przyciski −/+ powiększenia kadru',
+    s: {
+      fields: { wallW: '410', wallH: '265', count: '4', material: '131|mural-canvas-ct' },
+      radios: { split: 'equal' },
+      clicks: ['#zoomIn', '#zoomIn', '#zoomOut'],
+    },
+    generate: false,
+  },
+  {
+    name: 'wygląd: nazwa wpisana przez użytkownika zostaje po zmianie wymiaru; minimalne powiększenie wyłącza „−”',
+    s: { type: { selector: '#order', text: 'Kowalski salon' }, clicks: ['#zoomOut', '#zoomOut'] },
+    generate: false,
+  },
+  {
+    name: 'wygląd: po wpisaniu nazwy zmiana ściany jej nie nadpisuje; upuszczenie pliku, który nie jest zdjęciem',
+    s: {
+      fields: { wallW: '420' },
+      script: `const dt = new DataTransfer(); dt.items.add(new File(['abc'], 'notatka.txt', { type: 'text/plain' }));
+        const drop = document.getElementById('drop');
+        for (const t of ['dragenter', 'dragover']) drop.dispatchEvent(new DragEvent(t, { bubbles: true, cancelable: true, dataTransfer: dt }));
+        drop.dispatchEvent(new DragEvent('drop', { bubbles: true, cancelable: true, dataTransfer: dt }));`,
+    },
+    generate: false,
+    expectText: ['To nie jest plik JPG ani PNG.'],
+  },
 ];
 
 /** Stan formularza (wartości pól, zaznaczenia) – porównanie po ponownym otwarciu strony. */
@@ -454,6 +480,8 @@ describe.skipIf(!enabled)('stary vs nowy program', () => {
           html: await pageHtml(page),
           // Style i inne wstawki w <head> (np. CSS modułów) – różnica w wyglądzie, której nie widać w treści.
           head: await page.evaluate(() => document.head.innerHTML),
+          // Wartości pól (atrybut value w HTML nie zmienia się po wpisaniu).
+          form: await formState(page),
           disabled,
           material,
           canvases,

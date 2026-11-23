@@ -103,6 +103,8 @@ export interface FormSettings {
   clicks?: string[];
   /** Klawisz na elemencie (np. Enter na karcie materiału). */
   keys?: { selector: string; key: string }[];
+  /** Wpisanie tekstu jak użytkownik (zdarzenia „zaufane”, isTrusted). */
+  type?: { selector: string; text: string };
   /** Przeciągnięcie myszą od środka elementu o (dx, dy) px. */
   drag?: { selector: string; dx: number; dy: number };
 }
@@ -141,6 +143,7 @@ export async function applySettings(page: Page, s: FormSettings): Promise<void> 
         .querySelector(k.selector)!
         .dispatchEvent(new KeyboardEvent('keydown', { key: k.key, bubbles: true, cancelable: true }));
   }, s);
+  if (s.type) await page.locator(s.type.selector).fill(s.type.text);
   if (s.drag) {
     const el = page.locator(s.drag.selector);
     await el.scrollIntoViewIfNeeded();

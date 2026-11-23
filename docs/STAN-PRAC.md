@@ -25,4 +25,5 @@ Aktualizacja: 2026-11-23
 - `window.Materialy` w nowym programie nie wystawia surowej listy `PRODUKTY` (żaden skrypt strony jej nie używa);
   reszta obiektu (`lista`, `GRUPY`, `TERMINY`, `ZRODLO`, `wybrany`, `init`, `sync`) – bez zmian.
 - `window.Montaz` w nowym programie nie ma `steps` (martwy kod, patrz wyżej); `widths`, `init`, `make`, `model` – bez zmian.
+- **Świadoma zmiana (decyzja Sebastiana 23.11.2026):** plik .cdr domyślnie z obrazami osadzonymi (stary program od 31.10 wysyłał `link:true` – po przeniesieniu pliku brak obrazów); obrazy linkowane jako opcja. PDF zostaje podstawowym plikiem dla ARPI. Wprowadzane przy przepisaniu `bryty.js`, z testem i opisem w README.
 - PR #6 starego repo (schemat montażu: zakład 5 cm) nie jest scalony – wzorcem jest `main`.
