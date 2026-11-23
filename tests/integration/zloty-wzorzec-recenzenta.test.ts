@@ -2,6 +2,7 @@
 // Kolejne części (walidacja, wycena, terminy, jakość) dochodzą w PR-ach tych modułów.
 import { describe, expect, it } from 'vitest';
 import { computeLayout } from '../../src/domain/layout';
+import { layoutWarnings, validate } from '../../src/domain/validation';
 import { reviewerGolden, withDefaults } from '../support/reviewer';
 
 const G = reviewerGolden();
@@ -39,5 +40,13 @@ describe('złoty wzorzec recenzenta: podział na bryty', () => {
       panoW: exp.panoW,
       imgH: exp.imgH,
     });
+  });
+});
+
+describe('złoty wzorzec recenzenta: błędy i ostrzeżenia', () => {
+  it.each(G.bryty.map(c => [c.name, c] as const))('%s', (_name, c) => {
+    const p = withDefaults(c.p);
+    expect(validate(p)).toEqual(c.errors);
+    if (c.layout) expect(layoutWarnings(p, computeLayout(p))).toEqual(c.warnings);
   });
 });
