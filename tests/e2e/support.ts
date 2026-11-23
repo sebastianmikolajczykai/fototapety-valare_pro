@@ -49,7 +49,9 @@ export async function startServer(kind: 'new' | 'old', port: number): Promise<Ru
 }
 
 export async function openPage(browser: Browser, url: string, errors: string[]): Promise<Page> {
-  const page = await browser.newPage({ viewport: { width: 1400, height: 1000 } });
+  // Własny kontekst (a nie browser.newPage), żeby można było otworzyć drugą kartę z tym samym localStorage.
+  const ctx = await browser.newContext({ viewport: { width: 1400, height: 1000 } });
+  const page = await ctx.newPage();
   await page.clock.setFixedTime(new Date(FIXED_NOW));
   page.on('pageerror', e => errors.push(e.message));
   page.on('console', m => {
