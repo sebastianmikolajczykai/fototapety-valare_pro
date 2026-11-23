@@ -5,19 +5,14 @@
 // pierwszej i bryty wypadały poza arkusz (zgłoszenie 27.10.2026).
 // Dane JPG nie są kopiowane: wynik to części pliku (bajty nagłówków + oryginalne dane, np. Blob w przeglądarce).
 import type { Layout, WallParams } from '../domain/layout';
+import { PdfFile, type PdfImage, type PdfPart } from './pdf-file';
 import { helveticaWidths, PL_NAMES, pdfText } from './pdf-text';
 import { ProductionSheet, type Cmyk, type SheetDrawer } from './sheet';
 
 /** Punkty PDF na cm. */
 export const PT_PER_CM = 72 / 2.54;
 
-/** Obraz JPG do osadzenia: dane (bez kopiowania), rozmiar w bajtach, wymiar w px. */
-export interface PdfImage<T> {
-  data: T;
-  size: number;
-  w: number;
-  h: number;
-}
+export type { PdfImage } from './pdf-file';
 
 export interface ProductionPdf<T> {
   parts: (Uint8Array | T)[];
@@ -64,57 +59,6 @@ class PdfPageDrawer implements SheetDrawer {
   }
 }
 
-type Part<T> = string | Uint8Array | PdfImage<T>;
-
-/** Prosty zapis obiektów PDF z tabelą xref. Obrazy przekazywane bez kopiowania. */
-class PdfFile<T> {
-  private readonly objs: Part<T>[][] = [];
-
-  /** Rezerwuje numer obiektu (treść można podać później przez set). */
-  add(parts: Part<T>[] = []): number {
-    this.objs.push(parts);
-    return this.objs.length;
-  }
-
-  set(id: number, parts: Part<T>[]): void {
-    this.objs[id - 1] = parts;
-  }
-
-  bytes(root: number): (Uint8Array | T)[] {
-    const enc = new TextEncoder();
-    const out: (Uint8Array | T)[] = [];
-    const offsets: number[] = [];
-    let off = 0;
-    const push = (part: Part<T>): void => {
-      if (typeof part === 'string') {
-        const b = enc.encode(part);
-        out.push(b);
-        off += b.length;
-      } else if (part instanceof Uint8Array) {
-        out.push(part);
-        off += part.length;
-      } else {
-        out.push(part.data);
-        off += part.size;
-      }
-    };
-    push('%PDF-1.4\n');
-    push(new Uint8Array([0x25, 0xe2, 0xe3, 0xcf, 0xd3, 0x0a]));
-    this.objs.forEach((parts, i) => {
-      offsets.push(off);
-      push(`${i + 1} 0 obj\n`);
-      parts.forEach(push);
-      push('\nendobj\n');
-    });
-    const xref = off;
-    let t = `xref\n0 ${this.objs.length + 1}\n0000000000 65535 f \n`;
-    for (const o of offsets) t += String(o).padStart(10, '0') + ' 00000 n \n';
-    t += `trailer\n<< /Size ${this.objs.length + 1} /Root ${root} 0 R >>\nstartxref\n${xref}\n%%EOF\n`;
-    push(t);
-    return out;
-  }
-}
-
 /** PDF produkcyjny. jpegs: bryty bez pasków (wymiar z układu), pano: podgląd całości w niższej rozdzielczości. */
 export function productionPdf<T>(
   L: Layout,
@@ -135,7 +79,7 @@ export function productionPdf<T>(
   const font = pdf.add([
     `<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /FirstChar 32 /LastChar 255 /Widths [${helveticaWidths(false).join(' ')}] /Encoding << /Type /Encoding /BaseEncoding /WinAnsiEncoding /Differences [128 ${PL_NAMES}] >> >>`,
   ]);
-  const imgDict = (w: number, h: number, img: PdfImage<T>): Part<T>[] => [
+  const imgDict = (w: number, h: number, img: PdfImage<T>): PdfPart<T>[] => [
     `<< /Type /XObject /Subtype /Image /Width ${w} /Height ${h} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${img.size} >>\nstream\n`,
     img,
     '\nendstream',
