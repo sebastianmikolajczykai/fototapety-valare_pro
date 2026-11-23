@@ -1889,6 +1889,166 @@
  },
  {
   "p": {
+   "wallW": 2,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 0,
+   "mR": 0,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 2,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "errs": [
+   "Zakład jest większy niż szerokość brytu."
+  ],
+  "L": {
+   "totalWcm": 2,
+   "totalHcm": 276,
+   "bw": {
+    "widths": [
+     4,
+     4
+    ],
+    "added": false
+   },
+   "bWs": [
+    237,
+    237
+   ],
+   "xs": [
+    0,
+    -117
+   ],
+   "bH": 16300,
+   "band": 0,
+   "ov": 354,
+   "panoW": 120,
+   "imgH": 16300
+  }
+ },
+ {
+  "p": {
+   "wallW": 2,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 0,
+   "mR": 0,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "custom",
+   "count": 2,
+   "widths": [
+    5,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "errs": [
+   "Wcześniejsze bryty już pokrywają całą ścianę z naddatkiem. Zmniejsz liczbę brytów albo ich szerokości."
+  ],
+  "L": {
+   "totalWcm": 2,
+   "totalHcm": 276,
+   "bw": {
+    "widths": [
+     5,
+     3
+    ],
+    "added": true,
+    "rest": 0
+   },
+   "bWs": [
+    296,
+    178
+   ],
+   "xs": [
+    0,
+    -58
+   ],
+   "bH": 16300,
+   "band": 0,
+   "ov": 354,
+   "panoW": 120,
+   "imgH": 16300
+  }
+ },
+ {
+  "p": {
+   "wallW": 20,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 0,
+   "mR": 0,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "custom",
+   "count": 2,
+   "widths": [
+    5,
+    21
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "errs": [
+   "Zakład jest większy niż szerokość brytu."
+  ],
+  "L": {
+   "totalWcm": 20,
+   "totalHcm": 276,
+   "bw": {
+    "widths": [
+     5,
+     21
+    ],
+    "added": false,
+    "rest": 0
+   },
+   "bWs": [
+    296,
+    1241
+   ],
+   "xs": [
+    0,
+    -58
+   ],
+   "bH": 16300,
+   "band": 0,
+   "ov": 354,
+   "panoW": 1183,
+   "imgH": 16300
+  }
+ },
+ {
+  "p": {
    "wallW": 714.9,
    "wallH": 57,
    "mT": 3.5,
