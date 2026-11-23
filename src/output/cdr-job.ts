@@ -2,16 +2,15 @@
 // serwer z CorelDRAW (PowerShell + COM) składa z nich plik .cdr. Odpowiednik makeCdr (bryty.js)
 // i parseCdrJob (serwer-fototapety.js). Format żądania: [długość opisu: 4 bajty LE][opis JSON][dane plików po kolei].
 //
-// UWAGA (znany błąd starego programu, decyzja Sebastiana): link = true – .cdr linkuje JPG ścieżką bezwzględną,
-// więc po przeniesieniu lub wysłaniu pliku brak obrazów (potwierdzone 06.11.2026). Zostawione jak było,
-// żeby porównanie stary/nowy było bajt w bajt; zmiana = jeden parametr (LINK_IMAGES).
+// ŚWIADOMA ZMIANA względem starego programu (decyzja Sebastiana 23.11.2026): obrazy domyślnie OSADZONE w .cdr.
+// Stary program wysyłał link = true – .cdr linkował JPG ścieżką bezwzględną, więc po przeniesieniu lub wysłaniu
+// pliku brakowało obrazów (potwierdzone 06.11.2026). Linkowanie zostaje jako opcja (link = true).
 import type { WallParams } from '../domain/layout';
 import { OpsRecorder, type ProductionSheet, type SheetOp } from './sheet';
 
 export const CDR_MAX_FILES = 64;
 const MAX_OPS = 10000;
 const MAX_TEXT = 500;
-const LINK_IMAGES = true;
 
 export interface CdrJob {
   name: string;
@@ -28,8 +27,11 @@ export class CdrJobError extends Error {
   readonly status = 400;
 }
 
-/** Opis arkusza. sizes: rozmiary plików [podgląd całości, bryt 1, bryt 2, …] w bajtach. */
-export function cdrJob(sheet: ProductionSheet, p: WallParams, sizes: readonly number[]): CdrJob {
+/**
+ * Opis arkusza. sizes: rozmiary plików [podgląd całości, bryt 1, bryt 2, …] w bajtach.
+ * link: obrazy linkowane do JPG obok .cdr (mniejszy plik, tylko na komputerze z serwerem); domyślnie osadzone.
+ */
+export function cdrJob(sheet: ProductionSheet, p: WallParams, sizes: readonly number[], link = false): CdrJob {
   const rec = new OpsRecorder();
   sheet.draw(rec);
   const { w, h } = sheet.pageSize();
@@ -37,7 +39,7 @@ export function cdrJob(sheet: ProductionSheet, p: WallParams, sizes: readonly nu
   return {
     name: `bryty_${p.order}.cdr`,
     unit: 'cm',
-    link: LINK_IMAGES,
+    link,
     pageW: w,
     pageH: h,
     ops: rec.ops,

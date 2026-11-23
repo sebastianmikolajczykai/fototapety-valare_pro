@@ -1,6 +1,6 @@
 // Stan strony głównej (src/web/bryty.ts) dla pozostałych modułów. Każdy moduł strony jest osobnym skryptem,
 // więc wspólny stan idzie przez jeden obiekt window.Bryty (zamiast globalnych zmiennych starego bryty.js:
-// img, crop, params, render, changed, canvasPoint, renderPano). Odczyt w chwili wywołania – kolejność
+// img, crop, params, render, changed, canvasPoint, renderPano, layout). Odczyt w chwili wywołania – kolejność
 // ładowania skryptów (część modułów ładuje się przed bryty.js) nie ma znaczenia.
 import type { Crop, Layout, WallParams } from '../../domain/layout';
 
@@ -15,6 +15,8 @@ export interface BrytyBridge {
   changed(): void;
   canvasPoint(e: { clientX: number; clientY: number }): { x: number; y: number };
   renderPano(L: Layout, maxW: number): Promise<{ blob: Blob; w: number; h: number }>;
+  /** Podział ściany na bryty (dawna globalna funkcja layout z bryty.js). */
+  layout(p: WallParams): Layout;
 }
 
 const bridge = (): BrytyBridge => (window as unknown as { Bryty: BrytyBridge }).Bryty;

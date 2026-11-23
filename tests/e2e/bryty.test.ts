@@ -78,16 +78,20 @@ describe.skipIf(!enabled)('strona główna: stary vs nowy program', () => {
   const both = async (
     f: (page: Page) => Promise<unknown>,
     pages: Record<Kind, { page: Page }> = side,
+    strip?: RegExp,
   ): Promise<Record<string, unknown>> => {
     const out: Record<string, unknown> = {};
+    const raw: Record<string, string> = {};
     for (const kind of ['old', 'new'] as const) {
       const { page } = pages[kind];
       const r = await f(page);
       await page.waitForTimeout(300);
-      out[kind] = { ...((await state(page)) as object), r };
+      const st = { ...((await state(page)) as object), r };
+      raw[kind] = JSON.stringify(st);
+      out[kind] = strip ? JSON.parse(raw[kind].replace(strip, '')) : st;
     }
     expect(out.new).toEqual(out.old);
-    return out.new as Record<string, unknown>;
+    return { ...(out.new as Record<string, unknown>), raw };
   };
   const html = (o: Record<string, unknown>): string => o.html as string;
   const set = (s: FormSettings) => (p: Page) => applySettings(p, s);
@@ -128,15 +132,16 @@ describe.skipIf(!enabled)('strona główna: stary vs nowy program', () => {
   });
   it('thru cut, bez pliku dla Corela: bryty, całość i ZIP bajt w bajt', async () => {
     const o = await both(async p => {
-      await loadTestImage(p);
+      // Najpierw poprawne ustawienia (poprzednie testy zostawiły za duży bryt), potem plik.
       await applySettings(p, {
-        fields: { wallW: '200', wallH: '150', count: '2', dpi: '100', order: 'Test thru' },
+        fields: { wallW: '200', wallH: '150', count: '2', dpi: '100' },
         checks: { thru: true, pdf: false },
       });
+      await loadTestImage(p);
       await p.waitForTimeout(200);
       return generate(p);
     });
-    expect(JSON.stringify(o.r)).toContain('bryty_Test_thru.zip');
+    expect(JSON.stringify(o.r)).toContain('bryty_Fototapeta_200x150_23.11.2026.zip');
   });
 
   describe('serwer z CorelDRAW (atrapa)', () => {
@@ -186,8 +191,13 @@ describe.skipIf(!enabled)('strona główna: stary vs nowy program', () => {
       expect(await corel.old.page.evaluate(() => !!document.getElementById('cdrLink'))).toBe(false);
     });
     it('.cdr: ten sam arkusz i pliki; stary – obrazy linkowane, nowy – osadzone (świadoma zmiana)', async () => {
-      const o = await both(p => generate(p), pages());
-      expect(JSON.stringify(o.r)).toContain('bryty_zlecenie.cdr');
+      // Jedyna różnica na ekranie: stary dopisuje zdanie o folderze z JPG (bo linkuje), nowy nie.
+      const FOLDER = / Pliki i \.cdr są też zapisane w folderze .*?zabierz cały folder\./g;
+      const o = await both(p => generate(p), pages(), FOLDER);
+      expect(JSON.stringify(o.r)).toContain('23.11.2026.cdr');
+      const raw = o.raw as Record<Kind, string>;
+      expect(raw.old).toContain('Pliki i .cdr są też zapisane w folderze');
+      expect(raw.new).not.toContain('Pliki i .cdr są też zapisane w folderze');
       const [oldJob, newJob] = [corel.old.jobs[0]!, corel.new.jobs[0]!];
       expect(oldJob.link).toBe(true);
       expect(newJob.link).toBe(false);

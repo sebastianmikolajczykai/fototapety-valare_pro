@@ -46,7 +46,7 @@ describe('strona główna (stary bryty.js) – teksty i liczby bez DOM', () => {
     const L = computeLayout(P);
     expect(brytTableHtml(L)).toBe(
       '<tr><th>Bryt</th><th>Szerokość</th><th>Wysokość</th><th>Piksele</th></tr>' +
-        '<tr><td>1</td><td>122,67 cm</td><td>276 cm</td><td>7245 × 16300</td></tr>'.repeat(3),
+        [1, 2, 3].map(i => `<tr><td>${i}</td><td>122,67 cm</td><td>276 cm</td><td>7245 × 16300</td></tr>`).join(''),
     );
     const C = computeLayout({ ...P, split: 'custom', widths: [130, NaN] });
     expect(brytTableHtml(C)).toContain('<td>2 <span class="hint">(reszta)</span></td>');

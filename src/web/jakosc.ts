@@ -75,10 +75,10 @@ export class QualityPanel {
     return this.doc.getElementById(id) as T | null;
   }
 
-  /** Całe przeliczenie strony (render z bryty.js), a bez niego tylko to okno. */
+  /** Całe przeliczenie strony (window.Bryty.render ze strony głównej), a bez niego tylko to okno. */
   private rerender(fallback: () => void): void {
-    const render = (this.win as unknown as { render?: unknown }).render;
-    if (typeof render === 'function') (render as () => void)();
+    const bryty = (this.win as unknown as { Bryty?: { render?: unknown } }).Bryty;
+    if (typeof bryty?.render === 'function') (bryty.render as () => void)();
     else fallback();
   }
 
