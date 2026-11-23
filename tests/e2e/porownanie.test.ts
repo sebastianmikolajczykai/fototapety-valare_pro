@@ -345,6 +345,54 @@ const SCENARIOS: {
       "[document.activeElement && (document.activeElement.id || document.activeElement.className), [...document.querySelectorAll('.panel > .step')].map(s => s.className)]",
     expectText: ['class="over"', 'Do pokrycia: 356 cm'],
   },
+  {
+    name: 'lupa: otwarcie, dwa razy „+”, ramka kadru i łączenia brytów',
+    s: {
+      fields: { wallW: '350', wallH: '270', count: '3', material: '131|mural-canvas-ct' },
+      radios: { split: 'equal', join: 'overlap' },
+      clicks: ['#lupaBtn', '#lpIn', '#lpIn'],
+    },
+    generate: false,
+    probe:
+      '[document.activeElement && (document.activeElement.id || document.activeElement.className), document.body.style.overflow]',
+    expectText: ['lp-seam', 'test.jpg · 6000 × 4000 px'],
+  },
+  {
+    name: 'lupa: 100% pikseli, klawisz „−”, przeciągnięcie myszą, Tab zostaje w oknie',
+    s: {
+      clicks: ['#lp100'],
+      keys: [
+        { selector: '#lpView', key: '-' },
+        { selector: '#lpClose', key: 'Tab' },
+      ],
+      drag: { selector: '#lpView', dx: -120, dy: 80 },
+    },
+    generate: false,
+    probe:
+      '[document.activeElement && (document.activeElement.id || document.activeElement.className), document.body.style.overflow]',
+  },
+  {
+    name: 'lupa: Esc zamyka i oddaje fokus',
+    s: { keys: [{ selector: '#lpView', key: 'Escape' }] },
+    generate: false,
+    probe:
+      '[document.activeElement && (document.activeElement.id || document.activeElement.className), document.body.style.overflow]',
+  },
+  {
+    name: 'lupa: błąd w ustawieniach – lupa bez ramki, z informacją',
+    s: { fields: { count: '0' }, clicks: ['#lupaBtn', '#lpFit'] },
+    generate: false,
+    probe:
+      '[document.activeElement && (document.activeElement.id || document.activeElement.className), document.body.style.overflow]',
+    expectText: ['kadr pojawi się po poprawieniu ustawień'],
+  },
+  {
+    name: 'lupa: zamknięcie przyciskiem, ustawienia z powrotem poprawne',
+    s: { clicks: ['#lpClose'], fields: { count: '3' } },
+    generate: false,
+    probe:
+      '[document.activeElement && (document.activeElement.id || document.activeElement.className), document.body.style.overflow]',
+  },
 ];
 
 /** Stan formularza (wartości pól, zaznaczenia) – porównanie po ponownym otwarciu strony. */
