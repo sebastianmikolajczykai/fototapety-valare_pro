@@ -9,13 +9,14 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "start": "node dist/server/main.js",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.e2e.json",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "vitest run --project unit --project integration",
     "test:coverage": "vitest run --project unit --project integration --coverage",
-    "check": "npm run format:check && npm run lint && npm run typecheck && npm run test:coverage"
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm run test:coverage",
+    "test:e2e": "npm run build && vitest run --project e2e"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
