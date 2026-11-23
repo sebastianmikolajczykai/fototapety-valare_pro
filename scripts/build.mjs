@@ -1,6 +1,7 @@
 /* global console */
 // Budowa: serwer (dist/server/main.js + skrypt Corela) i strona (dist/public: pliki z public/ + skrypty
-// przeglądarki z src/web/*.ts, każdy jako osobny plik o tej samej nazwie co dawny skrypt strony).
+// przeglądarki z src/web/*.ts, każdy jako osobny plik o tej samej nazwie co dawny skrypt strony;
+// src/web/lib/ = wspólne części dołączane do tych plików).
 import { build } from 'esbuild';
 import fs from 'node:fs';
 
