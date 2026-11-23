@@ -2,6 +2,7 @@
 // Kolejne części (walidacja, wycena, terminy, jakość) dochodzą w PR-ach tych modułów.
 import { describe, expect, it } from 'vitest';
 import { computeLayout } from '../../src/domain/layout';
+import { addWorkdays, areaM2, calcPrice, type PriceInput } from '../../src/domain/pricing';
 import { layoutWarnings, validate } from '../../src/domain/validation';
 import { reviewerGolden, withDefaults } from '../support/reviewer';
 
@@ -48,5 +49,30 @@ describe('złoty wzorzec recenzenta: błędy i ostrzeżenia', () => {
     const p = withDefaults(c.p);
     expect(validate(p)).toEqual(c.errors);
     if (c.layout) expect(layoutWarnings(p, computeLayout(p))).toEqual(c.warnings);
+  });
+});
+
+describe('złoty wzorzec recenzenta: powierzchnie, wyceny, terminy', () => {
+  it('powierzchnie do wyceny dla 488 podziałów', () => {
+    for (const c of valid) {
+      const p = withDefaults(c.p);
+      const L = computeLayout(p);
+      expect(
+        { margin: areaM2(p, L, 'margin'), print: areaM2(p, L, 'print'), wall: areaM2(p, L, 'wall') },
+        c.name,
+      ).toEqual(c.layout!.area);
+    }
+  });
+  it('1140 wycen', () => {
+    expect(G.wycena).toHaveLength(1140);
+    for (const w of G.wycena) expect(calcPrice(w.in as unknown as PriceInput), JSON.stringify(w.in)).toEqual(w.out);
+  });
+  it('24 terminy w dniach roboczych', () => {
+    expect(G.terminy).toHaveLength(24);
+    const pad = (n: number) => String(n).padStart(2, '0');
+    for (const t of G.terminy) {
+      const r = addWorkdays(new Date(`${t.od}T12:00:00`), t.dni);
+      expect(`${r.getFullYear()}-${pad(r.getMonth() + 1)}-${pad(r.getDate())}`, `${t.od}+${t.dni}`).toBe(t.wynik);
+    }
   });
 });
