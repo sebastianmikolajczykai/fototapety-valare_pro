@@ -249,3 +249,26 @@ export function scaleMessageHtml(a: ScaleResult, p: Pick<WallParams, 'wallW' | '
       '<div class="warn">Proporcje zaznaczenia odbiegają od proporcji ściany. Jeśli ściana jest na zdjęciu na wprost, popraw narożniki.</div>';
   return html;
 }
+
+// RED: część strony bez DOM – pusta implementacja, testy muszą paść.
+export interface VizMessageState {
+  own: boolean;
+  hasPhoto: boolean;
+  points: number;
+  refPicking: boolean;
+  refPoints: number;
+  valid: boolean | null;
+  hasImage: boolean;
+  wallW: number;
+  wallH: number;
+}
+export const wallTextureRect = (_p: unknown, _L: unknown): null => null;
+export const photoStoreSize = (_w: number, _h: number): { w: number; h: number } => ({ w: 0, h: 0 });
+export const photoViewSize = (_w: number, _h: number): { W: number; H: number } => ({ W: 0, H: 0 });
+export const jpegSize = (_w: number, _h: number, _m: number): null => null;
+export const grownQuad = (_q: readonly Pt[], _g = 0): Pt[] => [];
+export const nearestPoint = (_l: readonly Pt[], _q: Pt, _w: number, _h: number, _m = 22): number => -1;
+export const vizMessage = (_s: VizMessageState): string => '';
+export const refPickLabel = (_p: boolean, _n: number): string => '';
+export const vizAiInfoHtml = (_h: unknown): string => '';
+export const vizFileName = (_o: string, _w: boolean, _r: string): string => '';
