@@ -33,15 +33,32 @@ jobs:
       - name: Testy + pokrycie (min. 80% linii, 70% gałęzi)
         run: npm run test:coverage
 
-  # Strona w przeglądarce (Chromium) na zbudowanym serwerze – po scaleniu na main (uwaga recenzenta do PR #2).
-  # Porównanie ze starym programem wymaga OLD_REPO (lokalnie), tu jest pomijane.
+  # Strona w przeglądarce (Chromium) na zbudowanym serwerze – przy każdym PR i po scaleniu na main.
+  # Porównanie ze starym programem (fototapety-valare @ 6933982) działa, gdy w GitHub Secrets jest OLD_REPO_TOKEN
+  # (token tylko do odczytu tego repo). Bez tokena testy porównawcze są pomijane, a reszta e2e działa.
   e2e:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: check
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      OLD_REPO_TOKEN: ${{ secrets.OLD_REPO_TOKEN }}
     steps:
       - uses: actions/checkout@v4
+      - name: Stary program do porównania (tylko odczyt)
+        if: env.OLD_REPO_TOKEN != ''
+        uses: actions/checkout@v4
+        with:
+          repository: sebastianmikolajczykai/fototapety-valare
+          ref: 6933982602cfdaae2b64f5a1b26c15793702ab5f
+          token: ${{ secrets.OLD_REPO_TOKEN }}
+          path: old-repo
+          persist-credentials: false
+      - name: Ścieżka starego programu dla testów
+        if: env.OLD_REPO_TOKEN != ''
+        run: echo "OLD_REPO=$GITHUB_WORKSPACE/old-repo" >> "$GITHUB_ENV"
+      - name: Brak tokena – porównanie ze starym programem pominięte
+        if: env.OLD_REPO_TOKEN == ''
+        run: echo "::warning::Brak sekretu OLD_REPO_TOKEN – testy porównawcze stary vs nowy są pominięte."
       - uses: actions/setup-node@v4
         with:
           node-version: 22

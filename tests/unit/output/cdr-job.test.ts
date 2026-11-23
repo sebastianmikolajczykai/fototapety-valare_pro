@@ -38,13 +38,22 @@ const err = (body: Uint8Array): string => {
 };
 
 describe('zlecenie dla CorelDRAW (przeglądarka → serwer)', () => {
-  it('005-21: arkusz z rysunku, pliki: podgląd + 3 bryty, nazwa bryty_<zlecenie>.cdr, obrazy linkowane jak dotąd', () => {
+  it('005-21: arkusz z rysunku, pliki: podgląd + 3 bryty, nazwa bryty_<zlecenie>.cdr', () => {
     const L = computeLayout(P005);
     const job = cdrJob(new ProductionSheet(L, P005), { ...P005, order: 'Kowalski' }, [10, 20, 20, 20]);
     expect(job.name).toBe('bryty_Kowalski.cdr');
-    expect(job.link).toBe(true);
     expect(job.files.map(f => f.name)).toEqual(['pano.jpg', 'bryt_1.jpg', 'bryt_2.jpg', 'bryt_3.jpg']);
     expect(job.ops.length).toBeGreaterThan(20);
+  });
+  it('świadoma zmiana (Sebastian 23.11.2026): obrazy domyślnie osadzone, linkowane tylko na życzenie', () => {
+    const L = computeLayout(P005);
+    const sheet = new ProductionSheet(L, P005);
+    const embedded = cdrJob(sheet, P005, [10, 20, 20, 20]);
+    const linked = cdrJob(sheet, P005, [10, 20, 20, 20], true);
+    expect(embedded.link).toBe(false);
+    expect(linked.link).toBe(true);
+    // Poza tym jednym polem zlecenie jest takie samo jak w starym programie.
+    expect({ ...linked, link: false }).toEqual(embedded);
   });
   it('treść żądania: długość opisu (4 bajty LE), opis JSON, dane plików po kolei – i serwer to odczytuje', () => {
     const job = { ...okJob, unit: 'cm', link: true } as unknown as CdrJob;

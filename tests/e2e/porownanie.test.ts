@@ -233,7 +233,7 @@ const SCENARIOS: {
     generate: false,
     assembly: true,
     probe:
-      '(() => { const p = params(); const L = layout(p); return { data: Sciana.data(p, L), suggest: Sciana.suggest(p, L), warnings: Sciana.warnings(p, L), items: Sciana.items, min: [Sciana.CORNER_MIN_CM, Sciana.OPENING_MIN_CM] }; })()',
+      '(() => { const B = window.Bryty; const p = B ? B.params() : params(); const L = B ? B.layout(p) : layout(p); return { data: Sciana.data(p, L), suggest: Sciana.suggest(p, L), warnings: Sciana.warnings(p, L), items: Sciana.items, min: [Sciana.CORNER_MIN_CM, Sciana.OPENING_MIN_CM] }; })()',
     expectText: ['wypada bliżej niż 20 cm od narożnika'],
   },
   {
@@ -245,7 +245,7 @@ const SCENARIOS: {
     },
     generate: false,
     probe:
-      '(() => { const p = params(); const L = layout(p); return { data: Sciana.data(p, L), suggest: Sciana.suggest(p, L), warnings: Sciana.warnings(p, L), items: Sciana.items, min: [Sciana.CORNER_MIN_CM, Sciana.OPENING_MIN_CM] }; })()',
+      '(() => { const B = window.Bryty; const p = B ? B.params() : params(); const L = B ? B.layout(p) : layout(p); return { data: Sciana.data(p, L), suggest: Sciana.suggest(p, L), warnings: Sciana.warnings(p, L), items: Sciana.items, min: [Sciana.CORNER_MIN_CM, Sciana.OPENING_MIN_CM] }; })()',
     expectText: [
       'Drzwi 1: wpisz położenie',
       'Okno 1: wpisz szerokość',
@@ -268,7 +268,7 @@ const SCENARIOS: {
     },
     generate: false,
     probe:
-      '(() => { const p = params(); const L = layout(p); return { data: Sciana.data(p, L), suggest: Sciana.suggest(p, L), warnings: Sciana.warnings(p, L), items: Sciana.items, min: [Sciana.CORNER_MIN_CM, Sciana.OPENING_MIN_CM] }; })()',
+      '(() => { const B = window.Bryty; const p = B ? B.params() : params(); const L = B ? B.layout(p) : layout(p); return { data: Sciana.data(p, L), suggest: Sciana.suggest(p, L), warnings: Sciana.warnings(p, L), items: Sciana.items, min: [Sciana.CORNER_MIN_CM, Sciana.OPENING_MIN_CM] }; })()',
     expectText: ['Ustawiono'],
   },
   {
@@ -281,7 +281,7 @@ const SCENARIOS: {
     },
     generate: false,
     probe:
-      '(() => { const p = params(); const L = layout(p); return { data: Sciana.data(p, L), suggest: Sciana.suggest(p, L), warnings: Sciana.warnings(p, L), items: Sciana.items, min: [Sciana.CORNER_MIN_CM, Sciana.OPENING_MIN_CM] }; })()',
+      '(() => { const B = window.Bryty; const p = B ? B.params() : params(); const L = B ? B.layout(p) : layout(p); return { data: Sciana.data(p, L), suggest: Sciana.suggest(p, L), warnings: Sciana.warnings(p, L), items: Sciana.items, min: [Sciana.CORNER_MIN_CM, Sciana.OPENING_MIN_CM] }; })()',
     expectText: ['Obecny podział już omija narożniki i otwory.'],
   },
   {
