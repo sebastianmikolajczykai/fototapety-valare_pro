@@ -10,13 +10,14 @@ import {
   loadTestImage,
   OLD_REPO,
   openPage,
+  pageHtml,
   startServer,
   visibleText,
   type FormSettings,
   type RunningServer,
 } from './support';
 
-const SCENARIOS: { name: string; s: FormSettings; generate: boolean }[] = [
+const SCENARIOS: { name: string; s: FormSettings; generate: boolean; expectText?: string[] }[] = [
   {
     name: '005-21: 350×270, naddatek 3, zakład 6, 3 bryty, Mural Canvas CT',
     s: {
@@ -53,6 +54,24 @@ const SCENARIOS: { name: string; s: FormSettings; generate: boolean }[] = [
       widths: ['100', '120', ''],
     },
     generate: true,
+  },
+  {
+    name: 'wycena: ekspres, powierzchnia brytów, na styk, Canvas NW',
+    s: {
+      fields: { wallW: '400', count: '4', material: '132|canvas-nw', wycArea: 'print' },
+      radios: { join: 'butt', split: 'equal', wycTermin: 'express' },
+    },
+    generate: false,
+    expectText: ['Canvas NW:', 'Przygotowanie na styk', 'Dopłata za termin +30%'],
+  },
+  {
+    name: 'wycena: materiał na zamówienie (Diamante CT) blokuje wybór terminu, sama ściana',
+    s: {
+      fields: { material: '130|diamante-ct', wycArea: 'wall' },
+      radios: { join: 'overlap' },
+      checks: { wycOrder: true },
+    },
+    generate: false,
   },
   {
     name: 'błąd: bryt szerszy niż materiał',
@@ -93,9 +112,15 @@ describe.skipIf(!enabled)('stary vs nowy program', () => {
         await applySettings(page, sc.s);
         await page.waitForTimeout(300);
         const result = sc.generate ? await generate(page) : null;
-        out[kind] = { text: await visibleText(page), result };
+        const disabled = await page.evaluate(() =>
+          [...document.querySelectorAll('input, select, button')]
+            .filter(e => (e as HTMLInputElement).disabled)
+            .map(e => e.id || (e as HTMLInputElement).name),
+        );
+        out[kind] = { text: await visibleText(page), html: await pageHtml(page), disabled, result };
       }
       expect(out.new).toEqual(out.old);
+      for (const t of sc.expectText ?? []) expect((out.new as { html: string }).html).toContain(t);
     });
   it('brak błędów JavaScript po obu stronach', () => {
     expect(side.new.errors).toEqual(side.old.errors);

@@ -37,7 +37,7 @@ export async function startServer(kind: 'new' | 'old', port: number): Promise<Ru
   const env = {
     PATH: process.env.PATH,
     LOCAL_PORT: String(port),
-    ...(kind === 'new' ? { PUBLIC_DIR: path.resolve('public') } : {}),
+    ...(kind === 'new' ? { PUBLIC_DIR: path.resolve('dist/public') } : {}),
   };
   let out = '';
   const proc: ChildProcess = spawn(process.execPath, [file], { env, stdio: ['ignore', 'pipe', 'pipe'] });
@@ -199,3 +199,7 @@ export async function generate(page: Page, ov = 0): Promise<RunResult> {
 
 /** Tekst widoczny na stronie (porównanie komunikatów, ostrzeżeń, wyceny). */
 export const visibleText = (page: Page): Promise<string> => page.evaluate(() => document.body.innerText);
+
+/** Cały HTML strony (także zwiniętych kroków); adresy blob: zastąpione stałym tekstem (są losowe). */
+export const pageHtml = (page: Page): Promise<string> =>
+  page.evaluate(() => document.body.innerHTML.replace(/blob:[^"')\s]+/g, 'blob:X'));
