@@ -64,6 +64,10 @@ const named = [
   P({ overlap: 200, count: 3 }),
   P({ wallW: 300, mL: 0, mR: 0, count: 3, overlap: 0 }),
   P({ wallW: 2000, wallH: 300, count: 2, maxPrint: Infinity, dpi: 300 }),
+  // „Zakład jest większy niż szerokość brytu.” (uwaga recenzenta do PR #2): podział równy i własne szerokości.
+  P({ wallW: 2, mL: 0, mR: 0, count: 2, overlap: 6 }),
+  P({ wallW: 2, mL: 0, mR: 0, count: 2, overlap: 6, split: 'custom', widths: [5, NaN] }),
+  P({ wallW: 20, mL: 0, mR: 0, count: 2, overlap: 6, split: 'custom', widths: [5, 21] }),
 ];
 
 function randomParams() {
