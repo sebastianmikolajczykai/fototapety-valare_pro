@@ -28,6 +28,8 @@ const SCENARIOS: {
   sample?: boolean;
   /** Klik „Schemat montażu” i porównanie pliku PDF. */
   assembly?: boolean;
+  /** Wyrażenie liczone na stronie po ustawieniach (porównywany wynik). */
+  probe?: string;
   expectText?: string[];
 }[] = [
   {
@@ -210,6 +212,77 @@ const SCENARIOS: {
     s: { fields: { count: '0' } },
     generate: false,
   },
+  {
+    name: 'ściana: narożnik, drzwi i okno w danych (sekcja niewidoczna) – ostrzeżenia, nakładka, propozycja, schemat PDF',
+    s: {
+      script:
+        "Sciana.items.push({ type: 'corner', x: 118, w: NaN, y: NaN, h: NaN }, { type: 'door', x: 200, w: 90, y: 0, h: 205 }, { type: 'window', x: 20, w: 60, y: 100, h: NaN })",
+      fields: {
+        wallW: '350',
+        wallH: '270',
+        mT: '3',
+        mB: '3',
+        mL: '3',
+        mR: '3',
+        count: '3',
+        material: '131|mural-canvas-ct',
+      },
+      radios: { split: 'equal', join: 'overlap' },
+    },
+    generate: false,
+    assembly: true,
+    probe:
+      '(() => { const p = params(); const L = layout(p); return { data: Sciana.data(p, L), suggest: Sciana.suggest(p, L), warnings: Sciana.warnings(p, L), items: Sciana.items, min: [Sciana.CORNER_MIN_CM, Sciana.OPENING_MIN_CM] }; })()',
+    expectText: ['wypada bliżej niż 20 cm od narożnika'],
+  },
+  {
+    name: 'ściana: niekompletne i wystające elementy – ostrzeżenia',
+    s: {
+      script:
+        "Sciana.items.splice(0, Sciana.items.length, { type: 'door', x: NaN, w: 80, y: 0, h: NaN }, { type: 'window', x: 10, w: NaN, y: NaN, h: NaN }, { type: 'window', x: 300, w: 80, y: NaN, h: NaN }, { type: 'door', x: 10, w: 50, y: 100, h: 200 })",
+      fields: { count: '2' },
+    },
+    generate: false,
+    probe:
+      '(() => { const p = params(); const L = layout(p); return { data: Sciana.data(p, L), suggest: Sciana.suggest(p, L), warnings: Sciana.warnings(p, L), items: Sciana.items, min: [Sciana.CORNER_MIN_CM, Sciana.OPENING_MIN_CM] }; })()',
+    expectText: [
+      'Drzwi 1: wpisz położenie',
+      'Okno 1: wpisz szerokość',
+      'Okno 2 wychodzi poza ścianę',
+      'Drzwi 2 wychodzi poza ścianę u góry',
+    ],
+  },
+  {
+    name: 'ściana: panel wstawiony na stronę – dodanie narożnika, wpisanie położenia, propozycja podziału, usunięcie',
+    s: {
+      script: `Sciana.items.splice(0, Sciana.items.length);
+        const box = document.createElement('div'); box.id = 'scianaBox'; box.className = 'step';
+        document.getElementById('widthsBox').after(box); Sciana.init();
+        box.querySelector('[data-add=corner]').click(); box.querySelector('[data-add=window]').click();
+        const set = (i, k, v) => { const el = box.querySelector('input[data-i="' + i + '"][data-k="' + k + '"]'); el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })); };
+        set(0, 'x', '120,5'); set(1, 'x', '235'); set(1, 'w', '70');`,
+      fields: { wallW: '350', count: '3', material: '131|mural-canvas-ct' },
+      radios: { split: 'equal', join: 'overlap' },
+      clicks: ['#scianaSuggest'],
+    },
+    generate: false,
+    probe:
+      '(() => { const p = params(); const L = layout(p); return { data: Sciana.data(p, L), suggest: Sciana.suggest(p, L), warnings: Sciana.warnings(p, L), items: Sciana.items, min: [Sciana.CORNER_MIN_CM, Sciana.OPENING_MIN_CM] }; })()',
+    expectText: ['Ustawiono'],
+  },
+  {
+    name: 'ściana: usunięcie elementów z panelu, obecny podział bez konfliktów',
+    s: {
+      script: `const box = document.getElementById('scianaBox'); box.querySelector('[data-del="1"]').click();`,
+      fields: { count: '1', wallW: '100' },
+      radios: { split: 'equal' },
+      clicks: ['#scianaSuggest'],
+    },
+    generate: false,
+    probe:
+      '(() => { const p = params(); const L = layout(p); return { data: Sciana.data(p, L), suggest: Sciana.suggest(p, L), warnings: Sciana.warnings(p, L), items: Sciana.items, min: [Sciana.CORNER_MIN_CM, Sciana.OPENING_MIN_CM] }; })()',
+    expectText: ['Obecny podział już omija narożniki i otwory.'],
+  },
 ];
 
 const enabled = !!OLD_REPO;
@@ -256,6 +329,7 @@ describe.skipIf(!enabled)('stary vs nowy program', () => {
           return M ? M.wybrany() : 'brak window.Materialy';
         });
         const canvases = await canvasHashes(page);
+        const probe = sc.probe ? await page.evaluate(sc.probe) : null;
         out[kind] = {
           text: await visibleText(page),
           html: await pageHtml(page),
@@ -265,6 +339,7 @@ describe.skipIf(!enabled)('stary vs nowy program', () => {
           result,
           sample,
           assembly,
+          probe,
         };
       }
       expect(out.new).toEqual(out.old);
