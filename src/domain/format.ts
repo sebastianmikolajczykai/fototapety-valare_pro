@@ -7,9 +7,6 @@ export const f1 = (x: number): string => x.toLocaleString(LOCALE, { maximumFract
 /** Liczba z maks. 2 miejscami po przecinku, np. 1,25. */
 export const f2 = (x: number): string => x.toLocaleString(LOCALE, { maximumFractionDigits: 2 });
 
-/** Liczba zaokrąglona do całości, np. 12 500. */
-export const f0 = (x: number): string => Math.round(x).toLocaleString(LOCALE);
-
 /** Odmiana słowa „bryt”: 1 bryt, 2–4 bryty, 5+ brytów (12–14 brytów). */
 export function plural(n: number): string {
   if (n === 1) return 'bryt';
