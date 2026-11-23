@@ -74,6 +74,40 @@ const SCENARIOS: { name: string; s: FormSettings; generate: boolean; expectText?
     generate: false,
   },
   {
+    name: 'materiały: filtr „Własny klej”, rolka Sand Dot 160, klik w kartę zostawia wybraną rolkę',
+    s: {
+      fields: { wallW: '300', count: '2' },
+      clicks: [
+        '#mkBox [data-f="Własny klej"]',
+        '#mkBox .mk-chip[data-id="sand-dot-gw-160"]',
+        '#mkBox .mk-card[data-id="sand-dot-gw-107"] .mk-meta',
+      ],
+    },
+    generate: false,
+    expectText: ['Wybrany: <b>Sand Dot GW 160</b>, maks. druk 154 cm'],
+  },
+  {
+    name: 'materiały: filtr „Wszystkie”, Enter na karcie Woven Bamboo (na zamówienie), klik w opis nic nie zmienia',
+    s: {
+      clicks: ['#mkBox [data-f="Wszystkie"]', '#mkBox .mk-card[data-id="concrete-nw"] summary'],
+      keys: [{ selector: '#mkBox .mk-card[data-id="woven-bamboo-nw"]', key: 'Enter' }],
+    },
+    generate: false,
+    expectText: ['Wybrany: <b>Woven Bamboo NW</b>', 'na zamówienie (21 dni rob.)'],
+  },
+  {
+    name: 'materiały: karta „Inny materiał” z wpisaną szerokością 120,5 cm',
+    s: { fields: { maxPrint: '120.5' }, clicks: ['#mkBox .mk-card[data-id="own"]'] },
+    generate: false,
+    expectText: ['Wybrany: <b>inny materiał</b>, maks. druk 120.5 cm'],
+  },
+  {
+    name: 'materiały: karta „Bez materiału”, filtr „Uzupełniające”',
+    s: { clicks: ['#mkBox .mk-card[data-id=""]', '#mkBox [data-f="Uzupełniające"]'] },
+    generate: false,
+    expectText: ['Wybrany: <b>bez materiału</b>'],
+  },
+  {
     name: 'błąd: bryt szerszy niż materiał',
     s: { fields: { wallW: '120', count: '1', material: '100|sand-dot-gw-107' }, radios: { split: 'equal' } },
     generate: false,
@@ -117,7 +151,11 @@ describe.skipIf(!enabled)('stary vs nowy program', () => {
             .filter(e => (e as HTMLInputElement).disabled)
             .map(e => e.id || (e as HTMLInputElement).name),
         );
-        out[kind] = { text: await visibleText(page), html: await pageHtml(page), disabled, result };
+        const material = await page.evaluate(() => {
+          const M = (window as unknown as { Materialy?: { wybrany(): unknown } }).Materialy;
+          return M ? M.wybrany() : 'brak window.Materialy';
+        });
+        out[kind] = { text: await visibleText(page), html: await pageHtml(page), disabled, material, result };
       }
       expect(out.new).toEqual(out.old);
       for (const t of sc.expectText ?? []) expect((out.new as { html: string }).html).toContain(t);

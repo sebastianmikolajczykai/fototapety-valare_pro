@@ -95,6 +95,10 @@ export interface FormSettings {
   radios?: Record<string, string>;
   checks?: Record<string, boolean>;
   widths?: string[];
+  /** Kliknięcia (selektory CSS) po ustawieniu pól – w DOM, więc działa też w zwiniętym kroku. */
+  clicks?: string[];
+  /** Klawisz na elemencie (np. Enter na karcie materiału). */
+  keys?: { selector: string; key: string }[];
 }
 
 /** Ustawienia formularza przez DOM (zdarzenie input jak od użytkownika). */
@@ -124,6 +128,11 @@ export async function applySettings(page: Page, s: FormSettings): Promise<void> 
       ins.forEach((el, i) => (el.value = s.widths![i] ?? ''));
       fire(document.getElementById('widthsBox')!);
     }
+    for (const sel of s.clicks ?? []) (document.querySelector(sel) as HTMLElement).click();
+    for (const k of s.keys ?? [])
+      document
+        .querySelector(k.selector)!
+        .dispatchEvent(new KeyboardEvent('keydown', { key: k.key, bubbles: true, cancelable: true }));
   }, s);
 }
 
