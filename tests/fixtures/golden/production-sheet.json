@@ -1,0 +1,3531 @@
+[
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "panoW": 4000,
+  "panoH": 3063,
+  "out": {
+   "pdf": "JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5kb2JqCjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFsxMCAwIFJdIC9Db3VudCAxID4+CmVuZG9iagozIDAgb2JqCjw8IC9UeXBlIC9Gb250IC9TdWJ0eXBlIC9UeXBlMSAvQmFzZUZvbnQgL0hlbHZldGljYSAvRmlyc3RDaGFyIDMyIC9MYXN0Q2hhciAyNTUgL1dpZHRocyBbMjc4IDI3OCAzNTUgNTU2IDU1NiA4ODkgNjY3IDE5MSAzMzMgMzMzIDM4OSA1ODQgMjc4IDMzMyAyNzggMjc4IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiAyNzggMjc4IDU4NCA1ODQgNTg0IDU1NiAxMDE1IDY2NyA2NjcgNzIyIDcyMiA2NjcgNjExIDc3OCA3MjIgMjc4IDUwMCA2NjcgNTU2IDgzMyA3MjIgNzc4IDY2NyA3NzggNzIyIDY2NyA2MTEgNzIyIDY2NyA5NDQgNjY3IDY2NyA2MTEgMjc4IDI3OCAyNzggNDY5IDU1NiAzMzMgNTU2IDU1NiA1MDAgNTU2IDU1NiAyNzggNTU2IDU1NiAyMjIgMjIyIDUwMCAyMjIgODMzIDU1NiA1NTYgNTU2IDU1NiAzMzMgNTAwIDI3OCA1NTYgNTAwIDcyMiA1MDAgNTAwIDUwMCAzMzQgMjYwIDMzNCA1ODQgNTU2IDU1NiA1MDAgNTU2IDIyMiA1NTYgNTAwIDUwMCA1MDAgNjY3IDcyMiA2NjcgNTU2IDcyMiA2NjcgNjExIDYxMSA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiAyNzggNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNzc4IDU1NiA1NTYgNTU2IDU4NCA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTZdIC9FbmNvZGluZyA8PCAvVHlwZSAvRW5jb2RpbmcgL0Jhc2VFbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9EaWZmZXJlbmNlcyBbMTI4IC9hb2dvbmVrIC9jYWN1dGUgL2VvZ29uZWsgL2xzbGFzaCAvbmFjdXRlIC9zYWN1dGUgL3phY3V0ZSAvemRvdGFjY2VudCAvQW9nb25layAvQ2FjdXRlIC9Fb2dvbmVrIC9Mc2xhc2ggL05hY3V0ZSAvU2FjdXRlIC9aYWN1dGUgL1pkb3RhY2NlbnRdID4+ID4+CmVuZG9iago0IDAgb2JqCjw8IC9UeXBlIC9YT2JqZWN0IC9TdWJ0eXBlIC9JbWFnZSAvV2lkdGggNDAwMCAvSGVpZ2h0IDMwNjMgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDkgPj4Kc3RyZWFtClBBTk8tSlBFRwplbmRzdHJlYW0KZW5kb2JqCjUgMCBvYmoKPDwgL1R5cGUgL1hPYmplY3QgL1N1YnR5cGUgL0ltYWdlIC9XaWR0aCA3MjQ1IC9IZWlnaHQgMTYzMDAgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE3ID4+CnN0cmVhbQpKUEVHLTAtNzI0NXgxNjMwMAplbmRzdHJlYW0KZW5kb2JqCjYgMCBvYmoKPDwgL1R5cGUgL1hPYmplY3QgL1N1YnR5cGUgL0ltYWdlIC9XaWR0aCA3MjQ1IC9IZWlnaHQgMTYzMDAgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE3ID4+CnN0cmVhbQpKUEVHLTEtNzI0NXgxNjMwMAplbmRzdHJlYW0KZW5kb2JqCjcgMCBvYmoKPDwgL1R5cGUgL1hPYmplY3QgL1N1YnR5cGUgL0ltYWdlIC9XaWR0aCA3MjQ1IC9IZWlnaHQgMTYzMDAgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE3ID4+CnN0cmVhbQpKUEVHLTItNzI0NXgxNjMwMAplbmRzdHJlYW0KZW5kb2JqCjggMCBvYmoKPDwgL0ZvbnQgPDwgL0YxIDMgMCBSID4+IC9YT2JqZWN0IDw8IC9QYW5vIDQgMCBSIC9JbTAgNSAwIFIgL0ltMSA2IDAgUiAvSW0yIDcgMCBSID4+ID4+CmVuZG9iago5IDAgb2JqCjw8IC9MZW5ndGggMjA0MSA+PgpzdHJlYW0KQlQgL0YxIDI1Mi4zMjQgVGYgMCAwIDAgMSBrIDEyNjEuNjIgMjg1OTQuNTY4IFRkIChMRUdFTkRBOikgVGogRVQKQlQgL0YxIDIwMS44NTkgVGYgMSAwIDAgMCBrIDEyNjEuNjIgMjgyNjYuNTQ3IFRkIChuYWRkYXRlaykgVGogRVQKcSAwIDEgLTEgMCAxMTU5Ni44MTEgMjczNTEuMTE2IGNtIEJUIC9GMSAyMDEuODU5IFRmIDEgMCAwIDAgayAwIDAgVGQgKG5hZGRhdGVrKSBUaiBFVCBRCnEgMTAwOTIuOTYgMCAwIDc4MjQgMTI2MS42MiAyMDM2Ni44NSBjbSAvUGFubyBEbyBRCnEgMSAwIDAgMCBLIDMzLjY0MyB3IDEyNjEuNjIgMjAzNjYuODUgMTAwOTIuOTYgNzgyNCByZSBTIFEKcSAwIDEgMSAwIEsgMTYuODIyIHcgMTM0Ni42NTkgMjA0NTIuMjY3IDk5MjEuMjYgNzY1My41NDMgcmUgUyBRCnEgMCAxIDEgMCBLIDE2LjgyMiB3IDEzNDYuNjU5IDIwMTY0Ljk5MSBtIDExMjY3LjkxOSAyMDE2NC45OTEgbCBTIFEKcSAwIDEgMSAwIEsgMTYuODIyIHcgMTM0Ni42NTkgMjAyNDAuNjg4IG0gMTM0Ni42NTkgMjAwODkuMjk0IGwgUyBRCnEgMCAxIDEgMCBLIDE2LjgyMiB3IDExMjY3LjkxOSAyMDI0MC42ODggbSAxMTI2Ny45MTkgMjAwODkuMjk0IGwgUyBRCkJUIC9GMSAyMDEuODU5IFRmIDAgMSAxIDAgayA1NzgyLjQ1NSAxOTk0Mi45NDYgVGQgKDM1MDAsMDAgbW0pIFRqIEVUCkJUIC9GMSAyNTIuMzI0IFRmIDAgMSAxIDAgayA1NDU0LjQzNCAxOTY3MC40MzYgVGQgKHd5bWlhciBcMjA1Y2lhbnkpIFRqIEVUCnEgMCAxIDEgMCBLIDE2LjgyMiB3IDEwNTkuNzYxIDI4MTA1LjgxMSBtIDEwNTkuNzYxIDIwNDUyLjI2NyBsIFMgUQpxIDAgMSAxIDAgSyAxNi44MjIgdyA5ODQuMDY0IDI4MTA1LjgxMSBtIDExMzUuNDU4IDI4MTA1LjgxMSBsIFMgUQpxIDAgMSAxIDAgSyAxNi44MjIgdyA5ODQuMDY0IDIwNDUyLjI2NyBtIDExMzUuNDU4IDIwNDUyLjI2NyBsIFMgUQpxIDAgMSAtMSAwIDk5OS4yMDMgMjM3NTQuMjA1IGNtIEJUIC9GMSAyMDEuODU5IFRmIDAgMSAxIDAgayAwIDAgVGQgKDI3MDAsMDAgbW0pIFRqIEVUIFEKcSAwIDEgLTEgMCA3NzcuMTU4IDIzNDI2LjE4NCBjbSBCVCAvRjEgMjUyLjMyNCBUZiAwIDEgMSAwIGsgMCAwIFRkICh3eW1pYXIgXDIwNWNpYW55KSBUaiBFVCBRCnEgMTAwOTIuOTYgMCAwIDc4MjQgMTI2MS42MiAxMDg3Ny4zMTYgY20gL1Bhbm8gRG8gUQpxIDAgMCAwIDEgSyAxNi44MjIgdyAxMjYxLjYyIDE4NzAxLjMxNiAzNDc3LjYgNzgyLjQgcmUgUyBRCnEgMCAwIDAgMSBLIDE2LjgyMiB3IDEyNjEuNjIgMTAwOTQuOTE2IDM0NzcuNiA3ODIuNCByZSBTIFEKcSAwIDAgMCAxIEsgMTYuODIyIHcgNDU2OS4zIDE4NzAxLjMxNiAzNDc3LjYgNzgyLjQgcmUgUyBRCnEgMCAwIDAgMSBLIDE2LjgyMiB3IDQ1NjkuMyAxMDA5NC45MTYgMzQ3Ny42IDc4Mi40IHJlIFMgUQpxIDAgMCAwIDEgSyAxNi44MjIgdyA3ODc2Ljk4IDE4NzAxLjMxNiAzNDc3LjYgNzgyLjQgcmUgUyBRCnEgMCAwIDAgMSBLIDE2LjgyMiB3IDc4NzYuOTggMTAwOTQuOTE2IDM0NzcuNiA3ODIuNCByZSBTIFEKcSAwIDAgMCAxIEsgMTYuODIyIHcgMTI2MS42MiAxMDg3Ny4zMTYgMTAwOTIuOTYgNzgyNCByZSBTIFEKQlQgL0YxIDUwNC42NDggVGYgMCAwIDAgMSBrIDUwNC42NDggOTA4NS42MiBUZCAoRm90b3RhcGV0YSkgVGogRVQKQlQgL0YxIDIwMS44NTkgVGYgMCAwIDAgMSBrIDUwNC42NDggODc1Mi41NTIgVGQgKDEvMyAgMTIyLDcgXDMyNyAyNzYsMCBjbSkgVGogRVQKcSAzNDc3LjYgMCAwIDc4MjQgNTA0LjY0OCA4MDcuNDM3IGNtIC9JbTAgRG8gUQpCVCAvRjEgMjAxLjg1OSBUZiAwIDAgMCAxIGsgNDM4NS45NjYgODc1Mi41NTIgVGQgKDIvMyAgMTIyLDcgXDMyNyAyNzYsMCBjbSkgVGogRVQKcSAzNDc3LjYgMCAwIDc4MjQgNDM4NS45NjYgODA3LjQzNyBjbSAvSW0xIERvIFEKQlQgL0YxIDIwMS44NTkgVGYgMCAwIDAgMSBrIDgyNjcuMjg1IDg3NTIuNTUyIFRkICgzLzMgIDEyMiw3IFwzMjcgMjc2LDAgY20pIFRqIEVUCnEgMzQ3Ny42IDAgMCA3ODI0IDgyNjcuMjg1IDgwNy40MzcgY20gL0ltMiBEbyBRCgplbmRzdHJlYW0KZW5kb2JqCjEwIDAgb2JqCjw8IC9UeXBlIC9QYWdlIC9QYXJlbnQgMiAwIFIgL01lZGlhQm94IFswIDAgMTIzNjMuODc2IDI5MzUxLjU0XSAvUmVzb3VyY2VzIDggMCBSIC9Db250ZW50cyA5IDAgUiA+PgplbmRvYmoKeHJlZgowIDExCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwMDY0IDAwMDAwIG4gCjAwMDAwMDAxMjIgMDAwMDAgbiAKMDAwMDAwMTM0OSAwMDAwMCBuIAowMDAwMDAxNTI1IDAwMDAwIG4gCjAwMDAwMDE3MTEgMDAwMDAgbiAKMDAwMDAwMTg5NyAwMDAwMCBuIAowMDAwMDAyMDgzIDAwMDAwIG4gCjAwMDAwMDIxODYgMDAwMDAgbiAKMDAwMDAwNDI3OSAwMDAwMCBuIAp0cmFpbGVyCjw8IC9TaXplIDExIC9Sb290IDEgMCBSID4+CnN0YXJ0eHJlZgo0Mzk1CiUlRU9GCg==",
+   "pages": 1,
+   "schemaScale": 1,
+   "G": {
+    "n": 3,
+    "wCm": [
+     122.68199999999999,
+     122.68199999999999,
+     122.68199999999999
+    ],
+    "xsCm": [
+     0,
+     116.68759999999999,
+     233.37519999999998
+    ],
+    "PW": 356.0572,
+    "PH": 276.0133333333333,
+    "IH": 276.0133333333333,
+    "B": 0,
+    "fs": 8.901430000000001,
+    "fsS": 7.121144000000001,
+    "lw": 0.5934286666666667,
+    "M": 17.802860000000003,
+    "ext": 27.601333333333333,
+    "gap": 14.242288000000002
+   },
+   "cdr": {
+    "pageW": 436.17007000000007,
+    "pageH": 1035.4571196666666,
+    "ops": [
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "LEGENDA:",
+      "x": 44.50715000000001,
+      "y": 26.704290000000004,
+      "size": 8.901430000000001,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "s": "naddatek",
+      "x": 44.50715000000001,
+      "y": 38.276149000000004,
+      "size": 7.121144000000001,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "s": "naddatek",
+      "x": 409.10972280000004,
+      "y": 70.57053704,
+      "size": 7.121144000000001,
+      "rot": true
+     },
+     {
+      "t": "img",
+      "file": "pano.jpg",
+      "x": 44.50715000000001,
+      "y": 40.946578,
+      "w": 356.0572,
+      "h": 276.0133333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "x": 44.50715000000001,
+      "y": 40.946578,
+      "w": 356.0572,
+      "h": 276.0133333333333,
+      "wd": 1.1868573333333334
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x": 47.50715000000001,
+      "y": 43.946578,
+      "w": 350,
+      "h": 270,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 47.50715000000001,
+      "y1": 324.0810553333333,
+      "x2": 397.50715,
+      "y2": 324.0810553333333,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 47.50715000000001,
+      "y1": 321.4106263333333,
+      "x2": 47.50715000000001,
+      "y2": 326.75148433333334,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 397.50715,
+      "y1": 321.4106263333333,
+      "x2": 397.50715,
+      "y2": 326.75148433333334,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "3500,00 mm",
+      "x": 203.99217560000002,
+      "y": 331.9143137333333,
+      "size": 7.121144000000001,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "wymiar ściany",
+      "x": 192.4203166,
+      "y": 341.5278581333333,
+      "size": 8.901430000000001,
+      "rot": false
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 37.38600600000001,
+      "y1": 43.946578,
+      "x2": 37.38600600000001,
+      "y2": 313.946578,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 34.71557700000001,
+      "y1": 43.946578,
+      "x2": 40.05643500000001,
+      "y2": 43.946578,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 34.71557700000001,
+      "y1": 313.946578,
+      "x2": 40.05643500000001,
+      "y2": 313.946578,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "2700,00 mm",
+      "x": 35.24966280000001,
+      "y": 197.4615524,
+      "size": 7.121144000000001,
+      "rot": true
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "wymiar ściany",
+      "x": 27.416404400000008,
+      "y": 209.0334114,
+      "size": 8.901430000000001,
+      "rot": true
+     },
+     {
+      "t": "img",
+      "file": "pano.jpg",
+      "x": 44.50715000000001,
+      "y": 375.71624966666667,
+      "w": 356.0572,
+      "h": 276.0133333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 44.50715000000001,
+      "y": 348.1149163333333,
+      "w": 122.68199999999999,
+      "h": 27.601333333333333,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 44.50715000000001,
+      "y": 651.729583,
+      "w": 122.68199999999999,
+      "h": 27.601333333333333,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 161.19475,
+      "y": 348.1149163333333,
+      "w": 122.68199999999999,
+      "h": 27.601333333333333,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 161.19475,
+      "y": 651.729583,
+      "w": 122.68199999999999,
+      "h": 27.601333333333333,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 277.88235,
+      "y": 348.1149163333333,
+      "w": 122.68199999999999,
+      "h": 27.601333333333333,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 277.88235,
+      "y": 651.729583,
+      "w": 122.68199999999999,
+      "h": 27.601333333333333,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 44.50715000000001,
+      "y": 375.71624966666667,
+      "w": 356.0572,
+      "h": 276.0133333333333,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "Fototapeta",
+      "x": 17.802860000000003,
+      "y": 714.9366363333334,
+      "size": 17.802860000000003,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "1/3  122,7 × 276,0 cm",
+      "x": 17.802860000000003,
+      "y": 726.6865239333333,
+      "size": 7.121144000000001,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_1.jpg",
+      "x": 17.802860000000003,
+      "y": 730.9592103333333,
+      "w": 122.68199999999999,
+      "h": 276.0133333333333
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "2/3  122,7 × 276,0 cm",
+      "x": 154.727148,
+      "y": 726.6865239333333,
+      "size": 7.121144000000001,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_2.jpg",
+      "x": 154.727148,
+      "y": 730.9592103333333,
+      "w": 122.68199999999999,
+      "h": 276.0133333333333
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "3/3  122,7 × 276,0 cm",
+      "x": 291.651436,
+      "y": 726.6865239333333,
+      "size": 7.121144000000001,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_3.jpg",
+      "x": 291.651436,
+      "y": 730.9592103333333,
+      "w": 122.68199999999999,
+      "h": 276.0133333333333
+     }
+    ]
+   }
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": true,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "panoW": 4000,
+  "panoH": 3063,
+  "out": {
+   "pdf": "JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5kb2JqCjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFsxMCAwIFJdIC9Db3VudCAxID4+CmVuZG9iagozIDAgb2JqCjw8IC9UeXBlIC9Gb250IC9TdWJ0eXBlIC9UeXBlMSAvQmFzZUZvbnQgL0hlbHZldGljYSAvRmlyc3RDaGFyIDMyIC9MYXN0Q2hhciAyNTUgL1dpZHRocyBbMjc4IDI3OCAzNTUgNTU2IDU1NiA4ODkgNjY3IDE5MSAzMzMgMzMzIDM4OSA1ODQgMjc4IDMzMyAyNzggMjc4IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiAyNzggMjc4IDU4NCA1ODQgNTg0IDU1NiAxMDE1IDY2NyA2NjcgNzIyIDcyMiA2NjcgNjExIDc3OCA3MjIgMjc4IDUwMCA2NjcgNTU2IDgzMyA3MjIgNzc4IDY2NyA3NzggNzIyIDY2NyA2MTEgNzIyIDY2NyA5NDQgNjY3IDY2NyA2MTEgMjc4IDI3OCAyNzggNDY5IDU1NiAzMzMgNTU2IDU1NiA1MDAgNTU2IDU1NiAyNzggNTU2IDU1NiAyMjIgMjIyIDUwMCAyMjIgODMzIDU1NiA1NTYgNTU2IDU1NiAzMzMgNTAwIDI3OCA1NTYgNTAwIDcyMiA1MDAgNTAwIDUwMCAzMzQgMjYwIDMzNCA1ODQgNTU2IDU1NiA1MDAgNTU2IDIyMiA1NTYgNTAwIDUwMCA1MDAgNjY3IDcyMiA2NjcgNTU2IDcyMiA2NjcgNjExIDYxMSA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiAyNzggNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNzc4IDU1NiA1NTYgNTU2IDU4NCA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTZdIC9FbmNvZGluZyA8PCAvVHlwZSAvRW5jb2RpbmcgL0Jhc2VFbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9EaWZmZXJlbmNlcyBbMTI4IC9hb2dvbmVrIC9jYWN1dGUgL2VvZ29uZWsgL2xzbGFzaCAvbmFjdXRlIC9zYWN1dGUgL3phY3V0ZSAvemRvdGFjY2VudCAvQW9nb25layAvQ2FjdXRlIC9Fb2dvbmVrIC9Mc2xhc2ggL05hY3V0ZSAvU2FjdXRlIC9aYWN1dGUgL1pkb3RhY2NlbnRdID4+ID4+CmVuZG9iago0IDAgb2JqCjw8IC9UeXBlIC9YT2JqZWN0IC9TdWJ0eXBlIC9JbWFnZSAvV2lkdGggNDAwMCAvSGVpZ2h0IDMwNjMgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDkgPj4Kc3RyZWFtClBBTk8tSlBFRwplbmRzdHJlYW0KZW5kb2JqCjUgMCBvYmoKPDwgL1R5cGUgL1hPYmplY3QgL1N1YnR5cGUgL0ltYWdlIC9XaWR0aCA3MjQ1IC9IZWlnaHQgMTYyNDAgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE3ID4+CnN0cmVhbQpKUEVHLTAtNzI0NXgxNjI0MAplbmRzdHJlYW0KZW5kb2JqCjYgMCBvYmoKPDwgL1R5cGUgL1hPYmplY3QgL1N1YnR5cGUgL0ltYWdlIC9XaWR0aCA3MjQ1IC9IZWlnaHQgMTYyNDAgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE3ID4+CnN0cmVhbQpKUEVHLTEtNzI0NXgxNjI0MAplbmRzdHJlYW0KZW5kb2JqCjcgMCBvYmoKPDwgL1R5cGUgL1hPYmplY3QgL1N1YnR5cGUgL0ltYWdlIC9XaWR0aCA3MjQ1IC9IZWlnaHQgMTYyNDAgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE3ID4+CnN0cmVhbQpKUEVHLTItNzI0NXgxNjI0MAplbmRzdHJlYW0KZW5kb2JqCjggMCBvYmoKPDwgL0ZvbnQgPDwgL0YxIDMgMCBSID4+IC9YT2JqZWN0IDw8IC9QYW5vIDQgMCBSIC9JbTAgNSAwIFIgL0ltMSA2IDAgUiAvSW0yIDcgMCBSID4+ID4+CmVuZG9iago5IDAgb2JqCjw8IC9MZW5ndGggMjQ0MiA+PgpzdHJlYW0KQlQgL0YxIDI1Mi4zMjQgVGYgMCAwIDAgMSBrIDEyNjEuNjIgMjg1OTQuNTY4IFRkIChMRUdFTkRBOikgVGogRVQKQlQgL0YxIDIwMS44NTkgVGYgMSAwIDAgMCBrIDEyNjEuNjIgMjgyNjYuNTQ3IFRkIChuYWRkYXRlaykgVGogRVQKcSAwIDEgLTEgMCAxMTU5Ni44MTEgMjczNTEuMTE2IGNtIEJUIC9GMSAyMDEuODU5IFRmIDEgMCAwIDAgayAwIDAgVGQgKG5hZGRhdGVrKSBUaiBFVCBRCnEgMTAwOTIuOTYgMCAwIDc3OTUuMiAxMjYxLjYyIDIwMzgxLjI1IGNtIC9QYW5vIERvIFEKcSAxIDAgMCAwIEsgMzMuNjQzIHcgMTI2MS42MiAyMDM2Ni44NSAxMDA5Mi45NiA3ODI0IHJlIFMgUQpxIDAgMSAxIDAgSyAxNi44MjIgdyAxMzQ2LjY1OSAyMDQ1Mi4yNjcgOTkyMS4yNiA3NjUzLjU0MyByZSBTIFEKcSAwIDEgMSAwIEsgMTYuODIyIHcgMTM0Ni42NTkgMjAxNjQuOTkxIG0gMTEyNjcuOTE5IDIwMTY0Ljk5MSBsIFMgUQpxIDAgMSAxIDAgSyAxNi44MjIgdyAxMzQ2LjY1OSAyMDI0MC42ODggbSAxMzQ2LjY1OSAyMDA4OS4yOTQgbCBTIFEKcSAwIDEgMSAwIEsgMTYuODIyIHcgMTEyNjcuOTE5IDIwMjQwLjY4OCBtIDExMjY3LjkxOSAyMDA4OS4yOTQgbCBTIFEKQlQgL0YxIDIwMS44NTkgVGYgMCAxIDEgMCBrIDU3ODIuNDU1IDE5OTQyLjk0NiBUZCAoMzUwMCwwMCBtbSkgVGogRVQKQlQgL0YxIDI1Mi4zMjQgVGYgMCAxIDEgMCBrIDU0NTQuNDM0IDE5NjcwLjQzNiBUZCAod3ltaWFyIFwyMDVjaWFueSkgVGogRVQKcSAwIDEgMSAwIEsgMTYuODIyIHcgMTA1OS43NjEgMjgxMDUuODExIG0gMTA1OS43NjEgMjA0NTIuMjY3IGwgUyBRCnEgMCAxIDEgMCBLIDE2LjgyMiB3IDk4NC4wNjQgMjgxMDUuODExIG0gMTEzNS40NTggMjgxMDUuODExIGwgUyBRCnEgMCAxIDEgMCBLIDE2LjgyMiB3IDk4NC4wNjQgMjA0NTIuMjY3IG0gMTEzNS40NTggMjA0NTIuMjY3IGwgUyBRCnEgMCAxIC0xIDAgOTk5LjIwMyAyMzc1NC4yMDUgY20gQlQgL0YxIDIwMS44NTkgVGYgMCAxIDEgMCBrIDAgMCBUZCAoMjcwMCwwMCBtbSkgVGogRVQgUQpxIDAgMSAtMSAwIDc3Ny4xNTggMjM0MjYuMTg0IGNtIEJUIC9GMSAyNTIuMzI0IFRmIDAgMSAxIDAgayAwIDAgVGQgKHd5bWlhciBcMjA1Y2lhbnkpIFRqIEVUIFEKcSAxMDA5Mi45NiAwIDAgNzc5NS4yIDEyNjEuNjIgMTA4OTEuNzE2IGNtIC9QYW5vIERvIFEKcSAxIDAgMCAwIGsgMTI2MS42MiAxODY4Ni45MTYgMTAwOTIuOTYgMTQuNCByZSBmIFEKcSAxIDAgMCAwIGsgMTI2MS42MiAxMDg3Ny4zMTYgMTAwOTIuOTYgMTQuNCByZSBmIFEKcSAwIDAgMCAxIEsgMTYuODIyIHcgMTI2MS42MiAxODcwMS4zMTYgMzQ3Ny42IDc4Mi40IHJlIFMgUQpxIDAgMCAwIDEgSyAxNi44MjIgdyAxMjYxLjYyIDEwMDk0LjkxNiAzNDc3LjYgNzgyLjQgcmUgUyBRCnEgMCAwIDAgMSBLIDE2LjgyMiB3IDQ1NjkuMyAxODcwMS4zMTYgMzQ3Ny42IDc4Mi40IHJlIFMgUQpxIDAgMCAwIDEgSyAxNi44MjIgdyA0NTY5LjMgMTAwOTQuOTE2IDM0NzcuNiA3ODIuNCByZSBTIFEKcSAwIDAgMCAxIEsgMTYuODIyIHcgNzg3Ni45OCAxODcwMS4zMTYgMzQ3Ny42IDc4Mi40IHJlIFMgUQpxIDAgMCAwIDEgSyAxNi44MjIgdyA3ODc2Ljk4IDEwMDk0LjkxNiAzNDc3LjYgNzgyLjQgcmUgUyBRCnEgMCAwIDAgMSBLIDE2LjgyMiB3IDEyNjEuNjIgMTA4NzcuMzE2IDEwMDkyLjk2IDc4MjQgcmUgUyBRCkJUIC9GMSA1MDQuNjQ4IFRmIDAgMCAwIDEgayA1MDQuNjQ4IDkwODUuNjIgVGQgKEZvdG90YXBldGEpIFRqIEVUCkJUIC9GMSAyMDEuODU5IFRmIDAgMCAwIDEgayA1MDQuNjQ4IDg3NTIuNTUyIFRkICgxLzMgIDEyMiw3IFwzMjcgMjc2LDAgY20pIFRqIEVUCnEgMzQ3Ny42IDAgMCA3Nzk1LjIgNTA0LjY0OCA4MjEuODM3IGNtIC9JbTAgRG8gUQpxIDEgMCAwIDAgayA1MDQuNjQ4IDg2MTcuMDM3IDM0NzcuNiAxNC40IHJlIGYgUQpxIDEgMCAwIDAgayA1MDQuNjQ4IDgwNy40MzcgMzQ3Ny42IDE0LjQgcmUgZiBRCkJUIC9GMSAyMDEuODU5IFRmIDAgMCAwIDEgayA0Mzg1Ljk2NiA4NzUyLjU1MiBUZCAoMi8zICAxMjIsNyBcMzI3IDI3NiwwIGNtKSBUaiBFVApxIDM0NzcuNiAwIDAgNzc5NS4yIDQzODUuOTY2IDgyMS44MzcgY20gL0ltMSBEbyBRCnEgMSAwIDAgMCBrIDQzODUuOTY2IDg2MTcuMDM3IDM0NzcuNiAxNC40IHJlIGYgUQpxIDEgMCAwIDAgayA0Mzg1Ljk2NiA4MDcuNDM3IDM0NzcuNiAxNC40IHJlIGYgUQpCVCAvRjEgMjAxLjg1OSBUZiAwIDAgMCAxIGsgODI2Ny4yODUgODc1Mi41NTIgVGQgKDMvMyAgMTIyLDcgXDMyNyAyNzYsMCBjbSkgVGogRVQKcSAzNDc3LjYgMCAwIDc3OTUuMiA4MjY3LjI4NSA4MjEuODM3IGNtIC9JbTIgRG8gUQpxIDEgMCAwIDAgayA4MjY3LjI4NSA4NjE3LjAzNyAzNDc3LjYgMTQuNCByZSBmIFEKcSAxIDAgMCAwIGsgODI2Ny4yODUgODA3LjQzNyAzNDc3LjYgMTQuNCByZSBmIFEKCmVuZHN0cmVhbQplbmRvYmoKMTAgMCBvYmoKPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCAxMjM2My44NzYgMjkzNTEuNTRdIC9SZXNvdXJjZXMgOCAwIFIgL0NvbnRlbnRzIDkgMCBSID4+CmVuZG9iagp4cmVmCjAgMTEKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDAwNjQgMDAwMDAgbiAKMDAwMDAwMDEyMiAwMDAwMCBuIAowMDAwMDAxMzQ5IDAwMDAwIG4gCjAwMDAwMDE1MjUgMDAwMDAgbiAKMDAwMDAwMTcxMSAwMDAwMCBuIAowMDAwMDAxODk3IDAwMDAwIG4gCjAwMDAwMDIwODMgMDAwMDAgbiAKMDAwMDAwMjE4NiAwMDAwMCBuIAowMDAwMDA0NjgwIDAwMDAwIG4gCnRyYWlsZXIKPDwgL1NpemUgMTEgL1Jvb3QgMSAwIFIgPj4Kc3RhcnR4cmVmCjQ3OTYKJSVFT0YK",
+   "pages": 1,
+   "schemaScale": 1,
+   "G": {
+    "n": 3,
+    "wCm": [
+     122.68199999999999,
+     122.68199999999999,
+     122.68199999999999
+    ],
+    "xsCm": [
+     0,
+     116.68759999999999,
+     233.37519999999998
+    ],
+    "PW": 356.0572,
+    "PH": 276.0133333333333,
+    "IH": 274.99733333333336,
+    "B": 0.508,
+    "fs": 8.901430000000001,
+    "fsS": 7.121144000000001,
+    "lw": 0.5934286666666667,
+    "M": 17.802860000000003,
+    "ext": 27.601333333333333,
+    "gap": 14.242288000000002
+   },
+   "cdr": {
+    "pageW": 436.17007000000007,
+    "pageH": 1035.4571196666666,
+    "ops": [
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "LEGENDA:",
+      "x": 44.50715000000001,
+      "y": 26.704290000000004,
+      "size": 8.901430000000001,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "s": "naddatek",
+      "x": 44.50715000000001,
+      "y": 38.276149000000004,
+      "size": 7.121144000000001,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "s": "naddatek",
+      "x": 409.10972280000004,
+      "y": 70.57053704,
+      "size": 7.121144000000001,
+      "rot": true
+     },
+     {
+      "t": "img",
+      "file": "pano.jpg",
+      "x": 44.50715000000001,
+      "y": 41.454578000000005,
+      "w": 356.0572,
+      "h": 274.99733333333336
+     },
+     {
+      "t": "rectS",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "x": 44.50715000000001,
+      "y": 40.946578,
+      "w": 356.0572,
+      "h": 276.0133333333333,
+      "wd": 1.1868573333333334
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x": 47.50715000000001,
+      "y": 43.946578,
+      "w": 350,
+      "h": 270,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 47.50715000000001,
+      "y1": 324.0810553333333,
+      "x2": 397.50715,
+      "y2": 324.0810553333333,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 47.50715000000001,
+      "y1": 321.4106263333333,
+      "x2": 47.50715000000001,
+      "y2": 326.75148433333334,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 397.50715,
+      "y1": 321.4106263333333,
+      "x2": 397.50715,
+      "y2": 326.75148433333334,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "3500,00 mm",
+      "x": 203.99217560000002,
+      "y": 331.9143137333333,
+      "size": 7.121144000000001,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "wymiar ściany",
+      "x": 192.4203166,
+      "y": 341.5278581333333,
+      "size": 8.901430000000001,
+      "rot": false
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 37.38600600000001,
+      "y1": 43.946578,
+      "x2": 37.38600600000001,
+      "y2": 313.946578,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 34.71557700000001,
+      "y1": 43.946578,
+      "x2": 40.05643500000001,
+      "y2": 43.946578,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 34.71557700000001,
+      "y1": 313.946578,
+      "x2": 40.05643500000001,
+      "y2": 313.946578,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "2700,00 mm",
+      "x": 35.24966280000001,
+      "y": 197.4615524,
+      "size": 7.121144000000001,
+      "rot": true
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "wymiar ściany",
+      "x": 27.416404400000008,
+      "y": 209.0334114,
+      "size": 8.901430000000001,
+      "rot": true
+     },
+     {
+      "t": "img",
+      "file": "pano.jpg",
+      "x": 44.50715000000001,
+      "y": 376.22424966666665,
+      "w": 356.0572,
+      "h": 274.99733333333336
+     },
+     {
+      "t": "rectF",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "x": 44.50715000000001,
+      "y": 375.71624966666667,
+      "w": 356.0572,
+      "h": 0.508
+     },
+     {
+      "t": "rectF",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "x": 44.50715000000001,
+      "y": 651.221583,
+      "w": 356.0572,
+      "h": 0.508
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 44.50715000000001,
+      "y": 348.1149163333333,
+      "w": 122.68199999999999,
+      "h": 27.601333333333333,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 44.50715000000001,
+      "y": 651.729583,
+      "w": 122.68199999999999,
+      "h": 27.601333333333333,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 161.19475,
+      "y": 348.1149163333333,
+      "w": 122.68199999999999,
+      "h": 27.601333333333333,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 161.19475,
+      "y": 651.729583,
+      "w": 122.68199999999999,
+      "h": 27.601333333333333,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 277.88235,
+      "y": 348.1149163333333,
+      "w": 122.68199999999999,
+      "h": 27.601333333333333,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 277.88235,
+      "y": 651.729583,
+      "w": 122.68199999999999,
+      "h": 27.601333333333333,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 44.50715000000001,
+      "y": 375.71624966666667,
+      "w": 356.0572,
+      "h": 276.0133333333333,
+      "wd": 0.5934286666666667
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "Fototapeta",
+      "x": 17.802860000000003,
+      "y": 714.9366363333334,
+      "size": 17.802860000000003,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "1/3  122,7 × 276,0 cm",
+      "x": 17.802860000000003,
+      "y": 726.6865239333333,
+      "size": 7.121144000000001,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_1.jpg",
+      "x": 17.802860000000003,
+      "y": 731.4672103333334,
+      "w": 122.68199999999999,
+      "h": 274.99733333333336
+     },
+     {
+      "t": "rectF",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "x": 17.802860000000003,
+      "y": 730.9592103333333,
+      "w": 122.68199999999999,
+      "h": 0.508
+     },
+     {
+      "t": "rectF",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "x": 17.802860000000003,
+      "y": 1006.4645436666666,
+      "w": 122.68199999999999,
+      "h": 0.508
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "2/3  122,7 × 276,0 cm",
+      "x": 154.727148,
+      "y": 726.6865239333333,
+      "size": 7.121144000000001,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_2.jpg",
+      "x": 154.727148,
+      "y": 731.4672103333334,
+      "w": 122.68199999999999,
+      "h": 274.99733333333336
+     },
+     {
+      "t": "rectF",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "x": 154.727148,
+      "y": 730.9592103333333,
+      "w": 122.68199999999999,
+      "h": 0.508
+     },
+     {
+      "t": "rectF",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "x": 154.727148,
+      "y": 1006.4645436666666,
+      "w": 122.68199999999999,
+      "h": 0.508
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "3/3  122,7 × 276,0 cm",
+      "x": 291.651436,
+      "y": 726.6865239333333,
+      "size": 7.121144000000001,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_3.jpg",
+      "x": 291.651436,
+      "y": 731.4672103333334,
+      "w": 122.68199999999999,
+      "h": 274.99733333333336
+     },
+     {
+      "t": "rectF",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "x": 291.651436,
+      "y": 730.9592103333333,
+      "w": 122.68199999999999,
+      "h": 0.508
+     },
+     {
+      "t": "rectF",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "x": 291.651436,
+      "y": 1006.4645436666666,
+      "w": 122.68199999999999,
+      "h": 0.508
+     }
+    ]
+   }
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta 325x245 31.10.2026"
+  },
+  "panoW": 4000,
+  "panoH": 3000,
+  "out": {
+   "pdf": "JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5kb2JqCjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFsxMCAwIFJdIC9Db3VudCAxID4+CmVuZG9iagozIDAgb2JqCjw8IC9UeXBlIC9Gb250IC9TdWJ0eXBlIC9UeXBlMSAvQmFzZUZvbnQgL0hlbHZldGljYSAvRmlyc3RDaGFyIDMyIC9MYXN0Q2hhciAyNTUgL1dpZHRocyBbMjc4IDI3OCAzNTUgNTU2IDU1NiA4ODkgNjY3IDE5MSAzMzMgMzMzIDM4OSA1ODQgMjc4IDMzMyAyNzggMjc4IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiAyNzggMjc4IDU4NCA1ODQgNTg0IDU1NiAxMDE1IDY2NyA2NjcgNzIyIDcyMiA2NjcgNjExIDc3OCA3MjIgMjc4IDUwMCA2NjcgNTU2IDgzMyA3MjIgNzc4IDY2NyA3NzggNzIyIDY2NyA2MTEgNzIyIDY2NyA5NDQgNjY3IDY2NyA2MTEgMjc4IDI3OCAyNzggNDY5IDU1NiAzMzMgNTU2IDU1NiA1MDAgNTU2IDU1NiAyNzggNTU2IDU1NiAyMjIgMjIyIDUwMCAyMjIgODMzIDU1NiA1NTYgNTU2IDU1NiAzMzMgNTAwIDI3OCA1NTYgNTAwIDcyMiA1MDAgNTAwIDUwMCAzMzQgMjYwIDMzNCA1ODQgNTU2IDU1NiA1MDAgNTU2IDIyMiA1NTYgNTAwIDUwMCA1MDAgNjY3IDcyMiA2NjcgNTU2IDcyMiA2NjcgNjExIDYxMSA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiAyNzggNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNzc4IDU1NiA1NTYgNTU2IDU4NCA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTZdIC9FbmNvZGluZyA8PCAvVHlwZSAvRW5jb2RpbmcgL0Jhc2VFbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9EaWZmZXJlbmNlcyBbMTI4IC9hb2dvbmVrIC9jYWN1dGUgL2VvZ29uZWsgL2xzbGFzaCAvbmFjdXRlIC9zYWN1dGUgL3phY3V0ZSAvemRvdGFjY2VudCAvQW9nb25layAvQ2FjdXRlIC9Fb2dvbmVrIC9Mc2xhc2ggL05hY3V0ZSAvU2FjdXRlIC9aYWN1dGUgL1pkb3RhY2NlbnRdID4+ID4+CmVuZG9iago0IDAgb2JqCjw8IC9UeXBlIC9YT2JqZWN0IC9TdWJ0eXBlIC9JbWFnZSAvV2lkdGggNDAwMCAvSGVpZ2h0IDMwMDAgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDkgPj4Kc3RyZWFtClBBTk8tSlBFRwplbmRzdHJlYW0KZW5kb2JqCjUgMCBvYmoKPDwgL1R5cGUgL1hPYmplY3QgL1N1YnR5cGUgL0ltYWdlIC9XaWR0aCA2NzUyIC9IZWlnaHQgMTQ4MjMgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE3ID4+CnN0cmVhbQpKUEVHLTAtNjc1MngxNDgyMwplbmRzdHJlYW0KZW5kb2JqCjYgMCBvYmoKPDwgL1R5cGUgL1hPYmplY3QgL1N1YnR5cGUgL0ltYWdlIC9XaWR0aCA2NzUyIC9IZWlnaHQgMTQ4MjMgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE3ID4+CnN0cmVhbQpKUEVHLTEtNjc1MngxNDgyMwplbmRzdHJlYW0KZW5kb2JqCjcgMCBvYmoKPDwgL1R5cGUgL1hPYmplY3QgL1N1YnR5cGUgL0ltYWdlIC9XaWR0aCA2NzUyIC9IZWlnaHQgMTQ4MjMgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE3ID4+CnN0cmVhbQpKUEVHLTItNjc1MngxNDgyMwplbmRzdHJlYW0KZW5kb2JqCjggMCBvYmoKPDwgL0ZvbnQgPDwgL0YxIDMgMCBSID4+IC9YT2JqZWN0IDw8IC9QYW5vIDQgMCBSIC9JbTAgNSAwIFIgL0ltMSA2IDAgUiAvSW0yIDcgMCBSID4+ID4+CmVuZG9iago5IDAgb2JqCjw8IC9MZW5ndGggMjA4MSA+PgpzdHJlYW0KQlQgL0YxIDIzNC41NzYgVGYgMCAwIDAgMSBrIDExNzIuODggMjYwNzUuNjUgVGQgKExFR0VOREE6KSBUaiBFVApCVCAvRjEgMTg3LjY2MSBUZiAxIDAgMCAwIGsgMTE3Mi44OCAyNTc3MC43MDEgVGQgKG5hZGRhdGVrKSBUaiBFVApxIDAgMSAtMSAwIDEwNzgxLjExMyAyNDkxOS42NTkgY20gQlQgL0YxIDE4Ny42NjEgVGYgMSAwIDAgMCBrIDAgMCBUZCAobmFkZGF0ZWspIFRqIEVUIFEKcSA5MzgzLjA0IDAgMCA3MTE1LjA0IDExNzIuODggMTg1ODUuMjg4IGNtIC9QYW5vIERvIFEKcSAxIDAgMCAwIEsgMzEuMjc3IHcgMTE3Mi44OCAxODU4NS4yODggOTM4My4wNCA3MTE1LjA0IHJlIFMgUQpxIDAgMSAxIDAgSyAxNS42MzggdyAxMjU3LjkxOSAxODY3MC40MDcgOTIxMi41OTggNjk0NC44ODIgcmUgUyBRCnEgMCAxIDEgMCBLIDE1LjYzOCB3IDEyNTcuOTE5IDE4Mzk3LjYyNyBtIDEwNDcwLjUxOCAxODM5Ny42MjcgbCBTIFEKcSAwIDEgMSAwIEsgMTUuNjM4IHcgMTI1Ny45MTkgMTg0NjggbSAxMjU3LjkxOSAxODMyNy4yNTQgbCBTIFEKcSAwIDEgMSAwIEsgMTUuNjM4IHcgMTA0NzAuNTE4IDE4NDY4IG0gMTA0NzAuNTE4IDE4MzI3LjI1NCBsIFMgUQpCVCAvRjEgMTg3LjY2MSBUZiAwIDEgMSAwIGsgNTM3Ni4zMDEgMTgxOTEuMiBUZCAoMzI1MCwwMCBtbSkgVGogRVQKQlQgL0YxIDIzNC41NzYgVGYgMCAxIDEgMCBrIDUwNzEuMzUyIDE3OTM3Ljg1OCBUZCAod3ltaWFyIFwyMDVjaWFueSkgVGogRVQKcSAwIDEgMSAwIEsgMTUuNjM4IHcgOTg1LjIxOSAyNTYxNS4yODkgbSA5ODUuMjE5IDE4NjcwLjQwNyBsIFMgUQpxIDAgMSAxIDAgSyAxNS42MzggdyA5MTQuODQ2IDI1NjE1LjI4OSBtIDEwNTUuNTkyIDI1NjE1LjI4OSBsIFMgUQpxIDAgMSAxIDAgSyAxNS42MzggdyA5MTQuODQ2IDE4NjcwLjQwNyBtIDEwNTUuNTkyIDE4NjcwLjQwNyBsIFMgUQpxIDAgMSAtMSAwIDkyOC45MjEgMjE2NTQuOTMgY20gQlQgL0YxIDE4Ny42NjEgVGYgMCAxIDEgMCBrIDAgMCBUZCAoMjQ1MCwwMCBtbSkgVGogRVQgUQpxIDAgMSAtMSAwIDcyMi40OTQgMjEzNDkuOTgxIGNtIEJUIC9GMSAyMzQuNTc2IFRmIDAgMSAxIDAgayAwIDAgVGQgKHd5bWlhciBcMjA1Y2lhbnkpIFRqIEVUIFEKcSA5MzgzLjA0IDAgMCA3MTE1LjA0IDExNzIuODggOTkzNy43MjggY20gL1Bhbm8gRG8gUQpxIDAgMCAwIDEgSyAxNS42MzggdyAxMTcyLjg4IDE3MDUyLjc2OCAzMjQwLjk2IDcxMS41MDQgcmUgUyBRCnEgMCAwIDAgMSBLIDE1LjYzOCB3IDExNzIuODggOTIyNi4yMjQgMzI0MC45NiA3MTEuNTA0IHJlIFMgUQpxIDAgMCAwIDEgSyAxNS42MzggdyA0MjQzLjkyIDE3MDUyLjc2OCAzMjQwLjk2IDcxMS41MDQgcmUgUyBRCnEgMCAwIDAgMSBLIDE1LjYzOCB3IDQyNDMuOTIgOTIyNi4yMjQgMzI0MC45NiA3MTEuNTA0IHJlIFMgUQpxIDAgMCAwIDEgSyAxNS42MzggdyA3MzE0Ljk2IDE3MDUyLjc2OCAzMjQwLjk2IDcxMS41MDQgcmUgUyBRCnEgMCAwIDAgMSBLIDE1LjYzOCB3IDczMTQuOTYgOTIyNi4yMjQgMzI0MC45NiA3MTEuNTA0IHJlIFMgUQpxIDAgMCAwIDEgSyAxNS42MzggdyAxMTcyLjg4IDk5MzcuNzI4IDkzODMuMDQgNzExNS4wNCByZSBTIFEKQlQgL0YxIDQ2OS4xNTIgVGYgMCAwIDAgMSBrIDQ2OS4xNTIgODI4Ny45MiBUZCAoRm90b3RhcGV0YSAzMjV4MjQ1IDMxLjEwLjIwMjYpIFRqIEVUCkJUIC9GMSAxODcuNjYxIFRmIDAgMCAwIDEgayA0NjkuMTUyIDc5NzguMjggVGQgKDEvMyAgMTE0LDMgXDMyNyAyNTEsMCBjbSkgVGogRVQKcSAzMjQwLjk2IDAgMCA3MTE1LjA0IDQ2OS4xNTIgNzUwLjY0MyBjbSAvSW0wIERvIFEKQlQgL0YxIDE4Ny42NjEgVGYgMCAwIDAgMSBrIDQwODUuNDM0IDc5NzguMjggVGQgKDIvMyAgMTE0LDMgXDMyNyAyNTEsMCBjbSkgVGogRVQKcSAzMjQwLjk2IDAgMCA3MTE1LjA0IDQwODUuNDM0IDc1MC42NDMgY20gL0ltMSBEbyBRCkJUIC9GMSAxODcuNjYxIFRmIDAgMCAwIDEgayA3NzAxLjcxNSA3OTc4LjI4IFRkICgzLzMgIDExNCwzIFwzMjcgMjUxLDAgY20pIFRqIEVUCnEgMzI0MC45NiAwIDAgNzExNS4wNCA3NzAxLjcxNSA3NTAuNjQzIGNtIC9JbTIgRG8gUQoKZW5kc3RyZWFtCmVuZG9iagoxMCAwIG9iago8PCAvVHlwZSAvUGFnZSAvUGFyZW50IDIgMCBSIC9NZWRpYUJveCBbMCAwIDExNDk0LjIyNCAyNjc3OS4zNzhdIC9SZXNvdXJjZXMgOCAwIFIgL0NvbnRlbnRzIDkgMCBSID4+CmVuZG9iagp4cmVmCjAgMTEKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDAwNjQgMDAwMDAgbiAKMDAwMDAwMDEyMiAwMDAwMCBuIAowMDAwMDAxMzQ5IDAwMDAwIG4gCjAwMDAwMDE1MjUgMDAwMDAgbiAKMDAwMDAwMTcxMSAwMDAwMCBuIAowMDAwMDAxODk3IDAwMDAwIG4gCjAwMDAwMDIwODMgMDAwMDAgbiAKMDAwMDAwMjE4NiAwMDAwMCBuIAowMDAwMDA0MzE5IDAwMDAwIG4gCnRyYWlsZXIKPDwgL1NpemUgMTEgL1Jvb3QgMSAwIFIgPj4Kc3RhcnR4cmVmCjQ0MzYKJSVFT0YK",
+   "pages": 1,
+   "schemaScale": 1,
+   "G": {
+    "n": 3,
+    "wCm": [
+     114.33386666666668,
+     114.33386666666668,
+     114.33386666666668
+    ],
+    "xsCm": [
+     0,
+     108.33946666666668,
+     216.67893333333336
+    ],
+    "PW": 331.01279999999997,
+    "PH": 251.00279999999998,
+    "IH": 251.00279999999998,
+    "B": 0,
+    "fs": 8.275319999999999,
+    "fsS": 6.6202559999999995,
+    "lw": 0.551688,
+    "M": 16.550639999999998,
+    "ext": 25.100279999999998,
+    "gap": 13.240511999999999
+   },
+   "cdr": {
+    "pageW": 405.49067999999994,
+    "pageH": 944.716932,
+    "ops": [
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "LEGENDA:",
+      "x": 41.376599999999996,
+      "y": 24.825959999999995,
+      "size": 8.275319999999999,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "s": "naddatek",
+      "x": 41.376599999999996,
+      "y": 35.583876,
+      "size": 6.6202559999999995,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "s": "naddatek",
+      "x": 380.3337072,
+      "y": 65.60673695999999,
+      "size": 6.6202559999999995,
+      "rot": true
+     },
+     {
+      "t": "img",
+      "file": "pano.jpg",
+      "x": 41.376599999999996,
+      "y": 38.066472,
+      "w": 331.01279999999997,
+      "h": 251.00279999999998
+     },
+     {
+      "t": "rectS",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "x": 41.376599999999996,
+      "y": 38.066472,
+      "w": 331.01279999999997,
+      "h": 251.00279999999998,
+      "wd": 1.103376
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x": 44.376599999999996,
+      "y": 41.066472,
+      "w": 325,
+      "h": 245,
+      "wd": 0.551688
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 44.376599999999996,
+      "y1": 295.68952799999994,
+      "x2": 369.3766,
+      "y2": 295.68952799999994,
+      "wd": 0.551688
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 44.376599999999996,
+      "y1": 293.20693199999994,
+      "x2": 44.376599999999996,
+      "y2": 298.17212399999994,
+      "wd": 0.551688
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 369.3766,
+      "y1": 293.20693199999994,
+      "x2": 369.3766,
+      "y2": 298.17212399999994,
+      "wd": 0.551688
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "3250,00 mm",
+      "x": 189.6639344,
+      "y": 302.9718095999999,
+      "size": 6.6202559999999995,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "wymiar ściany",
+      "x": 178.9060184,
+      "y": 311.9091552,
+      "size": 8.275319999999999,
+      "rot": false
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 34.756344,
+      "y1": 41.066472,
+      "x2": 34.756344,
+      "y2": 286.066472,
+      "wd": 0.551688
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 32.273748,
+      "y1": 41.066472,
+      "x2": 37.23894,
+      "y2": 41.066472,
+      "wd": 0.551688
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 32.273748,
+      "y1": 286.066472,
+      "x2": 37.23894,
+      "y2": 286.066472,
+      "wd": 0.551688
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "2450,00 mm",
+      "x": 32.7702672,
+      "y": 180.7791376,
+      "size": 6.6202559999999995,
+      "rot": true
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "wymiar ściany",
+      "x": 25.487985600000002,
+      "y": 191.5370536,
+      "size": 8.275319999999999,
+      "rot": true
+     },
+     {
+      "t": "img",
+      "file": "pano.jpg",
+      "x": 41.376599999999996,
+      "y": 343.13317199999995,
+      "w": 331.01279999999997,
+      "h": 251.00279999999998
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 41.376599999999996,
+      "y": 318.03289199999995,
+      "w": 114.33386666666668,
+      "h": 25.100279999999998,
+      "wd": 0.551688
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 41.376599999999996,
+      "y": 594.1359719999999,
+      "w": 114.33386666666668,
+      "h": 25.100279999999998,
+      "wd": 0.551688
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 149.71606666666668,
+      "y": 318.03289199999995,
+      "w": 114.33386666666668,
+      "h": 25.100279999999998,
+      "wd": 0.551688
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 149.71606666666668,
+      "y": 594.1359719999999,
+      "w": 114.33386666666668,
+      "h": 25.100279999999998,
+      "wd": 0.551688
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 258.05553333333336,
+      "y": 318.03289199999995,
+      "w": 114.33386666666668,
+      "h": 25.100279999999998,
+      "wd": 0.551688
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 258.05553333333336,
+      "y": 594.1359719999999,
+      "w": 114.33386666666668,
+      "h": 25.100279999999998,
+      "wd": 0.551688
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 41.376599999999996,
+      "y": 343.13317199999995,
+      "w": 331.01279999999997,
+      "h": 251.00279999999998,
+      "wd": 0.551688
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "Fototapeta 325x245 31.10.2026",
+      "x": 16.550639999999998,
+      "y": 652.337532,
+      "size": 16.550639999999998,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "1/3  114,3 × 251,0 cm",
+      "x": 16.550639999999998,
+      "y": 663.2609544,
+      "size": 6.6202559999999995,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_1.jpg",
+      "x": 16.550639999999998,
+      "y": 667.2331079999999,
+      "w": 114.33386666666668,
+      "h": 251.00279999999998
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "2/3  114,3 × 251,0 cm",
+      "x": 144.12501866666668,
+      "y": 663.2609544,
+      "size": 6.6202559999999995,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_2.jpg",
+      "x": 144.12501866666668,
+      "y": 667.2331079999999,
+      "w": 114.33386666666668,
+      "h": 251.00279999999998
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "3/3  114,3 × 251,0 cm",
+      "x": 271.69939733333337,
+      "y": 663.2609544,
+      "size": 6.6202559999999995,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_3.jpg",
+      "x": 271.69939733333337,
+      "y": 667.2331079999999,
+      "w": 114.33386666666668,
+      "h": 251.00279999999998
+     }
+    ]
+   }
+  }
+ },
+ {
+  "p": {
+   "wallW": 325,
+   "wallH": 245,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "butt",
+   "overlap": 1,
+   "split": "equal",
+   "count": 3,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta 325x245 6.11.2026"
+  },
+  "panoW": 4000,
+  "panoH": 3000,
+  "out": {
+   "pdf": "JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5kb2JqCjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFsxMCAwIFJdIC9Db3VudCAxID4+CmVuZG9iagozIDAgb2JqCjw8IC9UeXBlIC9Gb250IC9TdWJ0eXBlIC9UeXBlMSAvQmFzZUZvbnQgL0hlbHZldGljYSAvRmlyc3RDaGFyIDMyIC9MYXN0Q2hhciAyNTUgL1dpZHRocyBbMjc4IDI3OCAzNTUgNTU2IDU1NiA4ODkgNjY3IDE5MSAzMzMgMzMzIDM4OSA1ODQgMjc4IDMzMyAyNzggMjc4IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiAyNzggMjc4IDU4NCA1ODQgNTg0IDU1NiAxMDE1IDY2NyA2NjcgNzIyIDcyMiA2NjcgNjExIDc3OCA3MjIgMjc4IDUwMCA2NjcgNTU2IDgzMyA3MjIgNzc4IDY2NyA3NzggNzIyIDY2NyA2MTEgNzIyIDY2NyA5NDQgNjY3IDY2NyA2MTEgMjc4IDI3OCAyNzggNDY5IDU1NiAzMzMgNTU2IDU1NiA1MDAgNTU2IDU1NiAyNzggNTU2IDU1NiAyMjIgMjIyIDUwMCAyMjIgODMzIDU1NiA1NTYgNTU2IDU1NiAzMzMgNTAwIDI3OCA1NTYgNTAwIDcyMiA1MDAgNTAwIDUwMCAzMzQgMjYwIDMzNCA1ODQgNTU2IDU1NiA1MDAgNTU2IDIyMiA1NTYgNTAwIDUwMCA1MDAgNjY3IDcyMiA2NjcgNTU2IDcyMiA2NjcgNjExIDYxMSA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiAyNzggNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNzc4IDU1NiA1NTYgNTU2IDU4NCA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTZdIC9FbmNvZGluZyA8PCAvVHlwZSAvRW5jb2RpbmcgL0Jhc2VFbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9EaWZmZXJlbmNlcyBbMTI4IC9hb2dvbmVrIC9jYWN1dGUgL2VvZ29uZWsgL2xzbGFzaCAvbmFjdXRlIC9zYWN1dGUgL3phY3V0ZSAvemRvdGFjY2VudCAvQW9nb25layAvQ2FjdXRlIC9Fb2dvbmVrIC9Mc2xhc2ggL05hY3V0ZSAvU2FjdXRlIC9aYWN1dGUgL1pkb3RhY2NlbnRdID4+ID4+CmVuZG9iago0IDAgb2JqCjw8IC9UeXBlIC9YT2JqZWN0IC9TdWJ0eXBlIC9JbWFnZSAvV2lkdGggNDAwMCAvSGVpZ2h0IDMwMDAgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDkgPj4Kc3RyZWFtClBBTk8tSlBFRwplbmRzdHJlYW0KZW5kb2JqCjUgMCBvYmoKPDwgL1R5cGUgL1hPYmplY3QgL1N1YnR5cGUgL0ltYWdlIC9XaWR0aCA2NTU2IC9IZWlnaHQgMTQ4MjMgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE3ID4+CnN0cmVhbQpKUEVHLTAtNjU1NngxNDgyMwplbmRzdHJlYW0KZW5kb2JqCjYgMCBvYmoKPDwgL1R5cGUgL1hPYmplY3QgL1N1YnR5cGUgL0ltYWdlIC9XaWR0aCA2NTU2IC9IZWlnaHQgMTQ4MjMgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE3ID4+CnN0cmVhbQpKUEVHLTEtNjU1NngxNDgyMwplbmRzdHJlYW0KZW5kb2JqCjcgMCBvYmoKPDwgL1R5cGUgL1hPYmplY3QgL1N1YnR5cGUgL0ltYWdlIC9XaWR0aCA2NTU2IC9IZWlnaHQgMTQ4MjMgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE3ID4+CnN0cmVhbQpKUEVHLTItNjU1NngxNDgyMwplbmRzdHJlYW0KZW5kb2JqCjggMCBvYmoKPDwgL0ZvbnQgPDwgL0YxIDMgMCBSID4+IC9YT2JqZWN0IDw8IC9QYW5vIDQgMCBSIC9JbTAgNSAwIFIgL0ltMSA2IDAgUiAvSW0yIDcgMCBSID4+ID4+CmVuZG9iago5IDAgb2JqCjw8IC9MZW5ndGggMjAwMSA+PgpzdHJlYW0KQlQgL0YxIDIzNC42IFRmIDAgMCAwIDEgayAxMTczIDI2MDc1Ljk4OCBUZCAoTEVHRU5EQTopIFRqIEVUCkJUIC9GMSAxODcuNjggVGYgMSAwIDAgMCBrIDExNzMgMjU3NzEuMDA4IFRkIChuYWRkYXRlaykgVGogRVQKcSAwIDEgLTEgMCAxMDc4Mi4yMTYgMjQ5MTkuODc5IGNtIEJUIC9GMSAxODcuNjggVGYgMSAwIDAgMCBrIDAgMCBUZCAobmFkZGF0ZWspIFRqIEVUIFEKcSA5Mzg0IDAgMCA3MTE1LjA0IDExNzMgMTg1ODUuNTg4IGNtIC9QYW5vIERvIFEKcSAxIDAgMCAwIEsgMzEuMjggdyAxMTczIDE4NTg1LjU4OCA5Mzg0IDcxMTUuMDQgcmUgUyBRCnEgMCAxIDEgMCBLIDE1LjY0IHcgMTI1OC4wMzkgMTg2NzAuNzA3IDkyMTIuNTk4IDY5NDQuODgyIHJlIFMgUQpxIDAgMSAxIDAgSyAxNS42NCB3IDEyNTguMDM5IDE4Mzk3LjkwOCBtIDEwNDcwLjYzOCAxODM5Ny45MDggbCBTIFEKcSAwIDEgMSAwIEsgMTUuNjQgdyAxMjU4LjAzOSAxODQ2OC4yODggbSAxMjU4LjAzOSAxODMyNy41MjggbCBTIFEKcSAwIDEgMSAwIEsgMTUuNjQgdyAxMDQ3MC42MzggMTg0NjguMjg4IG0gMTA0NzAuNjM4IDE4MzI3LjUyOCBsIFMgUQpCVCAvRjEgMTg3LjY4IFRmIDAgMSAxIDAgayA1Mzc2LjM3MSAxODE5MS40NiBUZCAoMzI1MCwwMCBtbSkgVGogRVQKQlQgL0YxIDIzNC42IFRmIDAgMSAxIDAgayA1MDcxLjM5MSAxNzkzOC4wOTIgVGQgKHd5bWlhciBcMjA1Y2lhbnkpIFRqIEVUCnEgMCAxIDEgMCBLIDE1LjY0IHcgOTg1LjMyIDI1NjE1LjU4OSBtIDk4NS4zMiAxODY3MC43MDcgbCBTIFEKcSAwIDEgMSAwIEsgMTUuNjQgdyA5MTQuOTQgMjU2MTUuNTg5IG0gMTA1NS43IDI1NjE1LjU4OSBsIFMgUQpxIDAgMSAxIDAgSyAxNS42NCB3IDkxNC45NCAxODY3MC43MDcgbSAxMDU1LjcgMTg2NzAuNzA3IGwgUyBRCnEgMCAxIC0xIDAgOTI5LjAxNiAyMTY1NS4xOCBjbSBCVCAvRjEgMTg3LjY4IFRmIDAgMSAxIDAgayAwIDAgVGQgKDI0NTAsMDAgbW0pIFRqIEVUIFEKcSAwIDEgLTEgMCA3MjIuNTY4IDIxMzUwLjIgY20gQlQgL0YxIDIzNC42IFRmIDAgMSAxIDAgayAwIDAgVGQgKHd5bWlhciBcMjA1Y2lhbnkpIFRqIEVUIFEKcSA5Mzg0IDAgMCA3MTE1LjA0IDExNzMgOTkzNy45NDQgY20gL1Bhbm8gRG8gUQpxIDAgMCAwIDEgSyAxNS42NCB3IDExNzMgMTcwNTIuOTg0IDMxNDYuODggNzExLjUwNCByZSBTIFEKcSAwIDAgMCAxIEsgMTUuNjQgdyAxMTczIDkyMjYuNDQgMzE0Ni44OCA3MTEuNTA0IHJlIFMgUQpxIDAgMCAwIDEgSyAxNS42NCB3IDQyOTEuNTYgMTcwNTIuOTg0IDMxNDYuODggNzExLjUwNCByZSBTIFEKcSAwIDAgMCAxIEsgMTUuNjQgdyA0MjkxLjU2IDkyMjYuNDQgMzE0Ni44OCA3MTEuNTA0IHJlIFMgUQpxIDAgMCAwIDEgSyAxNS42NCB3IDc0MTAuMTIgMTcwNTIuOTg0IDMxNDYuODggNzExLjUwNCByZSBTIFEKcSAwIDAgMCAxIEsgMTUuNjQgdyA3NDEwLjEyIDkyMjYuNDQgMzE0Ni44OCA3MTEuNTA0IHJlIFMgUQpxIDAgMCAwIDEgSyAxNS42NCB3IDExNzMgOTkzNy45NDQgOTM4NCA3MTE1LjA0IHJlIFMgUQpCVCAvRjEgNDY5LjIgVGYgMCAwIDAgMSBrIDQ2OS4yIDgyODguMDQgVGQgKEZvdG90YXBldGEgMzI1eDI0NSA2LjExLjIwMjYpIFRqIEVUCkJUIC9GMSAxODcuNjggVGYgMCAwIDAgMSBrIDQ2OS4yIDc5NzguMzY4IFRkICgxLzMgIDExMSwwIFwzMjcgMjUxLDAgY20pIFRqIEVUCnEgMzE0Ni44OCAwIDAgNzExNS4wNCA0NjkuMiA3NTAuNzIgY20gL0ltMCBEbyBRCkJUIC9GMSAxODcuNjggVGYgMCAwIDAgMSBrIDM5OTEuNDQgNzk3OC4zNjggVGQgKDIvMyAgMTExLDAgXDMyNyAyNTEsMCBjbSkgVGogRVQKcSAzMTQ2Ljg4IDAgMCA3MTE1LjA0IDM5OTEuNDQgNzUwLjcyIGNtIC9JbTEgRG8gUQpCVCAvRjEgMTg3LjY4IFRmIDAgMCAwIDEgayA3NTEzLjY4IDc5NzguMzY4IFRkICgzLzMgIDExMSwwIFwzMjcgMjUxLDAgY20pIFRqIEVUCnEgMzE0Ni44OCAwIDAgNzExNS4wNCA3NTEzLjY4IDc1MC43MiBjbSAvSW0yIERvIFEKCmVuZHN0cmVhbQplbmRvYmoKMTAgMCBvYmoKPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCAxMTQ5NS40IDI2Nzc5Ljc4OF0gL1Jlc291cmNlcyA4IDAgUiAvQ29udGVudHMgOSAwIFIgPj4KZW5kb2JqCnhyZWYKMCAxMQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDA2NCAwMDAwMCBuIAowMDAwMDAwMTIyIDAwMDAwIG4gCjAwMDAwMDEzNDkgMDAwMDAgbiAKMDAwMDAwMTUyNSAwMDAwMCBuIAowMDAwMDAxNzExIDAwMDAwIG4gCjAwMDAwMDE4OTcgMDAwMDAgbiAKMDAwMDAwMjA4MyAwMDAwMCBuIAowMDAwMDAyMTg2IDAwMDAwIG4gCjAwMDAwMDQyMzkgMDAwMDAgbiAKdHJhaWxlcgo8PCAvU2l6ZSAxMSAvUm9vdCAxIDAgUiA+PgpzdGFydHhyZWYKNDM1NAolJUVPRgo=",
+   "pages": 1,
+   "schemaScale": 1,
+   "G": {
+    "n": 3,
+    "wCm": [
+     111.01493333333333,
+     111.01493333333333,
+     111.01493333333333
+    ],
+    "xsCm": [
+     0,
+     110.01586666666667,
+     220.03173333333334
+    ],
+    "PW": 331.0466666666667,
+    "PH": 251.00279999999998,
+    "IH": 251.00279999999998,
+    "B": 0,
+    "fs": 8.276166666666667,
+    "fsS": 6.620933333333333,
+    "lw": 0.5517444444444445,
+    "M": 16.552333333333333,
+    "ext": 25.100279999999998,
+    "gap": 13.241866666666667
+   },
+   "cdr": {
+    "pageW": 405.5321666666666,
+    "pageH": 944.73141,
+    "ops": [
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "LEGENDA:",
+      "x": 41.38083333333333,
+      "y": 24.8285,
+      "size": 8.276166666666667,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "s": "naddatek",
+      "x": 41.38083333333333,
+      "y": 35.587516666666666,
+      "size": 6.620933333333333,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "s": "naddatek",
+      "x": 380.37262,
+      "y": 65.61344933333334,
+      "size": 6.620933333333333,
+      "rot": true
+     },
+     {
+      "t": "img",
+      "file": "pano.jpg",
+      "x": 41.38083333333333,
+      "y": 38.07036666666667,
+      "w": 331.0466666666667,
+      "h": 251.00279999999998
+     },
+     {
+      "t": "rectS",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "x": 41.38083333333333,
+      "y": 38.07036666666667,
+      "w": 331.0466666666667,
+      "h": 251.00279999999998,
+      "wd": 1.103488888888889
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x": 44.38083333333333,
+      "y": 41.07036666666667,
+      "w": 325,
+      "h": 245,
+      "wd": 0.5517444444444445
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 44.38083333333333,
+      "y1": 295.6941,
+      "x2": 369.3808333333333,
+      "y2": 295.6941,
+      "wd": 0.5517444444444445
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 44.38083333333333,
+      "y1": 293.21125,
+      "x2": 44.38083333333333,
+      "y2": 298.17695,
+      "wd": 0.5517444444444445
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 369.3808333333333,
+      "y1": 293.21125,
+      "x2": 369.3808333333333,
+      "y2": 298.17695,
+      "wd": 0.5517444444444445
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "3250,00 mm",
+      "x": 189.66640666666666,
+      "y": 302.97712666666666,
+      "size": 6.620933333333333,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "wymiar ściany",
+      "x": 178.90739,
+      "y": 311.9153866666666,
+      "size": 8.276166666666667,
+      "rot": false
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 34.759899999999995,
+      "y1": 41.07036666666667,
+      "x2": 34.759899999999995,
+      "y2": 286.0703666666667,
+      "wd": 0.5517444444444445
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 32.277049999999996,
+      "y1": 41.07036666666667,
+      "x2": 37.242749999999994,
+      "y2": 41.07036666666667,
+      "wd": 0.5517444444444445
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 32.277049999999996,
+      "y1": 286.0703666666667,
+      "x2": 37.242749999999994,
+      "y2": 286.0703666666667,
+      "wd": 0.5517444444444445
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "2450,00 mm",
+      "x": 32.773619999999994,
+      "y": 180.78479333333334,
+      "size": 6.620933333333333,
+      "rot": true
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "wymiar ściany",
+      "x": 25.49059333333333,
+      "y": 191.54381,
+      "size": 8.276166666666667,
+      "rot": true
+     },
+     {
+      "t": "img",
+      "file": "pano.jpg",
+      "x": 41.38083333333333,
+      "y": 343.14003,
+      "w": 331.0466666666667,
+      "h": 251.00279999999998
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 41.38083333333333,
+      "y": 318.03975,
+      "w": 111.01493333333333,
+      "h": 25.100279999999998,
+      "wd": 0.5517444444444445
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 41.38083333333333,
+      "y": 594.14283,
+      "w": 111.01493333333333,
+      "h": 25.100279999999998,
+      "wd": 0.5517444444444445
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 151.3967,
+      "y": 318.03975,
+      "w": 111.01493333333333,
+      "h": 25.100279999999998,
+      "wd": 0.5517444444444445
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 151.3967,
+      "y": 594.14283,
+      "w": 111.01493333333333,
+      "h": 25.100279999999998,
+      "wd": 0.5517444444444445
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 261.41256666666663,
+      "y": 318.03975,
+      "w": 111.01493333333333,
+      "h": 25.100279999999998,
+      "wd": 0.5517444444444445
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 261.41256666666663,
+      "y": 594.14283,
+      "w": 111.01493333333333,
+      "h": 25.100279999999998,
+      "wd": 0.5517444444444445
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 41.38083333333333,
+      "y": 343.14003,
+      "w": 331.0466666666667,
+      "h": 251.00279999999998,
+      "wd": 0.5517444444444445
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "Fototapeta 325x245 6.11.2026",
+      "x": 16.552333333333333,
+      "y": 652.3477766666666,
+      "size": 16.552333333333333,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "1/3  111,0 × 251,0 cm",
+      "x": 16.552333333333333,
+      "y": 663.2723166666666,
+      "size": 6.620933333333333,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_1.jpg",
+      "x": 16.552333333333333,
+      "y": 667.2448766666666,
+      "w": 111.01493333333333,
+      "h": 251.00279999999998
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "2/3  111,0 × 251,0 cm",
+      "x": 140.80913333333334,
+      "y": 663.2723166666666,
+      "size": 6.620933333333333,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_2.jpg",
+      "x": 140.80913333333334,
+      "y": 667.2448766666666,
+      "w": 111.01493333333333,
+      "h": 251.00279999999998
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "3/3  111,0 × 251,0 cm",
+      "x": 265.0659333333333,
+      "y": 663.2723166666666,
+      "size": 6.620933333333333,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_3.jpg",
+      "x": 265.0659333333333,
+      "y": 667.2448766666666,
+      "w": 111.01493333333333,
+      "h": 251.00279999999998
+     }
+    ]
+   }
+  }
+ },
+ {
+  "p": {
+   "wallW": 120,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 1,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "ŻÓŁĆ (jeden) bryt"
+  },
+  "panoW": 1900,
+  "panoH": 4000,
+  "out": {
+   "pdf": "JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5kb2JqCjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFs4IDAgUl0gL0NvdW50IDEgPj4KZW5kb2JqCjMgMCBvYmoKPDwgL1R5cGUgL0ZvbnQgL1N1YnR5cGUgL1R5cGUxIC9CYXNlRm9udCAvSGVsdmV0aWNhIC9GaXJzdENoYXIgMzIgL0xhc3RDaGFyIDI1NSAvV2lkdGhzIFsyNzggMjc4IDM1NSA1NTYgNTU2IDg4OSA2NjcgMTkxIDMzMyAzMzMgMzg5IDU4NCAyNzggMzMzIDI3OCAyNzggNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDI3OCAyNzggNTg0IDU4NCA1ODQgNTU2IDEwMTUgNjY3IDY2NyA3MjIgNzIyIDY2NyA2MTEgNzc4IDcyMiAyNzggNTAwIDY2NyA1NTYgODMzIDcyMiA3NzggNjY3IDc3OCA3MjIgNjY3IDYxMSA3MjIgNjY3IDk0NCA2NjcgNjY3IDYxMSAyNzggMjc4IDI3OCA0NjkgNTU2IDMzMyA1NTYgNTU2IDUwMCA1NTYgNTU2IDI3OCA1NTYgNTU2IDIyMiAyMjIgNTAwIDIyMiA4MzMgNTU2IDU1NiA1NTYgNTU2IDMzMyA1MDAgMjc4IDU1NiA1MDAgNzIyIDUwMCA1MDAgNTAwIDMzNCAyNjAgMzM0IDU4NCA1NTYgNTU2IDUwMCA1NTYgMjIyIDU1NiA1MDAgNTAwIDUwMCA2NjcgNzIyIDY2NyA1NTYgNzIyIDY2NyA2MTEgNjExIDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDI3OCA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA3NzggNTU2IDU1NiA1NTYgNTg0IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1Nl0gL0VuY29kaW5nIDw8IC9UeXBlIC9FbmNvZGluZyAvQmFzZUVuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL0RpZmZlcmVuY2VzIFsxMjggL2FvZ29uZWsgL2NhY3V0ZSAvZW9nb25layAvbHNsYXNoIC9uYWN1dGUgL3NhY3V0ZSAvemFjdXRlIC96ZG90YWNjZW50IC9Bb2dvbmVrIC9DYWN1dGUgL0VvZ29uZWsgL0xzbGFzaCAvTmFjdXRlIC9TYWN1dGUgL1phY3V0ZSAvWmRvdGFjY2VudF0gPj4gPj4KZW5kb2JqCjQgMCBvYmoKPDwgL1R5cGUgL1hPYmplY3QgL1N1YnR5cGUgL0ltYWdlIC9XaWR0aCAxOTAwIC9IZWlnaHQgNDAwMCAvQ29sb3JTcGFjZSAvRGV2aWNlUkdCIC9CaXRzUGVyQ29tcG9uZW50IDggL0ZpbHRlciAvRENURGVjb2RlIC9MZW5ndGggOSA+PgpzdHJlYW0KUEFOTy1KUEVHCmVuZHN0cmVhbQplbmRvYmoKNSAwIG9iago8PCAvVHlwZSAvWE9iamVjdCAvU3VidHlwZSAvSW1hZ2UgL1dpZHRoIDc0NDEgL0hlaWdodCAxNjMwMCAvQ29sb3JTcGFjZSAvRGV2aWNlUkdCIC9CaXRzUGVyQ29tcG9uZW50IDggL0ZpbHRlciAvRENURGVjb2RlIC9MZW5ndGggMTcgPj4Kc3RyZWFtCkpQRUctMC03NDQxeDE2MzAwCmVuZHN0cmVhbQplbmRvYmoKNiAwIG9iago8PCAvRm9udCA8PCAvRjEgMyAwIFIgPj4gL1hPYmplY3QgPDwgL1Bhbm8gNCAwIFIgL0ltMCA1IDAgUiA+PiA+PgplbmRvYmoKNyAwIG9iago8PCAvTGVuZ3RoIDE1MjUgPj4Kc3RyZWFtCkJUIC9GMSA4OS4yOTIgVGYgMCAwIDAgMSBrIDQ0Ni40NiAyNjI5NS44MTcgVGQgKExFR0VOREE6KSBUaiBFVApCVCAvRjEgNzEuNDM0IFRmIDEgMCAwIDAgayA0NDYuNDYgMjYxNzkuNzM4IFRkIChuYWRkYXRlaykgVGogRVQKcSAwIDEgLTEgMCA0MTAzLjg2IDI1ODU1Ljc4NiBjbSBCVCAvRjEgNzEuNDM0IFRmIDEgMCAwIDAgayAwIDAgVGQgKG5hZGRhdGVrKSBUaiBFVCBRCnEgMzU3MS42OCAwIDAgNzgyNCA0NDYuNDYgMTgzMjguOTUgY20gL1Bhbm8gRG8gUQpxIDEgMCAwIDAgSyAxMS45MDYgdyA0NDYuNDYgMTgzMjguOTUgMzU3MS42OCA3ODI0IHJlIFMgUQpxIDAgMSAxIDAgSyA1Ljk1MyB3IDUzMS40OTkgMTg0MTQuMzY3IDM0MDEuNTc1IDc2NTMuNTQzIHJlIFMgUQpxIDAgMSAxIDAgSyA1Ljk1MyB3IDUzMS40OTkgMTgyNTcuNTE2IG0gMzkzMy4wNzQgMTgyNTcuNTE2IGwgUyBRCnEgMCAxIDEgMCBLIDUuOTUzIHcgNTMxLjQ5OSAxODI4NC4zMDQgbSA1MzEuNDk5IDE4MjMwLjcyOSBsIFMgUQpxIDAgMSAxIDAgSyA1Ljk1MyB3IDM5MzMuMDc0IDE4Mjg0LjMwNCBtIDM5MzMuMDc0IDE4MjMwLjcyOSBsIFMgUQpCVCAvRjEgNzEuNDM0IFRmIDAgMSAxIDAgayAyMDQ2LjU1OSAxODE3OC45MzkgVGQgKDEyMDAsMDAgbW0pIFRqIEVUCkJUIC9GMSA4OS4yOTIgVGYgMCAxIDEgMCBrIDE5MzAuNDggMTgwODIuNTA0IFRkICh3eW1pYXIgXDIwNWNpYW55KSBUaiBFVApxIDAgMSAxIDAgSyA1Ljk1MyB3IDM3NS4wMjYgMjYwNjcuOTExIG0gMzc1LjAyNiAxODQxNC4zNjcgbCBTIFEKcSAwIDEgMSAwIEsgNS45NTMgdyAzNDguMjM5IDI2MDY3LjkxMSBtIDQwMS44MTQgMjYwNjcuOTExIGwgUyBRCnEgMCAxIDEgMCBLIDUuOTUzIHcgMzQ4LjIzOSAxODQxNC4zNjcgbSA0MDEuODE0IDE4NDE0LjM2NyBsIFMgUQpxIDAgMSAtMSAwIDM1My41OTYgMjIwNTUuNDEyIGNtIEJUIC9GMSA3MS40MzQgVGYgMCAxIDEgMCBrIDAgMCBUZCAoMjcwMCwwMCBtbSkgVGogRVQgUQpxIDAgMSAtMSAwIDI3NS4wMTkgMjE5MzkuMzMyIGNtIEJUIC9GMSA4OS4yOTIgVGYgMCAxIDEgMCBrIDAgMCBUZCAod3ltaWFyIFwyMDVjaWFueSkgVGogRVQgUQpxIDM1NzEuNjggMCAwIDc4MjQgNDQ2LjQ2IDk0MTAuMDI4IGNtIC9QYW5vIERvIFEKcSAwIDAgMCAxIEsgNS45NTMgdyA0NDYuNDYgMTcyMzQuMDI4IDM1NzEuNjggNzgyLjQgcmUgUyBRCnEgMCAwIDAgMSBLIDUuOTUzIHcgNDQ2LjQ2IDg2MjcuNjI4IDM1NzEuNjggNzgyLjQgcmUgUyBRCnEgMCAwIDAgMSBLIDUuOTUzIHcgNDQ2LjQ2IDk0MTAuMDI4IDM1NzEuNjggNzgyNCByZSBTIFEKQlQgL0YxIDE3OC41ODQgVGYgMCAwIDAgMSBrIDE3OC41ODQgODI3MC40NiBUZCAoXDIxN1wzMjNcMjEzXDIxMSBcKGplZGVuXCkgYnJ5dCkgVGogRVQKQlQgL0YxIDcxLjQzNCBUZiAwIDAgMCAxIGsgMTc4LjU4NCA4MTUyLjU5NSBUZCAoMS8xICAxMjYsMCBcMzI3IDI3NiwwIGNtKSBUaiBFVApxIDM1NzEuNjggMCAwIDc4MjQgMTc4LjU4NCAyODUuNzM0IGNtIC9JbTAgRG8gUQoKZW5kc3RyZWFtCmVuZG9iago4IDAgb2JqCjw8IC9UeXBlIC9QYWdlIC9QYXJlbnQgMiAwIFIgL01lZGlhQm94IFswIDAgNDM3NS4zMDggMjY1NjMuNjkzXSAvUmVzb3VyY2VzIDYgMCBSIC9Db250ZW50cyA3IDAgUiA+PgplbmRvYmoKeHJlZgowIDkKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDAwNjQgMDAwMDAgbiAKMDAwMDAwMDEyMSAwMDAwMCBuIAowMDAwMDAxMzQ4IDAwMDAwIG4gCjAwMDAwMDE1MjQgMDAwMDAgbiAKMDAwMDAwMTcxMCAwMDAwMCBuIAowMDAwMDAxNzkxIDAwMDAwIG4gCjAwMDAwMDMzNjggMDAwMDAgbiAKdHJhaWxlcgo8PCAvU2l6ZSA5IC9Sb290IDEgMCBSID4+CnN0YXJ0eHJlZgozNDgzCiUlRU9GCg==",
+   "pages": 1,
+   "schemaScale": 1,
+   "G": {
+    "n": 1,
+    "wCm": [
+     126.00093333333334
+    ],
+    "xsCm": [
+     0
+    ],
+    "PW": 126.00093333333334,
+    "PH": 276.0133333333333,
+    "IH": 276.0133333333333,
+    "B": 0,
+    "fs": 3.1500233333333334,
+    "fsS": 2.520018666666667,
+    "lw": 0.21000155555555555,
+    "M": 6.300046666666667,
+    "ext": 27.601333333333333,
+    "gap": 5.040037333333333
+   },
+   "cdr": {
+    "pageW": 154.35114333333334,
+    "pageH": 937.1080656666666,
+    "ops": [
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "LEGENDA:",
+      "x": 15.750116666666667,
+      "y": 9.45007,
+      "size": 3.1500233333333334,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "s": "naddatek",
+      "x": 15.750116666666667,
+      "y": 13.545100333333334,
+      "size": 2.520018666666667,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "s": "naddatek",
+      "x": 144.7750724,
+      "y": 24.97338498666667,
+      "size": 2.520018666666667,
+      "rot": true
+     },
+     {
+      "t": "img",
+      "file": "pano.jpg",
+      "x": 15.750116666666667,
+      "y": 14.490107333333334,
+      "w": 126.00093333333334,
+      "h": 276.0133333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "x": 15.750116666666667,
+      "y": 14.490107333333334,
+      "w": 126.00093333333334,
+      "h": 276.0133333333333,
+      "wd": 0.4200031111111111
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x": 18.750116666666667,
+      "y": 17.490107333333334,
+      "w": 120,
+      "h": 270,
+      "wd": 0.21000155555555555
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 18.750116666666667,
+      "y1": 293.02345933333334,
+      "x2": 138.75011666666666,
+      "y2": 293.02345933333334,
+      "wd": 0.21000155555555555
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 18.750116666666667,
+      "y1": 292.07845233333336,
+      "x2": 18.750116666666667,
+      "y2": 293.9684663333333,
+      "wd": 0.21000155555555555
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 138.75011666666666,
+      "y1": 292.07845233333336,
+      "x2": 138.75011666666666,
+      "y2": 293.9684663333333,
+      "wd": 0.21000155555555555
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "1200,00 mm",
+      "x": 72.19806813333334,
+      "y": 295.79547986666665,
+      "size": 2.520018666666667,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "wymiar ściany",
+      "x": 68.10303780000001,
+      "y": 299.1975050666666,
+      "size": 3.1500233333333334,
+      "rot": false
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 13.230098,
+      "y1": 17.490107333333334,
+      "x2": 13.230098,
+      "y2": 287.49010733333336,
+      "wd": 0.21000155555555555
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 12.285091,
+      "y1": 17.490107333333334,
+      "x2": 14.175105,
+      "y2": 17.490107333333334,
+      "wd": 0.21000155555555555
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 12.285091,
+      "y1": 287.49010733333336,
+      "x2": 14.175105,
+      "y2": 287.49010733333336,
+      "wd": 0.21000155555555555
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "2700,00 mm",
+      "x": 12.4740924,
+      "y": 159.04215586666666,
+      "size": 2.520018666666667,
+      "rot": true
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "wymiar ściany",
+      "x": 9.702071866666666,
+      "y": 163.1371862,
+      "size": 3.1500233333333334,
+      "rot": true
+     },
+     {
+      "t": "img",
+      "file": "pano.jpg",
+      "x": 15.750116666666667,
+      "y": 329.1298556666667,
+      "w": 126.00093333333334,
+      "h": 276.0133333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 15.750116666666667,
+      "y": 301.52852233333334,
+      "w": 126.00093333333334,
+      "h": 27.601333333333333,
+      "wd": 0.21000155555555555
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 15.750116666666667,
+      "y": 605.143189,
+      "w": 126.00093333333334,
+      "h": 27.601333333333333,
+      "wd": 0.21000155555555555
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 15.750116666666667,
+      "y": 329.1298556666667,
+      "w": 126.00093333333334,
+      "h": 276.0133333333333,
+      "wd": 0.21000155555555555
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "ŻÓŁĆ (jeden) bryt",
+      "x": 6.300046666666667,
+      "y": 645.3446156666665,
+      "size": 6.300046666666667,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "1/1  126,0 × 276,0 cm",
+      "x": 6.300046666666667,
+      "y": 649.5026464666666,
+      "size": 2.520018666666667,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_1.jpg",
+      "x": 6.300046666666667,
+      "y": 651.0146576666666,
+      "w": 126.00093333333334,
+      "h": 276.0133333333333
+     }
+    ]
+   }
+  }
+ },
+ {
+  "p": {
+   "wallW": 1000,
+   "wallH": 270,
+   "mT": 3,
+   "mB": 3,
+   "mL": 3,
+   "mR": 3,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "equal",
+   "count": 8,
+   "widths": [
+    122.7,
+    122.7,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 300,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Bardzo długa nazwa zlecenia klienta Kowalskiego Wiśniewskiego z Gdańska 2026"
+  },
+  "panoW": 4000,
+  "panoH": 1100,
+  "out": {
+   "pdf": "JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5kb2JqCjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFsxNSAwIFJdIC9Db3VudCAxID4+CmVuZG9iagozIDAgb2JqCjw8IC9UeXBlIC9Gb250IC9TdWJ0eXBlIC9UeXBlMSAvQmFzZUZvbnQgL0hlbHZldGljYSAvRmlyc3RDaGFyIDMyIC9MYXN0Q2hhciAyNTUgL1dpZHRocyBbMjc4IDI3OCAzNTUgNTU2IDU1NiA4ODkgNjY3IDE5MSAzMzMgMzMzIDM4OSA1ODQgMjc4IDMzMyAyNzggMjc4IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiAyNzggMjc4IDU4NCA1ODQgNTg0IDU1NiAxMDE1IDY2NyA2NjcgNzIyIDcyMiA2NjcgNjExIDc3OCA3MjIgMjc4IDUwMCA2NjcgNTU2IDgzMyA3MjIgNzc4IDY2NyA3NzggNzIyIDY2NyA2MTEgNzIyIDY2NyA5NDQgNjY3IDY2NyA2MTEgMjc4IDI3OCAyNzggNDY5IDU1NiAzMzMgNTU2IDU1NiA1MDAgNTU2IDU1NiAyNzggNTU2IDU1NiAyMjIgMjIyIDUwMCAyMjIgODMzIDU1NiA1NTYgNTU2IDU1NiAzMzMgNTAwIDI3OCA1NTYgNTAwIDcyMiA1MDAgNTAwIDUwMCAzMzQgMjYwIDMzNCA1ODQgNTU2IDU1NiA1MDAgNTU2IDIyMiA1NTYgNTAwIDUwMCA1MDAgNjY3IDcyMiA2NjcgNTU2IDcyMiA2NjcgNjExIDYxMSA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiAyNzggNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNzc4IDU1NiA1NTYgNTU2IDU4NCA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTZdIC9FbmNvZGluZyA8PCAvVHlwZSAvRW5jb2RpbmcgL0Jhc2VFbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9EaWZmZXJlbmNlcyBbMTI4IC9hb2dvbmVrIC9jYWN1dGUgL2VvZ29uZWsgL2xzbGFzaCAvbmFjdXRlIC9zYWN1dGUgL3phY3V0ZSAvemRvdGFjY2VudCAvQW9nb25layAvQ2FjdXRlIC9Fb2dvbmVrIC9Mc2xhc2ggL05hY3V0ZSAvU2FjdXRlIC9aYWN1dGUgL1pkb3RhY2NlbnRdID4+ID4+CmVuZG9iago0IDAgb2JqCjw8IC9UeXBlIC9YT2JqZWN0IC9TdWJ0eXBlIC9JbWFnZSAvV2lkdGggNDAwMCAvSGVpZ2h0IDExMDAgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDkgPj4Kc3RyZWFtClBBTk8tSlBFRwplbmRzdHJlYW0KZW5kb2JqCjUgMCBvYmoKPDwgL1R5cGUgL1hPYmplY3QgL1N1YnR5cGUgL0ltYWdlIC9XaWR0aCAxNTQ3MyAvSGVpZ2h0IDMyNTk5IC9Db2xvclNwYWNlIC9EZXZpY2VSR0IgL0JpdHNQZXJDb21wb25lbnQgOCAvRmlsdGVyIC9EQ1REZWNvZGUgL0xlbmd0aCAxOCA+PgpzdHJlYW0KSlBFRy0wLTE1NDczeDMyNTk5CmVuZHN0cmVhbQplbmRvYmoKNiAwIG9iago8PCAvVHlwZSAvWE9iamVjdCAvU3VidHlwZSAvSW1hZ2UgL1dpZHRoIDE1NDczIC9IZWlnaHQgMzI1OTkgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE4ID4+CnN0cmVhbQpKUEVHLTEtMTU0NzN4MzI1OTkKZW5kc3RyZWFtCmVuZG9iago3IDAgb2JqCjw8IC9UeXBlIC9YT2JqZWN0IC9TdWJ0eXBlIC9JbWFnZSAvV2lkdGggMTU0NzMgL0hlaWdodCAzMjU5OSAvQ29sb3JTcGFjZSAvRGV2aWNlUkdCIC9CaXRzUGVyQ29tcG9uZW50IDggL0ZpbHRlciAvRENURGVjb2RlIC9MZW5ndGggMTggPj4Kc3RyZWFtCkpQRUctMi0xNTQ3M3gzMjU5OQplbmRzdHJlYW0KZW5kb2JqCjggMCBvYmoKPDwgL1R5cGUgL1hPYmplY3QgL1N1YnR5cGUgL0ltYWdlIC9XaWR0aCAxNTQ3MyAvSGVpZ2h0IDMyNTk5IC9Db2xvclNwYWNlIC9EZXZpY2VSR0IgL0JpdHNQZXJDb21wb25lbnQgOCAvRmlsdGVyIC9EQ1REZWNvZGUgL0xlbmd0aCAxOCA+PgpzdHJlYW0KSlBFRy0zLTE1NDczeDMyNTk5CmVuZHN0cmVhbQplbmRvYmoKOSAwIG9iago8PCAvVHlwZSAvWE9iamVjdCAvU3VidHlwZSAvSW1hZ2UgL1dpZHRoIDE1NDczIC9IZWlnaHQgMzI1OTkgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE4ID4+CnN0cmVhbQpKUEVHLTQtMTU0NzN4MzI1OTkKZW5kc3RyZWFtCmVuZG9iagoxMCAwIG9iago8PCAvVHlwZSAvWE9iamVjdCAvU3VidHlwZSAvSW1hZ2UgL1dpZHRoIDE1NDczIC9IZWlnaHQgMzI1OTkgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE4ID4+CnN0cmVhbQpKUEVHLTUtMTU0NzN4MzI1OTkKZW5kc3RyZWFtCmVuZG9iagoxMSAwIG9iago8PCAvVHlwZSAvWE9iamVjdCAvU3VidHlwZSAvSW1hZ2UgL1dpZHRoIDE1NDczIC9IZWlnaHQgMzI1OTkgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE4ID4+CnN0cmVhbQpKUEVHLTYtMTU0NzN4MzI1OTkKZW5kc3RyZWFtCmVuZG9iagoxMiAwIG9iago8PCAvVHlwZSAvWE9iamVjdCAvU3VidHlwZSAvSW1hZ2UgL1dpZHRoIDE1NDczIC9IZWlnaHQgMzI1OTkgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE4ID4+CnN0cmVhbQpKUEVHLTctMTU0NzN4MzI1OTkKZW5kc3RyZWFtCmVuZG9iagoxMyAwIG9iago8PCAvRm9udCA8PCAvRjEgMyAwIFIgPj4gL1hPYmplY3QgPDwgL1Bhbm8gNCAwIFIgL0ltMCA1IDAgUiAvSW0xIDYgMCBSIC9JbTIgNyAwIFIgL0ltMyA4IDAgUiAvSW00IDkgMCBSIC9JbTUgMTAgMCBSIC9JbTYgMTEgMCBSIC9JbTcgMTIgMCBSID4+ID4+CmVuZG9iagoxNCAwIG9iago8PCAvTGVuZ3RoIDM0OTMgPj4Kc3RyZWFtCkJUIC9GMSA3MTIuOTI2IFRmIDAgMCAwIDEgayAzNTY0LjYzIDM1MDg4LjI4OSBUZCAoTEVHRU5EQTopIFRqIEVUCkJUIC9GMSA1NzAuMzQxIFRmIDEgMCAwIDAgayAzNTY0LjYzIDM0MTYxLjQ4NSBUZCAobmFkZGF0ZWspIFRqIEVUCnEgMCAxIC0xIDAgMzI3NjYuMDc5IDMxNTc0Ljk4OSBjbSBCVCAvRjEgNTcwLjM0MSBUZiAxIDAgMCAwIGsgMCAwIFRkIChuYWRkYXRlaykgVGogRVQgUQpxIDI4NTE3LjA0IDAgMCA3ODIzLjc2IDM1NjQuNjMgMjYxMjMuODQ3IGNtIC9QYW5vIERvIFEKcSAxIDAgMCAwIEsgOTUuMDU3IHcgMzU2NC42MyAyNjEyMy44NDcgMjg1MTcuMDQgNzgyMy43NiByZSBTIFEKcSAwIDEgMSAwIEsgNDcuNTI4IHcgMzY0OS42NjkgMjYyMDkuMDI0IDI4MzQ2LjQ1NyA3NjUzLjU0MyByZSBTIFEKcSAwIDEgMSAwIEsgNDcuNTI4IHcgMzY0OS42NjkgMjU1NTMuNTA2IG0gMzE5OTYuMTI2IDI1NTUzLjUwNiBsIFMgUQpxIDAgMSAxIDAgSyA0Ny41MjggdyAzNjQ5LjY2OSAyNTc2Ny4zODQgbSAzNjQ5LjY2OSAyNTMzOS42MjggbCBTIFEKcSAwIDEgMSAwIEsgNDcuNTI4IHcgMzE5OTYuMTI2IDI1NzY3LjM4NCBtIDMxOTk2LjEyNiAyNTMzOS42MjggbCBTIFEKQlQgL0YxIDU3MC4zNDEgVGYgMCAxIDEgMCBrIDE2MTkxLjcyMyAyNDkyNi4xMzEgVGQgKDEwMDAwLDAwIG1tKSBUaiBFVApCVCAvRjEgNzEyLjkyNiBUZiAwIDEgMSAwIGsgMTU0MTMuMjA4IDI0MTU2LjE3MSBUZCAod3ltaWFyIFwyMDVjaWFueSkgVGogRVQKcSAwIDEgMSAwIEsgNDcuNTI4IHcgMjk5NC4yODkgMzM4NjIuNTY4IG0gMjk5NC4yODkgMjYyMDkuMDI0IGwgUyBRCnEgMCAxIDEgMCBLIDQ3LjUyOCB3IDI3ODAuNDExIDMzODYyLjU2OCBtIDMyMDguMTY3IDMzODYyLjU2OCBsIFMgUQpxIDAgMSAxIDAgSyA0Ny41MjggdyAyNzgwLjQxMSAyNjIwOS4wMjQgbSAzMjA4LjE2NyAyNjIwOS4wMjQgbCBTIFEKcSAwIDEgLTEgMCAyODIzLjE4NyAyODU1Mi45MSBjbSBCVCAvRjEgNTcwLjM0MSBUZiAwIDEgMSAwIGsgMCAwIFRkICgyNzAwLDAwIG1tKSBUaiBFVCBRCnEgMCAxIC0xIDAgMjE5NS44MTIgMjc2MjYuMTA2IGNtIEJUIC9GMSA3MTIuOTI2IFRmIDAgMSAxIDAgayAwIDAgVGQgKHd5bWlhciBcMjA1Y2lhbnkpIFRqIEVUIFEKcSAyODUxNy4wNCAwIDAgNzgyMy43NiAzNTY0LjYzIDE1MDIyLjQ3IGNtIC9QYW5vIERvIFEKcSAwIDAgMCAxIEsgNDcuNTI4IHcgMzU2NC42MyAyMjg0Ni4yMyAzNzEzLjUyIDc4Mi4zNzYgcmUgUyBRCnEgMCAwIDAgMSBLIDQ3LjUyOCB3IDM1NjQuNjMgMTQyNDAuMDk0IDM3MTMuNTIgNzgyLjM3NiByZSBTIFEKcSAwIDAgMCAxIEsgNDcuNTI4IHcgNzEwNy45OSAyMjg0Ni4yMyAzNzEzLjUyIDc4Mi4zNzYgcmUgUyBRCnEgMCAwIDAgMSBLIDQ3LjUyOCB3IDcxMDcuOTkgMTQyNDAuMDk0IDM3MTMuNTIgNzgyLjM3NiByZSBTIFEKcSAwIDAgMCAxIEsgNDcuNTI4IHcgMTA2NTEuMzUgMjI4NDYuMjMgMzcxMy41MiA3ODIuMzc2IHJlIFMgUQpxIDAgMCAwIDEgSyA0Ny41MjggdyAxMDY1MS4zNSAxNDI0MC4wOTQgMzcxMy41MiA3ODIuMzc2IHJlIFMgUQpxIDAgMCAwIDEgSyA0Ny41MjggdyAxNDE5NC43MSAyMjg0Ni4yMyAzNzEzLjUyIDc4Mi4zNzYgcmUgUyBRCnEgMCAwIDAgMSBLIDQ3LjUyOCB3IDE0MTk0LjcxIDE0MjQwLjA5NCAzNzEzLjUyIDc4Mi4zNzYgcmUgUyBRCnEgMCAwIDAgMSBLIDQ3LjUyOCB3IDE3NzM4LjA3IDIyODQ2LjIzIDM3MTMuNTIgNzgyLjM3NiByZSBTIFEKcSAwIDAgMCAxIEsgNDcuNTI4IHcgMTc3MzguMDcgMTQyNDAuMDk0IDM3MTMuNTIgNzgyLjM3NiByZSBTIFEKcSAwIDAgMCAxIEsgNDcuNTI4IHcgMjEyODEuNDMgMjI4NDYuMjMgMzcxMy41MiA3ODIuMzc2IHJlIFMgUQpxIDAgMCAwIDEgSyA0Ny41MjggdyAyMTI4MS40MyAxNDI0MC4wOTQgMzcxMy41MiA3ODIuMzc2IHJlIFMgUQpxIDAgMCAwIDEgSyA0Ny41MjggdyAyNDgyNC43OSAyMjg0Ni4yMyAzNzEzLjUyIDc4Mi4zNzYgcmUgUyBRCnEgMCAwIDAgMSBLIDQ3LjUyOCB3IDI0ODI0Ljc5IDE0MjQwLjA5NCAzNzEzLjUyIDc4Mi4zNzYgcmUgUyBRCnEgMCAwIDAgMSBLIDQ3LjUyOCB3IDI4MzY4LjE1IDIyODQ2LjIzIDM3MTMuNTIgNzgyLjM3NiByZSBTIFEKcSAwIDAgMCAxIEsgNDcuNTI4IHcgMjgzNjguMTUgMTQyNDAuMDk0IDM3MTMuNTIgNzgyLjM3NiByZSBTIFEKcSAwIDAgMCAxIEsgNDcuNTI4IHcgMzU2NC42MyAxNTAyMi40NyAyODUxNy4wNCA3ODIzLjc2IHJlIFMgUQpCVCAvRjEgMTQyNS44NTIgVGYgMCAwIDAgMSBrIDE0MjUuODUyIDExMzg4LjM5IFRkIChCYXJkem8gZFwyMDN1Z2EgbmF6d2EgemxlY2VuaWEga2xpZW50YSBLb3dhbHNraWVnbyBXaVwyMDVuaWV3c2tpZWdvIHogR2RhXDIwNHNrYSAyMDI2KSBUaiBFVApCVCAvRjEgNTcwLjM0MSBUZiAwIDAgMCAxIGsgMTQyNS44NTIgMTA0NDcuMzI4IFRkICgxLzggIDEzMSwwIFwzMjcgMjc2LDAgY20pIFRqIEVUCnEgMzcxMy41MiAwIDAgNzgyMy43NiAxNDI1Ljg1MiAyMjgxLjM2MyBjbSAvSW0wIERvIFEKQlQgL0YxIDU3MC4zNDEgVGYgMCAwIDAgMSBrIDYyODAuMDU0IDEwNDQ3LjMyOCBUZCAoMi84ICAxMzEsMCBcMzI3IDI3NiwwIGNtKSBUaiBFVApxIDM3MTMuNTIgMCAwIDc4MjMuNzYgNjI4MC4wNTQgMjI4MS4zNjMgY20gL0ltMSBEbyBRCkJUIC9GMSA1NzAuMzQxIFRmIDAgMCAwIDEgayAxMTEzNC4yNTUgMTA0NDcuMzI4IFRkICgzLzggIDEzMSwwIFwzMjcgMjc2LDAgY20pIFRqIEVUCnEgMzcxMy41MiAwIDAgNzgyMy43NiAxMTEzNC4yNTUgMjI4MS4zNjMgY20gL0ltMiBEbyBRCkJUIC9GMSA1NzAuMzQxIFRmIDAgMCAwIDEgayAxNTk4OC40NTcgMTA0NDcuMzI4IFRkICg0LzggIDEzMSwwIFwzMjcgMjc2LDAgY20pIFRqIEVUCnEgMzcxMy41MiAwIDAgNzgyMy43NiAxNTk4OC40NTcgMjI4MS4zNjMgY20gL0ltMyBEbyBRCkJUIC9GMSA1NzAuMzQxIFRmIDAgMCAwIDEgayAyMDg0Mi42NTggMTA0NDcuMzI4IFRkICg1LzggIDEzMSwwIFwzMjcgMjc2LDAgY20pIFRqIEVUCnEgMzcxMy41MiAwIDAgNzgyMy43NiAyMDg0Mi42NTggMjI4MS4zNjMgY20gL0ltNCBEbyBRCkJUIC9GMSA1NzAuMzQxIFRmIDAgMCAwIDEgayAyNTY5Ni44NiAxMDQ0Ny4zMjggVGQgKDYvOCAgMTMxLDAgXDMyNyAyNzYsMCBjbSkgVGogRVQKcSAzNzEzLjUyIDAgMCA3ODIzLjc2IDI1Njk2Ljg2IDIyODEuMzYzIGNtIC9JbTUgRG8gUQpCVCAvRjEgNTcwLjM0MSBUZiAwIDAgMCAxIGsgMzA1NTEuMDYyIDEwNDQ3LjMyOCBUZCAoNy84ICAxMzEsMCBcMzI3IDI3NiwwIGNtKSBUaiBFVApxIDM3MTMuNTIgMCAwIDc4MjMuNzYgMzA1NTEuMDYyIDIyODEuMzYzIGNtIC9JbTYgRG8gUQpCVCAvRjEgNTcwLjM0MSBUZiAwIDAgMCAxIGsgMzU0MDUuMjYzIDEwNDQ3LjMyOCBUZCAoOC84ICAxMzEsMCBcMzI3IDI3NiwwIGNtKSBUaiBFVApxIDM3MTMuNTIgMCAwIDc4MjMuNzYgMzU0MDUuMjYzIDIyODEuMzYzIGNtIC9JbTcgRG8gUQoKZW5kc3RyZWFtCmVuZG9iagoxNSAwIG9iago8PCAvVHlwZSAvUGFnZSAvUGFyZW50IDIgMCBSIC9NZWRpYUJveCBbMCAwIDU5MjAxLjM3NSAzNzIyNy4wNjddIC9SZXNvdXJjZXMgMTMgMCBSIC9Db250ZW50cyAxNCAwIFIgPj4KZW5kb2JqCnhyZWYKMCAxNgowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDA2NCAwMDAwMCBuIAowMDAwMDAwMTIyIDAwMDAwIG4gCjAwMDAwMDEzNDkgMDAwMDAgbiAKMDAwMDAwMTUyNSAwMDAwMCBuIAowMDAwMDAxNzEzIDAwMDAwIG4gCjAwMDAwMDE5MDEgMDAwMDAgbiAKMDAwMDAwMjA4OSAwMDAwMCBuIAowMDAwMDAyMjc3IDAwMDAwIG4gCjAwMDAwMDI0NjUgMDAwMDAgbiAKMDAwMDAwMjY1NCAwMDAwMCBuIAowMDAwMDAyODQzIDAwMDAwIG4gCjAwMDAwMDMwMzIgMDAwMDAgbiAKMDAwMDAwMzE5NCAwMDAwMCBuIAowMDAwMDA2NzQwIDAwMDAwIG4gCnRyYWlsZXIKPDwgL1NpemUgMTYgL1Jvb3QgMSAwIFIgPj4Kc3RhcnR4cmVmCjY4NTkKJSVFT0YK",
+   "pages": 1,
+   "schemaScale": 1,
+   "G": {
+    "n": 8,
+    "wCm": [
+     131.00473333333335,
+     131.00473333333335,
+     131.00473333333335,
+     131.00473333333335,
+     131.00473333333335,
+     131.00473333333335,
+     131.00473333333335,
+     131.00473333333335
+    ],
+    "xsCm": [
+     0,
+     125.00186666666666,
+     250.00373333333332,
+     375.00559999999996,
+     500.00746666666663,
+     625.0093333333333,
+     750.0111999999999,
+     875.0130666666666
+    ],
+    "PW": 1006.0178,
+    "PH": 276.00486666666666,
+    "IH": 276.00486666666666,
+    "B": 0,
+    "fs": 25.150444999999998,
+    "fsS": 20.120356,
+    "lw": 1.6766963333333333,
+    "M": 50.300889999999995,
+    "ext": 27.60048666666667,
+    "gap": 40.240712
+   },
+   "cdr": {
+    "pageW": 2088.4929528,
+    "pageH": 1313.2881828333332,
+    "ops": [
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "LEGENDA:",
+      "x": 125.752225,
+      "y": 75.451335,
+      "size": 25.150444999999998,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "s": "naddatek",
+      "x": 125.752225,
+      "y": 108.1469135,
+      "size": 20.120356,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "s": "naddatek",
+      "x": 1155.9144522000001,
+      "y": 199.39272796,
+      "size": 20.120356,
+      "rot": true
+     },
+     {
+      "t": "img",
+      "file": "pano.jpg",
+      "x": 125.752225,
+      "y": 115.69204699999999,
+      "w": 1006.0178,
+      "h": 276.00486666666666
+     },
+     {
+      "t": "rectS",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "x": 125.752225,
+      "y": 115.69204699999999,
+      "w": 1006.0178,
+      "h": 276.00486666666666,
+      "wd": 3.3533926666666667
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x": 128.752225,
+      "y": 118.69204699999999,
+      "w": 1000,
+      "h": 270,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 128.752225,
+      "y1": 411.8172696666667,
+      "x2": 1128.752225,
+      "y2": 411.8172696666667,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 128.752225,
+      "y1": 404.27213616666666,
+      "x2": 128.752225,
+      "y2": 419.3624031666667,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 1128.752225,
+      "y1": 404.27213616666666,
+      "x2": 1128.752225,
+      "y2": 419.3624031666667,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "10000,00 mm",
+      "x": 571.2080068399999,
+      "y": 433.9496612666667,
+      "size": 20.120356,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "wymiar ściany",
+      "x": 543.7437209,
+      "y": 461.11214186666666,
+      "size": 25.150444999999998,
+      "rot": false
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 105.631869,
+      "y1": 118.69204699999999,
+      "x2": 105.631869,
+      "y2": 388.692047,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 98.0867355,
+      "y1": 118.69204699999999,
+      "x2": 113.17700249999999,
+      "y2": 118.69204699999999,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 98.0867355,
+      "y1": 388.692047,
+      "x2": 113.17700249999999,
+      "y2": 388.692047,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "2700,00 mm",
+      "x": 99.5957622,
+      "y": 306.00497260000003,
+      "size": 20.120356,
+      "rot": true
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "wymiar ściany",
+      "x": 77.46337059999999,
+      "y": 338.7005511,
+      "size": 25.150444999999998,
+      "rot": true
+     },
+     {
+      "t": "img",
+      "file": "pano.jpg",
+      "x": 125.752225,
+      "y": 507.3239578333333,
+      "w": 1006.0178,
+      "h": 276.00486666666666
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 125.752225,
+      "y": 479.7234711666666,
+      "w": 131.00473333333335,
+      "h": 27.60048666666667,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 125.752225,
+      "y": 783.3288244999999,
+      "w": 131.00473333333335,
+      "h": 27.60048666666667,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 250.75409166666665,
+      "y": 479.7234711666666,
+      "w": 131.00473333333335,
+      "h": 27.60048666666667,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 250.75409166666665,
+      "y": 783.3288244999999,
+      "w": 131.00473333333335,
+      "h": 27.60048666666667,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 375.7559583333333,
+      "y": 479.7234711666666,
+      "w": 131.00473333333335,
+      "h": 27.60048666666667,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 375.7559583333333,
+      "y": 783.3288244999999,
+      "w": 131.00473333333335,
+      "h": 27.60048666666667,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 500.75782499999997,
+      "y": 479.7234711666666,
+      "w": 131.00473333333335,
+      "h": 27.60048666666667,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 500.75782499999997,
+      "y": 783.3288244999999,
+      "w": 131.00473333333335,
+      "h": 27.60048666666667,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 625.7596916666666,
+      "y": 479.7234711666666,
+      "w": 131.00473333333335,
+      "h": 27.60048666666667,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 625.7596916666666,
+      "y": 783.3288244999999,
+      "w": 131.00473333333335,
+      "h": 27.60048666666667,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 750.7615583333333,
+      "y": 479.7234711666666,
+      "w": 131.00473333333335,
+      "h": 27.60048666666667,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 750.7615583333333,
+      "y": 783.3288244999999,
+      "w": 131.00473333333335,
+      "h": 27.60048666666667,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 875.7634249999999,
+      "y": 479.7234711666666,
+      "w": 131.00473333333335,
+      "h": 27.60048666666667,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 875.7634249999999,
+      "y": 783.3288244999999,
+      "w": 131.00473333333335,
+      "h": 27.60048666666667,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 1000.7652916666666,
+      "y": 479.7234711666666,
+      "w": 131.00473333333335,
+      "h": 27.60048666666667,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 1000.7652916666666,
+      "y": 783.3288244999999,
+      "w": 131.00473333333335,
+      "h": 27.60048666666667,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 125.752225,
+      "y": 507.3239578333333,
+      "w": 1006.0178,
+      "h": 276.00486666666666,
+      "wd": 1.6766963333333333
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "Bardzo długa nazwa zlecenia klienta Kowalskiego Wiśniewskiego z Gdańska 2026",
+      "x": 50.300889999999995,
+      "y": 911.5310911666666,
+      "size": 50.300889999999995,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "1/8  131,0 × 276,0 cm",
+      "x": 50.300889999999995,
+      "y": 944.7296785666665,
+      "size": 20.120356,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_1.jpg",
+      "x": 50.300889999999995,
+      "y": 956.8018921666666,
+      "w": 131.00473333333335,
+      "h": 276.00486666666666
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "2/8  131,0 × 276,0 cm",
+      "x": 221.54633533333333,
+      "y": 944.7296785666665,
+      "size": 20.120356,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_2.jpg",
+      "x": 221.54633533333333,
+      "y": 956.8018921666666,
+      "w": 131.00473333333335,
+      "h": 276.00486666666666
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "3/8  131,0 × 276,0 cm",
+      "x": 392.7917806666667,
+      "y": 944.7296785666665,
+      "size": 20.120356,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_3.jpg",
+      "x": 392.7917806666667,
+      "y": 956.8018921666666,
+      "w": 131.00473333333335,
+      "h": 276.00486666666666
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "4/8  131,0 × 276,0 cm",
+      "x": 564.037226,
+      "y": 944.7296785666665,
+      "size": 20.120356,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_4.jpg",
+      "x": 564.037226,
+      "y": 956.8018921666666,
+      "w": 131.00473333333335,
+      "h": 276.00486666666666
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "5/8  131,0 × 276,0 cm",
+      "x": 735.2826713333334,
+      "y": 944.7296785666665,
+      "size": 20.120356,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_5.jpg",
+      "x": 735.2826713333334,
+      "y": 956.8018921666666,
+      "w": 131.00473333333335,
+      "h": 276.00486666666666
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "6/8  131,0 × 276,0 cm",
+      "x": 906.5281166666667,
+      "y": 944.7296785666665,
+      "size": 20.120356,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_6.jpg",
+      "x": 906.5281166666667,
+      "y": 956.8018921666666,
+      "w": 131.00473333333335,
+      "h": 276.00486666666666
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "7/8  131,0 × 276,0 cm",
+      "x": 1077.773562,
+      "y": 944.7296785666665,
+      "size": 20.120356,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_7.jpg",
+      "x": 1077.773562,
+      "y": 956.8018921666666,
+      "w": 131.00473333333335,
+      "h": 276.00486666666666
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "8/8  131,0 × 276,0 cm",
+      "x": 1249.0190073333333,
+      "y": 944.7296785666665,
+      "size": 20.120356,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_8.jpg",
+      "x": 1249.0190073333333,
+      "y": 956.8018921666666,
+      "w": 131.00473333333335,
+      "h": 276.00486666666666
+     }
+    ]
+   }
+  }
+ },
+ {
+  "p": {
+   "wallW": 350,
+   "wallH": 270,
+   "mT": 1,
+   "mB": 10,
+   "mL": 0,
+   "mR": 5,
+   "join": "overlap",
+   "overlap": 6,
+   "split": "custom",
+   "count": 3,
+   "widths": [
+    100,
+    120,
+    {
+     "$n": "NaN"
+    }
+   ],
+   "maxPrint": 131,
+   "dpi": 150,
+   "thru": false,
+   "pdf": true,
+   "order": "Fototapeta",
+   "orderName": "Fototapeta"
+  },
+  "panoW": 4000,
+  "panoH": 3000,
+  "out": {
+   "pdf": "JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5kb2JqCjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFsxMCAwIFJdIC9Db3VudCAxID4+CmVuZG9iagozIDAgb2JqCjw8IC9UeXBlIC9Gb250IC9TdWJ0eXBlIC9UeXBlMSAvQmFzZUZvbnQgL0hlbHZldGljYSAvRmlyc3RDaGFyIDMyIC9MYXN0Q2hhciAyNTUgL1dpZHRocyBbMjc4IDI3OCAzNTUgNTU2IDU1NiA4ODkgNjY3IDE5MSAzMzMgMzMzIDM4OSA1ODQgMjc4IDMzMyAyNzggMjc4IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiAyNzggMjc4IDU4NCA1ODQgNTg0IDU1NiAxMDE1IDY2NyA2NjcgNzIyIDcyMiA2NjcgNjExIDc3OCA3MjIgMjc4IDUwMCA2NjcgNTU2IDgzMyA3MjIgNzc4IDY2NyA3NzggNzIyIDY2NyA2MTEgNzIyIDY2NyA5NDQgNjY3IDY2NyA2MTEgMjc4IDI3OCAyNzggNDY5IDU1NiAzMzMgNTU2IDU1NiA1MDAgNTU2IDU1NiAyNzggNTU2IDU1NiAyMjIgMjIyIDUwMCAyMjIgODMzIDU1NiA1NTYgNTU2IDU1NiAzMzMgNTAwIDI3OCA1NTYgNTAwIDcyMiA1MDAgNTAwIDUwMCAzMzQgMjYwIDMzNCA1ODQgNTU2IDU1NiA1MDAgNTU2IDIyMiA1NTYgNTAwIDUwMCA1MDAgNjY3IDcyMiA2NjcgNTU2IDcyMiA2NjcgNjExIDYxMSA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiAyNzggNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNzc4IDU1NiA1NTYgNTU2IDU4NCA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTZdIC9FbmNvZGluZyA8PCAvVHlwZSAvRW5jb2RpbmcgL0Jhc2VFbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9EaWZmZXJlbmNlcyBbMTI4IC9hb2dvbmVrIC9jYWN1dGUgL2VvZ29uZWsgL2xzbGFzaCAvbmFjdXRlIC9zYWN1dGUgL3phY3V0ZSAvemRvdGFjY2VudCAvQW9nb25layAvQ2FjdXRlIC9Fb2dvbmVrIC9Mc2xhc2ggL05hY3V0ZSAvU2FjdXRlIC9aYWN1dGUgL1pkb3RhY2NlbnRdID4+ID4+CmVuZG9iago0IDAgb2JqCjw8IC9UeXBlIC9YT2JqZWN0IC9TdWJ0eXBlIC9JbWFnZSAvV2lkdGggNDAwMCAvSGVpZ2h0IDMwMDAgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDkgPj4Kc3RyZWFtClBBTk8tSlBFRwplbmRzdHJlYW0KZW5kb2JqCjUgMCBvYmoKPDwgL1R5cGUgL1hPYmplY3QgL1N1YnR5cGUgL0ltYWdlIC9XaWR0aCA1OTA2IC9IZWlnaHQgMTY1OTUgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE3ID4+CnN0cmVhbQpKUEVHLTAtNTkwNngxNjU5NQplbmRzdHJlYW0KZW5kb2JqCjYgMCBvYmoKPDwgL1R5cGUgL1hPYmplY3QgL1N1YnR5cGUgL0ltYWdlIC9XaWR0aCA3MDg3IC9IZWlnaHQgMTY1OTUgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE3ID4+CnN0cmVhbQpKUEVHLTEtNzA4N3gxNjU5NQplbmRzdHJlYW0KZW5kb2JqCjcgMCBvYmoKPDwgL1R5cGUgL1hPYmplY3QgL1N1YnR5cGUgL0ltYWdlIC9XaWR0aCA4NjgyIC9IZWlnaHQgMTY1OTUgL0NvbG9yU3BhY2UgL0RldmljZVJHQiAvQml0c1BlckNvbXBvbmVudCA4IC9GaWx0ZXIgL0RDVERlY29kZSAvTGVuZ3RoIDE3ID4+CnN0cmVhbQpKUEVHLTItODY4MngxNjU5NQplbmRzdHJlYW0KZW5kb2JqCjggMCBvYmoKPDwgL0ZvbnQgPDwgL0YxIDMgMCBSID4+IC9YT2JqZWN0IDw8IC9QYW5vIDQgMCBSIC9JbTAgNSAwIFIgL0ltMSA2IDAgUiAvSW0yIDcgMCBSID4+ID4+CmVuZG9iago5IDAgb2JqCjw8IC9MZW5ndGggMjA1OCA+PgpzdHJlYW0KQlQgL0YxIDI1MS42MDQgVGYgMCAwIDAgMSBrIDEyNTguMDIgMjkwMzcuNTM2IFRkIChMRUdFTkRBOikgVGogRVQKQlQgL0YxIDIwMS4yODMgVGYgMSAwIDAgMCBrIDEyNTguMDIgMjg3MTAuNDUxIFRkIChuYWRkYXRlaykgVGogRVQKcSAwIDEgLTEgMCAxMTU2My43MiAyNzc5Ny42MzIgY20gQlQgL0YxIDIwMS4yODMgVGYgMSAwIDAgMCBrIDAgMCBUZCAobmFkZGF0ZWspIFRqIEVUIFEKcSAxMDA2NC4xNiAwIDAgNzk2NS42IDEyNTguMDIgMjA2NjkuMzcgY20gL1Bhbm8gRG8gUQpxIDEgMCAwIDAgSyAzMy41NDcgdyAxMjU4LjAyIDIwNjY5LjM3IDEwMDY0LjE2IDc5NjUuNiByZSBTIFEKcSAwIDEgMSAwIEsgMTYuNzc0IHcgMTI1OC4wMiAyMDk1My4wOCA5OTIxLjI2IDc2NTMuNTQzIHJlIFMgUQpxIDAgMSAxIDAgSyAxNi43NzQgdyAxMjU4LjAyIDIwNDY4LjA4NyBtIDExMTc5LjI4IDIwNDY4LjA4NyBsIFMgUQpxIDAgMSAxIDAgSyAxNi43NzQgdyAxMjU4LjAyIDIwNTQzLjU2OCBtIDEyNTguMDIgMjAzOTIuNjA2IGwgUyBRCnEgMCAxIDEgMCBLIDE2Ljc3NCB3IDExMTc5LjI4IDIwNTQzLjU2OCBtIDExMTc5LjI4IDIwMzkyLjYwNiBsIFMgUQpCVCAvRjEgMjAxLjI4MyBUZiAwIDEgMSAwIGsgNTY5NS4zMTQgMjAyNDYuNjc1IFRkICgzNTAwLDAwIG1tKSBUaiBFVApCVCAvRjEgMjUxLjYwNCBUZiAwIDEgMSAwIGsgNTM2OC4yMjggMTk5NzQuOTQzIFRkICh3eW1pYXIgXDIwNWNpYW55KSBUaiBFVApxIDAgMSAxIDAgSyAxNi43NzQgdyAxMDU2LjczNyAyODYwNi42MjQgbSAxMDU2LjczNyAyMDk1My4wOCBsIFMgUQpxIDAgMSAxIDAgSyAxNi43NzQgdyA5ODEuMjU2IDI4NjA2LjYyNCBtIDExMzIuMjE4IDI4NjA2LjYyNCBsIFMgUQpxIDAgMSAxIDAgSyAxNi43NzQgdyA5ODEuMjU2IDIwOTUzLjA4IG0gMTEzMi4yMTggMjA5NTMuMDggbCBTIFEKcSAwIDEgLTEgMCA5OTYuMzUyIDI0MjU2LjUxNiBjbSBCVCAvRjEgMjAxLjI4MyBUZiAwIDEgMSAwIGsgMCAwIFRkICgyNzAwLDAwIG1tKSBUaiBFVCBRCnEgMCAxIC0xIDAgNzc0Ljk0IDIzOTI5LjQzIGNtIEJUIC9GMSAyNTEuNjA0IFRmIDAgMSAxIDAgayAwIDAgVGQgKHd5bWlhciBcMjA1Y2lhbnkpIFRqIEVUIFEKcSAxMDA2NC4xNiAwIDAgNzk2NS42IDEyNTguMDIgMTEwMjYuNTk2IGNtIC9QYW5vIERvIFEKcSAwIDAgMCAxIEsgMTYuNzc0IHcgMTI1OC4wMiAxODk5Mi4xOTYgMjgzNC44OCA3OTYuNTYgcmUgUyBRCnEgMCAwIDAgMSBLIDE2Ljc3NCB3IDEyNTguMDIgMTAyMzAuMDM2IDI4MzQuODggNzk2LjU2IHJlIFMgUQpxIDAgMCAwIDEgSyAxNi43NzQgdyAzOTIyLjk4IDE4OTkyLjE5NiAzNDAxLjc2IDc5Ni41NiByZSBTIFEKcSAwIDAgMCAxIEsgMTYuNzc0IHcgMzkyMi45OCAxMDIzMC4wMzYgMzQwMS43NiA3OTYuNTYgcmUgUyBRCnEgMCAwIDAgMSBLIDE2Ljc3NCB3IDcxNTQuODIgMTg5OTIuMTk2IDQxNjcuMzYgNzk2LjU2IHJlIFMgUQpxIDAgMCAwIDEgSyAxNi43NzQgdyA3MTU0LjgyIDEwMjMwLjAzNiA0MTY3LjM2IDc5Ni41NiByZSBTIFEKcSAwIDAgMCAxIEsgMTYuNzc0IHcgMTI1OC4wMiAxMTAyNi41OTYgMTAwNjQuMTYgNzk2NS42IHJlIFMgUQpCVCAvRjEgNTAzLjIwOCBUZiAwIDAgMCAxIGsgNTAzLjIwOCA5MjIzLjYyIFRkIChGb3RvdGFwZXRhKSBUaiBFVApCVCAvRjEgMjAxLjI4MyBUZiAwIDAgMCAxIGsgNTAzLjIwOCA4ODkxLjUwMyBUZCAoMS8zICAxMDAsMCBcMzI3IDI4MSwwIGNtKSBUaiBFVApxIDI4MzQuODggMCAwIDc5NjUuNiA1MDMuMjA4IDgwNS4xMzMgY20gL0ltMCBEbyBRCkJUIC9GMSAyMDEuMjgzIFRmIDAgMCAwIDEgayAzNzQwLjY1NCA4ODkxLjUwMyBUZCAoMi8zICAxMjAsMCBcMzI3IDI4MSwwIGNtKSBUaiBFVApxIDM0MDEuNzYgMCAwIDc5NjUuNiAzNzQwLjY1NCA4MDUuMTMzIGNtIC9JbTEgRG8gUQpCVCAvRjEgMjAxLjI4MyBUZiAwIDAgMCAxIGsgNzU0NC45ODEgODg5MS41MDMgVGQgKDMvMyAgMTQ3LDAgXDMyNyAyODEsMCBjbSkgVGogRVQKcSA0MTY3LjM2IDAgMCA3OTY1LjYgNzU0NC45ODEgODA1LjEzMyBjbSAvSW0yIERvIFEKCmVuZHN0cmVhbQplbmRvYmoKMTAgMCBvYmoKPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCAxMjMyOC41OTYgMjk3OTIuMzQ4XSAvUmVzb3VyY2VzIDggMCBSIC9Db250ZW50cyA5IDAgUiA+PgplbmRvYmoKeHJlZgowIDExCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwMDY0IDAwMDAwIG4gCjAwMDAwMDAxMjIgMDAwMDAgbiAKMDAwMDAwMTM0OSAwMDAwMCBuIAowMDAwMDAxNTI1IDAwMDAwIG4gCjAwMDAwMDE3MTEgMDAwMDAgbiAKMDAwMDAwMTg5NyAwMDAwMCBuIAowMDAwMDAyMDgzIDAwMDAwIG4gCjAwMDAwMDIxODYgMDAwMDAgbiAKMDAwMDAwNDI5NiAwMDAwMCBuIAp0cmFpbGVyCjw8IC9TaXplIDExIC9Sb290IDEgMCBSID4+CnN0YXJ0eHJlZgo0NDEzCiUlRU9GCg==",
+   "pages": 1,
+   "schemaScale": 1,
+   "G": {
+    "n": 3,
+    "wCm": [
+     100.00826666666667,
+     120.00653333333334,
+     147.01520000000002
+    ],
+    "xsCm": [
+     0,
+     94.01386666666667,
+     208.026
+    ],
+    "PW": 355.0412,
+    "PH": 281.00866666666667,
+    "IH": 281.00866666666667,
+    "B": 0,
+    "fs": 8.87603,
+    "fsS": 7.100824,
+    "lw": 0.5917353333333334,
+    "M": 17.75206,
+    "ext": 28.10086666666667,
+    "gap": 14.201648
+   },
+   "cdr": {
+    "pageW": 434.92547,
+    "pageH": 1051.0078463333334,
+    "ops": [
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "LEGENDA:",
+      "x": 44.38015,
+      "y": 26.62809,
+      "size": 8.87603,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "s": "naddatek",
+      "x": 44.38015,
+      "y": 38.166929,
+      "size": 7.100824,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "s": "naddatek",
+      "x": 407.9423388,
+      "y": 70.36916584000001,
+      "size": 7.100824,
+      "rot": true
+     },
+     {
+      "t": "img",
+      "file": "pano.jpg",
+      "x": 44.38015,
+      "y": 40.829738000000006,
+      "w": 355.0412,
+      "h": 281.00866666666667
+     },
+     {
+      "t": "rectS",
+      "col": [
+       100,
+       0,
+       0,
+       0
+      ],
+      "x": 44.38015,
+      "y": 40.829738000000006,
+      "w": 355.0412,
+      "h": 281.00866666666667,
+      "wd": 1.1834706666666668
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x": 44.38015,
+      "y": 41.829738000000006,
+      "w": 350,
+      "h": 270,
+      "wd": 0.5917353333333334
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 44.38015,
+      "y1": 328.9392286666667,
+      "x2": 394.38015,
+      "y2": 328.9392286666667,
+      "wd": 0.5917353333333334
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 44.38015,
+      "y1": 326.2764196666667,
+      "x2": 44.38015,
+      "y2": 331.60203766666666,
+      "wd": 0.5917353333333334
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 394.38015,
+      "y1": 326.2764196666667,
+      "x2": 394.38015,
+      "y2": 331.60203766666666,
+      "wd": 0.5917353333333334
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "3500,00 mm",
+      "x": 200.9180076,
+      "y": 336.7501350666667,
+      "size": 7.100824,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "wymiar ściany",
+      "x": 189.3791686,
+      "y": 346.3362474666667,
+      "size": 8.87603,
+      "rot": false
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 37.279326,
+      "y1": 41.829738000000006,
+      "x2": 37.279326,
+      "y2": 311.829738,
+      "wd": 0.5917353333333334
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 34.616516999999995,
+      "y1": 41.829738000000006,
+      "x2": 39.942135,
+      "y2": 41.829738000000006,
+      "wd": 0.5917353333333334
+     },
+     {
+      "t": "line",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "x1": 34.616516999999995,
+      "y1": 311.829738,
+      "x2": 39.942135,
+      "y2": 311.829738,
+      "wd": 0.5917353333333334
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "2700,00 mm",
+      "x": 35.1490788,
+      "y": 195.29188040000003,
+      "size": 7.100824,
+      "rot": true
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       100,
+       100,
+       0
+      ],
+      "s": "wymiar ściany",
+      "x": 27.338172399999998,
+      "y": 206.83071940000002,
+      "size": 8.87603,
+      "rot": true
+     },
+     {
+      "t": "img",
+      "file": "pano.jpg",
+      "x": 44.38015,
+      "y": 381.00537633333334,
+      "w": 355.0412,
+      "h": 281.00866666666667
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 44.38015,
+      "y": 352.9045096666667,
+      "w": 100.00826666666667,
+      "h": 28.10086666666667,
+      "wd": 0.5917353333333334
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 44.38015,
+      "y": 662.014043,
+      "w": 100.00826666666667,
+      "h": 28.10086666666667,
+      "wd": 0.5917353333333334
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 138.3940166666667,
+      "y": 352.9045096666667,
+      "w": 120.00653333333334,
+      "h": 28.10086666666667,
+      "wd": 0.5917353333333334
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 138.3940166666667,
+      "y": 662.014043,
+      "w": 120.00653333333334,
+      "h": 28.10086666666667,
+      "wd": 0.5917353333333334
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 252.40615000000003,
+      "y": 352.9045096666667,
+      "w": 147.01520000000002,
+      "h": 28.10086666666667,
+      "wd": 0.5917353333333334
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 252.40615000000003,
+      "y": 662.014043,
+      "w": 147.01520000000002,
+      "h": 28.10086666666667,
+      "wd": 0.5917353333333334
+     },
+     {
+      "t": "rectS",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "x": 44.38015,
+      "y": 381.00537633333334,
+      "w": 355.0412,
+      "h": 281.00866666666667,
+      "wd": 0.5917353333333334
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "Fototapeta",
+      "x": 17.75206,
+      "y": 725.6190296666667,
+      "size": 17.75206,
+      "rot": false
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "1/3  100,0 × 281,0 cm",
+      "x": 17.75206,
+      "y": 737.3353892666667,
+      "size": 7.100824,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_1.jpg",
+      "x": 17.75206,
+      "y": 741.5958836666666,
+      "w": 100.00826666666667,
+      "h": 281.00866666666667
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "2/3  120,0 × 281,0 cm",
+      "x": 131.96197466666666,
+      "y": 737.3353892666667,
+      "size": 7.100824,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_2.jpg",
+      "x": 131.96197466666666,
+      "y": 741.5958836666666,
+      "w": 120.00653333333334,
+      "h": 281.00866666666667
+     },
+     {
+      "t": "text",
+      "col": [
+       0,
+       0,
+       0,
+       100
+      ],
+      "s": "3/3  147,0 × 281,0 cm",
+      "x": 266.170156,
+      "y": 737.3353892666667,
+      "size": 7.100824,
+      "rot": false
+     },
+     {
+      "t": "img",
+      "file": "bryt_3.jpg",
+      "x": 266.170156,
+      "y": 741.5958836666666,
+      "w": 147.01520000000002,
+      "h": 281.00866666666667
+     }
+    ]
+   }
+  }
+ }
+]
