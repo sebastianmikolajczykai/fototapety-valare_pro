@@ -24,4 +24,5 @@ Aktualizacja: 2026-11-23
 - Cena Sand Dot GW 279,05 zł – DO WALIDACJI (możliwa literówka w cenniku).
 - `window.Materialy` w nowym programie nie wystawia surowej listy `PRODUKTY` (żaden skrypt strony jej nie używa);
   reszta obiektu (`lista`, `GRUPY`, `TERMINY`, `ZRODLO`, `wybrany`, `init`, `sync`) – bez zmian.
+- `window.Montaz` w nowym programie nie ma `steps` (martwy kod, patrz wyżej); `widths`, `init`, `make`, `model` – bez zmian.
 - PR #6 starego repo (schemat montażu: zakład 5 cm) nie jest scalony – wzorcem jest `main`.

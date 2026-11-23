@@ -1,7 +1,7 @@
 // Dostęp do stanu głównego skryptu strony (public/bryty.js), który nie jest jeszcze przepisany na TypeScript.
 // bryty.js to zwykły skrypt: jego `let img`, `const crop` i funkcje są w globalnym zasięgu strony, więc moduły TS
 // czytają je po nazwie. Jedno miejsce z tymi odwołaniami – po przepisaniu bryty.js ten plik zniknie.
-import type { Crop, WallParams } from '../../domain/layout';
+import type { Crop, Layout, WallParams } from '../../domain/layout';
 
 /** Zdjęcie wczytane na stronie (z ewentualnym zmniejszonym podglądem). */
 export type PageImage = HTMLImageElement;
@@ -11,6 +11,7 @@ declare const crop: Crop;
 declare function params(): WallParams;
 declare function render(): void;
 declare function canvasPoint(e: PointerEvent): { x: number; y: number };
+declare function renderPano(L: Layout, maxW: number): Promise<{ blob: Blob; w: number; h: number }>;
 
 export const page = {
   img: (): PageImage | null => img,
@@ -19,4 +20,6 @@ export const page = {
   /** Przerysowanie podglądu bez kasowania wygenerowanych plików. */
   render: (): void => render(),
   canvasPoint: (e: PointerEvent): { x: number; y: number } => canvasPoint(e),
+  /** Podgląd całości (JPG, bez pasków) o szerokości maks. maxW px. */
+  renderPano: (L: Layout, maxW: number): Promise<{ blob: Blob; w: number; h: number }> => renderPano(L, maxW),
 };

@@ -194,7 +194,7 @@ const SCENARIOS: {
     },
     generate: false,
     assembly: true,
-    expectText: ['schemat-montazu_Monta_D_.pdf', '1 strona'],
+    expectText: ['schemat-montazu_Fototapeta_360x260_23.11.2026.pdf (0.6 MB, 1 strona)'],
   },
   {
     name: 'schemat montażu: na styk, 6 brytów, inny materiał',
@@ -264,6 +264,7 @@ describe.skipIf(!enabled)('stary vs nowy program', () => {
           canvases,
           result,
           sample,
+          assembly,
         };
       }
       expect(out.new).toEqual(out.old);
