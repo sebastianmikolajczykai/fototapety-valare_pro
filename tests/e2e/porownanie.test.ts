@@ -7,6 +7,7 @@ import {
   applySettings,
   canvasHashes,
   generate,
+  generateAssembly,
   generateSample,
   launch,
   loadTestImage,
@@ -25,6 +26,8 @@ const SCENARIOS: {
   generate: boolean;
   /** Klik „Generuj próbkę” i porównanie pliku próbki. */
   sample?: boolean;
+  /** Klik „Schemat montażu” i porównanie pliku PDF. */
+  assembly?: boolean;
   expectText?: string[];
 }[] = [
   {
@@ -173,6 +176,40 @@ const SCENARIOS: {
     generate: false,
     expectText: ['Ściana jest węższa niż próbka'],
   },
+  {
+    name: 'schemat montażu: 3 bryty na zakład, Linen NW, naddatki różne – PDF bajt w bajt',
+    s: {
+      fields: {
+        wallW: '360',
+        wallH: '260',
+        mT: '3',
+        mB: '3',
+        mL: '2',
+        mR: '4',
+        count: '3',
+        material: '132|linen-nw',
+        order: 'Montaż ŁÓDŹ',
+      },
+      radios: { split: 'equal', join: 'overlap' },
+    },
+    generate: false,
+    assembly: true,
+    expectText: ['schemat-montazu_Fototapeta_360x260_23.11.2026.pdf (0.6 MB, 1 strona)'],
+  },
+  {
+    name: 'schemat montażu: na styk, 6 brytów, inny materiał',
+    s: {
+      fields: { wallW: '600', count: '6', material: 'own', maxPrint: '120' },
+      radios: { join: 'butt' },
+    },
+    generate: false,
+    assembly: true,
+  },
+  {
+    name: 'schemat montażu: błąd w ustawieniach – przycisk wyłączony',
+    s: { fields: { count: '0' } },
+    generate: false,
+  },
 ];
 
 const enabled = !!OLD_REPO;
@@ -208,6 +245,7 @@ describe.skipIf(!enabled)('stary vs nowy program', () => {
         await page.waitForTimeout(300);
         const result = sc.generate ? await generate(page) : null;
         const sample = sc.sample ? await generateSample(page) : null;
+        const assembly = sc.assembly ? await generateAssembly(page) : null;
         const disabled = await page.evaluate(() =>
           [...document.querySelectorAll('input, select, button')]
             .filter(e => (e as HTMLInputElement).disabled)
@@ -226,6 +264,7 @@ describe.skipIf(!enabled)('stary vs nowy program', () => {
           canvases,
           result,
           sample,
+          assembly,
         };
       }
       expect(out.new).toEqual(out.old);

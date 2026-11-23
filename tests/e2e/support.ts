@@ -240,32 +240,44 @@ export async function canvasHashes(page: Page): Promise<Record<string, string>> 
   });
 }
 
-/** Klik „Generuj próbkę”, czekanie na wynik, odczyt pliku próbki (nazwa, rozmiar, SHA-256, wymiar, DPI). */
-export async function generateSample(page: Page): Promise<{ msg: string; files: GeneratedFile[] }> {
-  await page.evaluate(() => (document.getElementById('probkaGo') as HTMLButtonElement).click());
+/** Klik przycisku, czekanie na komunikat (done) i odczyt plików z linków: nazwa, rozmiar, SHA-256 (+ wymiar i DPI dla JPG). */
+export async function clickAndCollect(
+  page: Page,
+  o: { button: string; msg: string; links: string; done: RegExp },
+): Promise<{ msg: string; files: GeneratedFile[] }> {
+  await page.evaluate(sel => (document.querySelector(sel) as HTMLButtonElement).click(), o.button);
   await page.waitForFunction(
-    () => /Gotowe|Błąd|Najpierw/.test(document.getElementById('probkaMsg')!.textContent ?? ''),
-    null,
+    ([sel, re]) => new RegExp(re!).test(document.querySelector(sel!)!.textContent ?? ''),
+    [o.msg, o.done.source],
     { timeout: 120_000 },
   );
-  return page.evaluate(async () => {
+  return page.evaluate(async o => {
     const hex = (b: ArrayBuffer): string => [...new Uint8Array(b)].map(x => x.toString(16).padStart(2, '0')).join('');
     const files: GeneratedFile[] = [];
-    for (const a of document.querySelectorAll<HTMLAnchorElement>('#probkaDl a')) {
+    for (const a of document.querySelectorAll<HTMLAnchorElement>(o.links)) {
       const blob = await (await fetch(a.href)).blob();
       const buf = await blob.arrayBuffer();
-      const head = new Uint8Array(buf.slice(0, 18));
-      const bm = await createImageBitmap(blob);
-      files.push({
+      const f: GeneratedFile = {
         name: a.getAttribute('download') ?? '',
         size: blob.size,
         sha256: hex(await crypto.subtle.digest('SHA-256', buf)),
-        w: bm.width,
-        h: bm.height,
-        dpi: head[13] === 1 ? (head[14]! << 8) + head[15]! : null,
-      });
-      bm.close();
+      };
+      if (blob.type === 'image/jpeg') {
+        const head = new Uint8Array(buf.slice(0, 18));
+        const bm = await createImageBitmap(blob);
+        Object.assign(f, { w: bm.width, h: bm.height, dpi: head[13] === 1 ? (head[14]! << 8) + head[15]! : null });
+        bm.close();
+      }
+      files.push(f);
     }
-    return { msg: document.getElementById('probkaMsg')!.textContent ?? '', files };
-  });
+    return { msg: document.querySelector(o.msg)!.textContent ?? '', files };
+  }, o);
 }
+
+/** Klik „Generuj próbkę” i plik próbki. */
+export const generateSample = (page: Page): Promise<{ msg: string; files: GeneratedFile[] }> =>
+  clickAndCollect(page, { button: '#probkaGo', msg: '#probkaMsg', links: '#probkaDl a', done: /Gotowe|Błąd|Najpierw/ });
+
+/** Klik „Schemat montażu dla klienta (PDF)” i plik schematu. */
+export const generateAssembly = (page: Page): Promise<{ msg: string; files: GeneratedFile[] }> =>
+  clickAndCollect(page, { button: '#montazGo', msg: '#montazMsg', links: '#montazMsg a', done: /MB|Błąd|Najpierw/ });
