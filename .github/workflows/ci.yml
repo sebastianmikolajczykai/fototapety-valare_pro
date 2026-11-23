@@ -32,3 +32,22 @@ jobs:
         run: npm run typecheck
       - name: Testy + pokrycie (min. 80% linii, 70% gałęzi)
         run: npm run test:coverage
+
+  # Strona w przeglądarce (Chromium) na zbudowanym serwerze – po scaleniu na main (uwaga recenzenta do PR #2).
+  # Porównanie ze starym programem wymaga OLD_REPO (lokalnie), tu jest pomijane.
+  e2e:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: check
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Przeglądarka Chromium (Playwright 1.63.0)
+        run: npx playwright install --with-deps chromium
+      - name: Testy e2e
+        run: npm run test:e2e

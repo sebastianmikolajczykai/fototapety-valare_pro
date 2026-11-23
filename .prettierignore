@@ -1,6 +1,5 @@
-dist/
 coverage/
+dist/
 node_modules/
+public/
 tests/fixtures/
-public/wzory/
-public/fonts/

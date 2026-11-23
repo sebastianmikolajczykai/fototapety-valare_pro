@@ -10,8 +10,8 @@ Aktualizacja: 2026-11-23
 | 3    | Domena: materiały (PR #5), wycena (PR #6), jakość (PR #7), ściana (PR #8), próbka (PR #9), wizualizacja (PR #10), teksty AI (PR #11)                | do zrobienia |
 | 4    | Wyjście: JPG DPI (PR #12), ZIP (PR #13), tekst PDF (PR #14), arkusz (PR #15), PDF produkcyjny (PR #16), zlecenie CDR (PR #17), PDF montażu (PR #18) | gotowe w PR  |
 | 5    | Serwer: bezpieczeństwo (PR #19), logowanie (PR #20), AI na atrapach (PR #21), Corel + serwer HTTP (PR #22)                                          | gotowe w PR  |
-| 6    | Strona w TS (ten sam wygląd)                                                                                                                        | do zrobienia |
-| 7    | Porównanie e2e stary vs nowy                                                                                                                        | do zrobienia |
+| 6    | Strona: pliki starego programu w public/ (PR #23), potem skrypty → TS                                                                               | do zrobienia |
+| 7    | Porównanie e2e stary vs nowy (PR #23, rozbudowa z każdym PR strony)                                                                                 | do zrobienia |
 
 ## Ustalenia z audytu starego programu (do raportu)
 

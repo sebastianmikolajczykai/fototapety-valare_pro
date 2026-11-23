@@ -1,0 +1,104 @@
+// Porównanie stary vs nowy program w tej samej przeglądarce: te same ustawienia i to samo zdjęcie muszą dać
+// ten sam tekst na stronie i identyczne pliki (bajt w bajt: bryty JPG, całość, PDF, ZIP).
+// Wymaga OLD_REPO=/ścieżka/do/fototapety-valare (main 6933982); bez niej test jest pomijany.
+import type { Browser, Page } from 'playwright';
+import { afterAll, beforeAll, describe, expect, it } from 'vitest';
+import {
+  applySettings,
+  generate,
+  launch,
+  loadTestImage,
+  OLD_REPO,
+  openPage,
+  startServer,
+  visibleText,
+  type FormSettings,
+  type RunningServer,
+} from './support';
+
+const SCENARIOS: { name: string; s: FormSettings; generate: boolean }[] = [
+  {
+    name: '005-21: 350×270, naddatek 3, zakład 6, 3 bryty, Mural Canvas CT',
+    s: {
+      fields: {
+        wallW: '350',
+        wallH: '270',
+        mT: '3',
+        mB: '3',
+        mL: '3',
+        mR: '3',
+        overlap: '6',
+        count: '3',
+        dpi: '150',
+        material: '131|mural-canvas-ct',
+      },
+      radios: { join: 'overlap', split: 'equal' },
+    },
+    generate: true,
+  },
+  {
+    name: 'na styk, 325×245, thru cut, 100 DPI, zlecenie z polskimi znakami',
+    s: {
+      fields: { wallW: '325', wallH: '245', count: '3', dpi: '100', order: 'Kowalski – ŻÓŁĆ' },
+      radios: { join: 'butt' },
+      checks: { thru: true },
+    },
+    generate: true,
+  },
+  {
+    name: 'własne szerokości 100 / 120 / reszta',
+    s: {
+      fields: { wallW: '350', count: '3', material: '' },
+      radios: { join: 'overlap', split: 'custom' },
+      widths: ['100', '120', ''],
+    },
+    generate: true,
+  },
+  {
+    name: 'błąd: bryt szerszy niż materiał',
+    s: { fields: { wallW: '120', count: '1', material: '100|sand-dot-gw-107' }, radios: { split: 'equal' } },
+    generate: false,
+  },
+];
+
+const enabled = !!OLD_REPO;
+let browser: Browser;
+const side: Record<'old' | 'new', { server: RunningServer; page: Page; errors: string[] }> = {} as never;
+
+beforeAll(async () => {
+  if (!enabled) return;
+  browser = await launch();
+  for (const [kind, port] of [
+    ['old', 3600],
+    ['new', 3650],
+  ] as const) {
+    const server = await startServer(kind, port + Math.floor(Math.random() * 40));
+    const errors: string[] = [];
+    const page = await openPage(browser, server.url, errors);
+    await loadTestImage(page);
+    side[kind] = { server, page, errors };
+  }
+});
+afterAll(async () => {
+  await browser?.close();
+  for (const s of Object.values(side)) s.server.stop();
+});
+
+describe.skipIf(!enabled)('stary vs nowy program', () => {
+  for (const sc of SCENARIOS)
+    it(sc.name, async () => {
+      const out: Record<string, unknown> = {};
+      for (const kind of ['old', 'new'] as const) {
+        const { page } = side[kind];
+        await applySettings(page, sc.s);
+        await page.waitForTimeout(300);
+        const result = sc.generate ? await generate(page) : null;
+        out[kind] = { text: await visibleText(page), result };
+      }
+      expect(out.new).toEqual(out.old);
+    });
+  it('brak błędów JavaScript po obu stronach', () => {
+    expect(side.new.errors).toEqual(side.old.errors);
+    expect(side.new.errors).toEqual([]);
+  });
+});

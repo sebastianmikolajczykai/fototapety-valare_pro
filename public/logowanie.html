@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Konfigurator fototapet Valare – logowanie</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22268%20252%2052%2052%22%3E%3Crect%20x%3D%22268%22%20y%3D%22252%22%20width%3D%2252%22%20height%3D%2252%22%20fill%3D%22%2325c09e%22/%3E%3Cpath%20d%3D%22M%20305.808594%20298.71875%20L%20289.328125%20258.289062%20L%20300.1875%20258.289062%20L%20307.304688%20277.535156%20C%20309.988281%20284.820312%20311.128906%20288.734375%20311.832031%20291.3125%20L%20311.945312%20291.3125%20C%20312.578125%20288.976562%20313.136719%20287.265625%20316.929688%20276.804688%20L%20323.8125%20258.289062%20L%20334.308594%20258.289062%20L%20317.546875%20298.71875%20Z%20M%20305.808594%20298.71875%22%20fill%3D%22%23222a35%22/%3E%3Cpath%20d%3D%22M%20291.707031%20298.71875%20L%20301.324219%20298.71875%20L%20284.296875%20258.289062%20L%20274.675781%20258.289062%20Z%20M%20291.707031%20298.71875%22%20fill%3D%22%23fff%22/%3E%3C/svg%3E">
+<style>
+  @font-face { font-family: Urbanist; font-style: normal; font-weight: 100 900; font-display: swap; src: url(/fonts/urbanist-latin-ext.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+20A0-20AB, U+20AD-20C4, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: Urbanist; font-style: normal; font-weight: 100 900; font-display: swap; src: url(/fonts/urbanist-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212, U+FEFF, U+FFFD; }
+  /* Kolory i krój jak w bryty.html (styl Valare). */
+  :root { --font: Urbanist, "Segoe UI", Helvetica, Arial, sans-serif; --green: #25c09e; --green-hover: #1fae8f; --ink: #222a35;
+    --muted: #5d6470; --line: #d5d9de; --soft: #e6f7f3; --focus: rgba(37,192,158,.25); --err: #b91c1c; --err-bg: #fdecec; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; font-family: var(--font); color: var(--ink); background: #fff; }
+  header { background: var(--green); padding: 22px max(16px, calc((100% - 1200px) / 2)); font-weight: 700; font-size: 20px; letter-spacing: .3px; }
+  header span { font-weight: 500; opacity: .85; margin-left: 10px; font-size: 15px; }
+  main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 32px 16px; background: var(--soft); }
+  form { width: 100%; max-width: 420px; background: #fff; border: 1px solid var(--line); padding: 32px 28px; }
+  h1 { margin: 0 0 6px; font-size: 26px; }
+  p { margin: 0 0 22px; color: var(--muted); line-height: 1.45; }
+  label { display: block; font-weight: 600; font-size: 14px; margin: 14px 0 6px; }
+  input { width: 100%; font: inherit; font-size: 16px; padding: 11px 12px; border: 1px solid var(--line); border-radius: 0; color: var(--ink); }
+  input:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 3px var(--focus); }
+  button { width: 100%; margin-top: 22px; font: inherit; font-weight: 700; font-size: 16px; padding: 13px; border: 0; background: var(--green); color: var(--ink); cursor: pointer; }
+  button:hover { background: var(--green-hover); }
+  button:disabled { opacity: .6; cursor: wait; }
+  .msg { display: none; margin-top: 16px; padding: 10px 12px; background: var(--err-bg); color: var(--err); font-size: 14px; }
+  .msg.on { display: block; }
+</style>
+</head>
+<body>
+<header>Valare<span>Konfigurator fototapet</span></header>
+<main>
+  <form id="f" novalidate>
+    <h1>Zaloguj się</h1>
+    <p>Wpisz swój adres e-mail i hasło dostępu do konfiguratora.</p>
+    <label for="email">E-mail</label>
+    <input id="email" type="email" autocomplete="email" required autofocus>
+    <label for="password">Hasło</label>
+    <input id="password" type="password" autocomplete="current-password" required>
+    <button id="go" type="submit">Zaloguj</button>
+    <div class="msg" id="msg" role="alert"></div>
+  </form>
+</main>
+<script src="logowanie-strona.js"></script>
+</body>
+</html>
