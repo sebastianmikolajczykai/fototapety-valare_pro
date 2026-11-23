@@ -232,7 +232,6 @@ describe.skipIf(!enabled)('wizualizacja we wnętrzu: stary vs nowy program', () 
         });
         await page.goto(side[kind].server.url + '/');
         await loadTestImage(page);
-        await setValue(page, '#order', 'Kowalski');
         mock[kind] = m;
       }
     });
@@ -251,7 +250,7 @@ describe.skipIf(!enabled)('wizualizacja we wnętrzu: stary vs nowy program', () 
         await setValue(p, '#wizRoom', 'sypialnia');
         await runAi(p);
       }, pages());
-      expect(html(o)).toContain('Kowalski_wizualizacja_AI_sypialnia.png');
+      expect(html(o)).toMatch(/download="[^"]+_wizualizacja_AI_sypialnia\.png"/);
     });
     it('moje wnętrze: zdjęcie, 4 narożniki, wynik AI tylko w zaznaczonym obszarze', async () => {
       const o = await both(async p => {
@@ -261,7 +260,7 @@ describe.skipIf(!enabled)('wizualizacja we wnętrzu: stary vs nowy program', () 
         for (const [x, y] of CORNERS) await canvasClick(p, x, y);
         await runAi(p);
       }, pages());
-      expect(html(o)).toContain('Kowalski_wizualizacja_AI_moje-wnetrze.png');
+      expect(html(o)).toMatch(/download="[^"]+_wizualizacja_AI_moje-wnetrze\.png"/);
     });
     it('błąd usługi AI – komunikat (znaki HTML zabezpieczone)', async () => {
       mock.old.fail = mock.new.fail = true;

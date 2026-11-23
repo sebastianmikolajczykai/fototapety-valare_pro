@@ -1,7 +1,8 @@
 // Wizualizacja we wnętrzu (sekcja 10) – czysta matematyka starego wizualizacja.js:
 // geometria pokoju dla AI (perspektywa), homografia czworokąta „Moje wnętrze” i sprawdzenie skali
 // (przeniesione z FeltDecor interior/interior-scale.js, tolerancja ±10%). Wizualizacja nie zmienia plików produkcyjnych.
-import type { WallParams } from './layout';
+import type { Layout, WallParams } from './layout';
+import { cmToPx } from './units';
 export interface Pt {
   x: number;
   y: number;
@@ -250,25 +251,125 @@ export function scaleMessageHtml(a: ScaleResult, p: Pick<WallParams, 'wallW' | '
   return html;
 }
 
-// RED: część strony bez DOM – pusta implementacja, testy muszą paść.
+// ---------- Część strony „Wizualizacja we wnętrzu” bez DOM (stary wizualizacja.js) ----------
+
+/** Maks. bok kadru ściany w px użyty w wizualizacji. */
+export const TEXTURE_MAX = 1800;
+/** Zdjęcie klienta zmniejszane do 1600 px (jak FeltDecor prepareMyInteriorPhoto). */
+export const PHOTO_MAX = 1600;
+
+/** Kadr ściany bez naddatków w pikselach całości (X0..X1, Y0..Y1) i skala k obrazu dla wizualizacji; null = brak. */
+export function wallTextureRect(
+  p: Pick<WallParams, 'mL' | 'mR' | 'mT' | 'mB' | 'dpi'>,
+  L: Pick<Layout, 'band' | 'panoW' | 'bH'>,
+): { X0: number; X1: number; Y0: number; Y1: number; k: number; w: number; h: number } | null {
+  const band = L.band;
+  const X0 = Math.round(cmToPx(p.mL, p.dpi));
+  const X1 = L.panoW - Math.round(cmToPx(p.mR, p.dpi));
+  const Y0 = Math.max(band, Math.round(cmToPx(p.mT, p.dpi)));
+  const Y1 = Math.min(L.bH - band, L.bH - Math.round(cmToPx(p.mB, p.dpi)));
+  if (!(X1 > X0 && Y1 > Y0)) return null;
+  const k = Math.min(1, TEXTURE_MAX / (X1 - X0), TEXTURE_MAX / (Y1 - Y0));
+  return { X0, X1, Y0, Y1, k, w: Math.max(1, Math.round((X1 - X0) * k)), h: Math.max(1, Math.round((Y1 - Y0) * k)) };
+}
+
+/** Wymiar zdjęcia wnętrza po zmniejszeniu do PHOTO_MAX (dłuższy bok). */
+export const photoStoreSize = (w: number, h: number): { w: number; h: number } => {
+  const k = Math.min(1, PHOTO_MAX / Math.max(w, h));
+  return { w: Math.round(w * k), h: Math.round(h * k) };
+};
+
+/** Podgląd zdjęcia na ekranie: maks. 1200 × 900 px. */
+export const photoViewSize = (w: number, h: number): { W: number; H: number } => {
+  const k = Math.min(1, SCENE_W / w, 900 / h);
+  return { W: Math.round(w * k), H: Math.round(h * k) };
+};
+
+/** Wymiar obrazu wysłanego do AI (dłuższy bok maks. max); null = bez zmniejszania. */
+export const jpegSize = (w: number, h: number, max: number): { w: number; h: number } | null => {
+  const k = Math.min(1, max / Math.max(w, h));
+  return k === 1 ? null : { w: Math.round(w * k), h: Math.round(h * k) };
+};
+
+/** Czworokąt odsunięty od środka o grow px (maska trochę większa niż zaznaczenie). */
+export function grownQuad(q: readonly Pt[], grow = 0): Pt[] {
+  const cx = q.reduce((a, b) => a + b.x, 0) / 4;
+  const cy = q.reduce((a, b) => a + b.y, 0) / 4;
+  return q.map(v => {
+    const dx = v.x - cx;
+    const dy = v.y - cy;
+    const l = Math.hypot(dx, dy) || 1;
+    return { x: v.x + (dx / l) * grow, y: v.y + (dy / l) * grow };
+  });
+}
+
+/** Indeks punktu (ułamki zdjęcia) najbliższego q w promieniu max px ekranu; -1 = żaden. */
+export function nearestPoint(list: readonly Pt[], q: Pt, width: number, height: number, max = 22): number {
+  let best = -1;
+  let bd = max;
+  list.forEach((p, i) => {
+    const d = Math.hypot((p.x - q.x) * width, (p.y - q.y) * height);
+    if (d < bd) {
+      bd = d;
+      best = i;
+    }
+  });
+  return best;
+}
+
+/** Stan panelu potrzebny do komunikatu pod sceną. */
 export interface VizMessageState {
   own: boolean;
   hasPhoto: boolean;
   points: number;
   refPicking: boolean;
   refPoints: number;
+  /** Ustawienia poprawne (null = brak głównego skryptu). */
   valid: boolean | null;
   hasImage: boolean;
   wallW: number;
   wallH: number;
 }
-export const wallTextureRect = (_p: unknown, _L: unknown): null => null;
-export const photoStoreSize = (_w: number, _h: number): { w: number; h: number } => ({ w: 0, h: 0 });
-export const photoViewSize = (_w: number, _h: number): { W: number; H: number } => ({ W: 0, H: 0 });
-export const jpegSize = (_w: number, _h: number, _m: number): null => null;
-export const grownQuad = (_q: readonly Pt[], _g = 0): Pt[] => [];
-export const nearestPoint = (_l: readonly Pt[], _q: Pt, _w: number, _h: number, _m = 22): number => -1;
-export const vizMessage = (_s: VizMessageState): string => '';
-export const refPickLabel = (_p: boolean, _n: number): string => '';
-export const vizAiInfoHtml = (_h: unknown): string => '';
-export const vizFileName = (_o: string, _w: boolean, _r: string): string => '';
+
+/** Komunikat pod sceną (to, co zwracał draw() starego programu). */
+export function vizMessage(s: VizMessageState): string {
+  if (s.own) {
+    if (!s.hasPhoto)
+      return 'Zrób zdjęcie ściany, najlepiej na wprost, z całą ścianą w kadrze. Potem zaznacz jej 4 narożniki.';
+    if (s.points < 4)
+      return `Kliknij ${s.points + 1}. punkt: ${PHOTO_CORNERS[s.points]} narożnik obszaru fototapety (zwykle całej ściany). Kolejność: lewy górny, prawy górny, prawy dolny, lewy dolny.`;
+    if (s.refPicking) return `Kliknij ${s.refPoints + 1}. koniec odcinka odniesienia na tej samej ścianie.`;
+    return s.valid && s.hasImage
+      ? 'Narożniki zaznaczone (punkty możesz przeciągać). Kliknij „Stwórz wizualizację AI” – AI nałoży fototapetę na zaznaczoną ścianę.'
+      : 'Narożniki zaznaczone. Wgraj grafikę i ustaw wymiary ściany, potem kliknij „Stwórz wizualizację AI”.';
+  }
+  if (!s.valid) return 'Popraw ustawienia po lewej, żeby zrobić wizualizację.';
+  return (
+    `Wybierz typ wnętrza i kliknij „Stwórz wizualizację AI”. AI zrobi realistyczne zdjęcie takiego wnętrza z fototapetą na całej ścianie ${f0(s.wallW)} × ${f0(s.wallH)} cm.` +
+    (s.hasImage ? '' : ' Najpierw wgraj grafikę.')
+  );
+}
+
+/** Napis przycisku odcinka odniesienia. */
+export const refPickLabel = (picking: boolean, points: number): string =>
+  picking
+    ? 'Kliknij 2 końce odcinka na zdjęciu…'
+    : points === 2
+      ? 'Zaznacz odcinek ponownie'
+      : 'Zaznacz odcinek odniesienia';
+
+/** Informacja o usłudze AI pod przyciskiem (HTML); health = odpowiedź /api/health albo null (brak serwera). */
+export function vizAiInfoHtml(
+  health: { ai?: { generate?: boolean; provider?: unknown; model?: unknown } } | null,
+): string {
+  const lt = (s: unknown): string => String(s).replace(/</g, '&lt;');
+  if (health && health.ai && health.ai.generate)
+    return `AI: ${lt(health.ai.provider)} (${lt(health.ai.model)}). Podgląd z panelu (w trybie „Moje wnętrze” razem ze zdjęciem wnętrza) i kadr ściany są wysyłane do OpenAI. Każde zdjęcie kosztuje. Wynik jest poglądowy – AI może zmienić szczegóły grafiki, do produkcji idą bryty.`;
+  return health
+    ? 'Wizualizacja AI niedostępna – brak połączenia z usługą AI.'
+    : 'Wizualizacja AI niedostępna – brak połączenia z serwerem.';
+}
+
+/** Nazwa pobieranego pliku wizualizacji AI. */
+export const vizFileName = (order: string, own: boolean, room: string): string =>
+  `${order || 'zlecenie'}_wizualizacja_AI_${own ? 'moje-wnetrze' : room}.png`;
