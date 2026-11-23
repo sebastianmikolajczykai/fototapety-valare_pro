@@ -31,13 +31,21 @@ const waitFor = async (url: string, log: () => string): Promise<void> => {
   throw new Error('Serwer nie wystartował:\n' + log());
 };
 
-/** Serwer lokalny (bez PORT): nowy = dist/server/main.js z public/, stary = serwer-fototapety.js z OLD_REPO. */
-export async function startServer(kind: 'new' | 'old', port: number): Promise<RunningServer> {
+/**
+ * Serwer: nowy = dist/server/main.js z dist/public, stary = serwer-fototapety.js z OLD_REPO.
+ * Domyślnie lokalny (bez PORT); extra = dodatkowe zmienne (np. PORT i hasło testowe – tryb „w internecie”).
+ */
+export async function startServer(
+  kind: 'new' | 'old',
+  port: number,
+  extra: Record<string, string> = {},
+): Promise<RunningServer> {
   const file = kind === 'new' ? path.resolve('dist/server/main.js') : path.join(OLD_REPO, 'serwer-fototapety.js');
   const env = {
     PATH: process.env.PATH,
     LOCAL_PORT: String(port),
     ...(kind === 'new' ? { PUBLIC_DIR: path.resolve('dist/public') } : {}),
+    ...extra,
   };
   let out = '';
   const proc: ChildProcess = spawn(process.execPath, [file], { env, stdio: ['ignore', 'pipe', 'pipe'] });
