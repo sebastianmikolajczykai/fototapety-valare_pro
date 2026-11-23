@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Valare – podział fototapety na bryty</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22268%20252%2052%2052%22%3E%3Crect%20x%3D%22268%22%20y%3D%22252%22%20width%3D%2252%22%20height%3D%2252%22%20fill%3D%22%2325c09e%22/%3E%3Cpath%20d%3D%22M%20305.808594%20298.71875%20L%20289.328125%20258.289062%20L%20300.1875%20258.289062%20L%20307.304688%20277.535156%20C%20309.988281%20284.820312%20311.128906%20288.734375%20311.832031%20291.3125%20L%20311.945312%20291.3125%20C%20312.578125%20288.976562%20313.136719%20287.265625%20316.929688%20276.804688%20L%20323.8125%20258.289062%20L%20334.308594%20258.289062%20L%20317.546875%20298.71875%20Z%20M%20305.808594%20298.71875%22%20fill%3D%22%23222a35%22/%3E%3Cpath%20d%3D%22M%20291.707031%20298.71875%20L%20301.324219%20298.71875%20L%20284.296875%20258.289062%20L%20274.675781%20258.289062%20Z%20M%20291.707031%20298.71875%22%20fill%3D%22%23fff%22/%3E%3C/svg%3E">
+<style>
+  /* Urbanist (SIL OFL 1.1) – zastępczo za Aventę z cennika Valare; pliki lokalne, strona działa bez internetu. */
+  @font-face { font-family: Urbanist; font-style: normal; font-weight: 100 900; font-display: swap;
+    src: url(fonts/urbanist-latin-ext.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: Urbanist; font-style: normal; font-weight: 100 900; font-display: swap;
+    src: url(fonts/urbanist-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  /* Wariant V: styl marki Valare (z cennika Valare 2024 i valare.eu):
+     zieleń #25C09E, granat #222A35, geometryczny krój (Aventa w cenniku; tu zastępczo Urbanist),
+     wersaliki z rozstrzelonymi literami, zielona belka przy nagłówkach, ostre narożniki. */
+  :root {
+    --font: Urbanist, "Segoe UI", Helvetica, Arial, sans-serif;
+    --v-green: #25c09e; --v-green-dark: #1d9f83; --v-ink: #222a35;
+    --bg: #ffffff; --card: #ffffff; --card-line: #e3e5e8; --text: #222a35; --muted: #5d6470;
+    --line: #d5d9de; --line-strong: #a9b0b8; --field: #ffffff; --field-soft: #f4fbf9; --disabled: #f1f3f4;
+    --accent: #25c09e; --accent-soft: #e6f7f3; --focus: rgba(37,192,158,.25); --link: #16806a;
+    --chip: #25c09e; --chip-text: #222a35;
+    --seg: #f1f3f4; --seg-on: #222a35; --seg-on-text: #ffffff;
+    --btn: #25c09e; --btn-hover: #1fae8f; --btn-text: #222a35; --btn-off: #d9e4e1; --btn-off-text: #7f8a88;
+    --small-text: #222a35; --small-line: #222a35; --small-hover: #e6f7f3;
+    --bar: #25c09e; --bar-text: #222a35; --bar-muted: #222a35;
+    --stage: #ffffff; --stage-text: #222a35; --stage-muted: #5d6470; --stage-line: #e3e5e8; --stage-line-strong: #222a35; --stage-hover: #e6f7f3; --stage-warn: #b45309;
+    --warn: #b45309; --warn-bg: #fdf3e7; --err: #b91c1c; --err-bg: #fdecec; --ok: #15803d;
+    --radius: 0px; --radius-sm: 2px; --radius-btn: 0px;
+    --shadow: none;
+  }
+    * { box-sizing: border-box; }
+  html, body { background: var(--bg); }
+  body { margin: 0; font: 15px/1.5 var(--font); color: var(--text); }
+  b, strong { font-weight: 600; }
+
+  /* Pasek marki */
+  .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    min-height: 64px; padding: 10px max(16px, calc((100% - 1320px) / 2)); background: var(--bar); color: var(--bar-text); }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-mark { width: 26px; height: 26px; border-radius: 7px; background:
+    linear-gradient(90deg, var(--bar-text) 0 30%, transparent 30% 35%, var(--bar-text) 35% 65%, transparent 65% 70%, var(--bar-text) 70%); opacity: .9; }
+  .brand-name { font-size: 15px; letter-spacing: .4px; text-transform: uppercase; color: var(--bar-muted); }
+  .brand-name b { color: var(--bar-text); font-weight: 600; margin-left: 4px; }
+  .topbar-note { font-size: 13px; color: var(--bar-muted); }
+
+  main { max-width: 1320px; margin: 0 auto; padding: 28px 16px 56px; }
+  .intro { margin-bottom: 22px; }
+  h1 { font-size: 28px; line-height: 1.2; font-weight: 600; margin: 0 0 6px; letter-spacing: -.2px; }
+  .sub { color: var(--muted); margin: 0; max-width: 46rem; }
+
+  .grid { display: grid; grid-template-columns: 400px minmax(0, 1fr); gap: 24px; align-items: start; }
+  @media (max-width: 960px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+
+  /* Lewa kolumna: kroki */
+  .panel { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  .step, .actions, #scianaBox { background: var(--card); border: 1px solid var(--card-line); border-radius: var(--radius); padding: 18px 18px 20px; box-shadow: var(--shadow); }
+  .step-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }
+  .num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 999px;
+    background: var(--chip); color: var(--chip-text); font-size: 13px; font-weight: 600; flex: none; }
+  h2 { font-size: 16px; font-weight: 600; margin: 0; }
+  .step-note { font-size: 12px; color: var(--muted); }
+
+  label { display: block; font-size: 13px; color: var(--muted); margin: 12px 0 5px; }
+  select, input[type=number], input[type=text] { width: 100%; height: 42px; padding: 0 12px; border: 1px solid var(--line);
+    border-radius: var(--radius-sm); font: inherit; color: var(--text); background: var(--field); transition: border-color .15s, box-shadow .15s; }
+  select { padding-right: 8px; }
+  select:hover, input[type=number]:hover, input[type=text]:hover { border-color: var(--line-strong); }
+  select:focus, input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--focus); }
+  input:disabled { background: var(--disabled); color: var(--muted); }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .row4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+  .row4 label { margin-top: 8px; }
+  .hint { font-size: 12px; line-height: 1.45; color: var(--muted); margin-top: 6px; }
+
+  /* Pole wyboru zdjęcia */
+  .drop { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; margin: 12px 0 0; padding: 20px 12px;
+    border: 1.5px dashed var(--line-strong); border-radius: var(--radius-sm); background: var(--field-soft); cursor: pointer; text-align: center; transition: border-color .15s, background .15s; }
+  .drop:hover { border-color: var(--accent); background: var(--accent-soft); }
+  .drop-title { font-size: 15px; font-weight: 600; color: var(--text); }
+  .drop-hint { font-size: 12px; color: var(--muted); }
+  .drop input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .drop:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px var(--focus); }
+
+  /* Przełączniki (radio jako segmenty) */
+  .radios { display: flex; gap: 16px; flex-wrap: wrap; }
+  .radios.seg { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-top: 14px; padding: 4px; border-radius: var(--radius-sm); background: var(--seg); }
+  .radios.seg .radio { position: relative; justify-content: center; margin: 0; height: 36px; border-radius: calc(var(--radius-sm) - 3px); font-size: 14px; color: var(--muted); cursor: pointer; transition: background .15s, color .15s; }
+  .radios.seg .radio input { position: absolute; opacity: 0; }
+  .radios.seg .radio:has(input:checked) { background: var(--seg-on); color: var(--seg-on-text); box-shadow: 0 1px 3px rgba(0,0,0,.12); font-weight: 600; }
+  .radios.seg .radio:has(input:focus-visible) { box-shadow: 0 0 0 3px var(--focus); }
+  .check, .radio { display: flex; gap: 10px; align-items: flex-start; margin-top: 12px; color: var(--text); font-size: 14px; }
+  .check input { width: 18px; height: 18px; margin: 1px 0 0; accent-color: var(--accent); flex: none; }
+
+  /* Przyciski */
+  button { width: 100%; height: 50px; border: 0; border-radius: var(--radius-btn); background: var(--btn); color: var(--btn-text);
+    font: 600 15px var(--font); cursor: pointer; transition: background .15s, transform .05s; }
+  button:hover:not(:disabled) { background: var(--btn-hover); }
+  button:active:not(:disabled) { transform: translateY(1px); }
+  button:disabled { background: var(--btn-off); color: var(--btn-off-text); cursor: default; }
+  button:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--focus); }
+  button.small { width: auto; height: 34px; margin: 0; padding: 0 14px; font-size: 13px; background: transparent; color: var(--small-text); border: 1px solid var(--small-line); }
+  button.small:hover:not(:disabled) { background: var(--small-hover); }
+
+  .actions { position: sticky; bottom: 12px; z-index: 2; }
+  .msg { margin-top: 10px; font-size: 14px; }
+  .msg:empty { display: none; }
+  .warn { color: var(--warn); } .err { color: var(--err); } .ok { color: var(--ok); }
+  .msg > .warn, .msg > .err { margin-top: 8px; padding: 9px 12px; border-radius: 10px; font-size: 13px; }
+  .msg > .warn { background: var(--warn-bg); } .msg > .err { background: var(--err-bg); }
+  .dl:empty { display: none; }
+  .dl { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .dl a { display: inline-flex; align-items: center; height: 34px; padding: 0 12px; border-radius: 999px; background: var(--accent-soft); color: var(--link); text-decoration: none; font-size: 13px; font-weight: 500; }
+  .dl a:hover { text-decoration: underline; }
+
+  /* Prawa kolumna: podgląd */
+  .stage { position: sticky; top: 16px; min-width: 0; background: var(--stage); color: var(--stage-text); border: 1px solid var(--stage-line); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
+  .stage-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+  .stage h2 { color: var(--stage-text); }
+  .crop { display: flex; gap: 10px; align-items: center; font-size: 13px; flex-wrap: wrap; color: var(--stage-muted); }
+  .crop label { margin: 0; color: var(--stage-muted); }
+  .crop input[type=range] { width: 160px; accent-color: var(--accent); }
+  #zoomVal { min-width: 40px; font-variant-numeric: tabular-nums; color: var(--stage-text); }
+  .stage button.small { color: var(--stage-text); border-color: var(--stage-line-strong); }
+  .stage button.small:hover:not(:disabled) { background: var(--stage-hover); }
+  .canvas-wrap { border-radius: var(--radius-sm); overflow: hidden; background: #fff; border: 1px solid var(--stage-line); }
+  canvas#preview { width: 100%; height: auto; display: block; touch-action: none; }
+  canvas#preview.drag { cursor: grab; }
+  canvas#preview.drag:active { cursor: grabbing; }
+
+  .legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; font-size: 13px; color: var(--stage-muted); margin-top: 12px; }
+  .panel .legend { display: block; margin-top: 8px; color: var(--muted); }
+  .chip { display: inline-flex; align-items: center; gap: 6px; }
+  .legend-tip { margin-left: auto; font-size: 12px; }
+  .sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; border: 1px solid #0003; background: #fff; overflow: hidden; }
+  .sw i { display: block; width: 100%; height: 100%; }
+  .sw-frame { background: transparent; border: 1.5px solid #dc2626; }
+
+  .summary { margin-top: 14px; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; font-variant-numeric: tabular-nums; }
+  td, th { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--stage-line); }
+  th { color: var(--stage-muted); font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: .5px; }
+  tr:last-child td { border-bottom: 0; }
+  .stage .hint { color: var(--stage-muted); }
+  .stage .msg { color: var(--stage-text); line-height: 1.55; }
+  .stage .warn { color: var(--stage-warn); }
+
+  @media (max-width: 560px) {
+    h1 { font-size: 23px; }
+    .row4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .legend-tip { margin-left: 0; }
+    .stage { position: static; }
+    .actions { position: static; }
+    .topbar-note { display: none; }
+  }
+
+  body { font-weight: 400; }
+  .topbar { min-height: 76px; }
+  .valare-logo { height: 26px; width: auto; display: block; }
+  .valare-logo .v-ink { fill: var(--v-ink); }
+  .valare-logo .v-slash { fill: #ffffff; }
+  .brand { gap: 18px; }
+  .brand-name { font-size: 13px; letter-spacing: 4px; font-weight: 300; color: var(--v-ink); padding-left: 18px; border-left: 1px solid rgba(34,42,53,.35); }
+  .brand-name b { font-weight: 700; color: var(--v-ink); }
+  .topbar-note { font-weight: 500; opacity: .85; }
+
+  main { position: relative; }
+  .side-word { position: absolute; left: -26px; top: 150px; writing-mode: vertical-rl; transform: rotate(180deg);
+    font-size: 11px; letter-spacing: 6px; color: var(--v-green); white-space: nowrap; }
+  @media (max-width: 1400px) { .side-word { display: none; } }
+
+  h1 { font-weight: 300; text-transform: uppercase; letter-spacing: 1.5px; font-size: 30px;
+    padding-left: 16px; border-left: 6px solid var(--v-green); }
+  h1 b { font-weight: 700; }
+  .sub { padding-left: 22px; }
+  h2 { text-transform: uppercase; letter-spacing: 1.2px; font-size: 15px; font-weight: 600; }
+  .step { border-top: 3px solid var(--v-green); }
+  .num { border-radius: 0; width: 26px; height: 26px; font-weight: 700; }
+  .stage { border-top: 3px solid var(--v-ink); }
+  .stage h2 { font-weight: 300; } .stage h2 b { font-weight: 700; }
+  button { text-transform: uppercase; letter-spacing: 2px; font-weight: 700; font-size: 14px; }
+  button.small { letter-spacing: 1px; font-size: 12px; }
+  .drop-title { text-transform: uppercase; letter-spacing: 1.5px; font-size: 14px; }
+  label { font-weight: 500; }
+  th { color: var(--v-ink); font-weight: 700; letter-spacing: 1.2px; border-bottom: 2px solid var(--v-green); }
+  .dl a { border-radius: 0; background: var(--v-ink); color: #fff; }
+  .radios.seg { padding: 3px; }
+
+  [hidden] { display: none !important; }
+  /* Krok 5 (narożniki) – treść wstawia sciana.js, numer kroku dodaje styl */
+  #scianaBox { border-top: 3px solid var(--v-green); }
+  #scianaBox:empty { display: none; }
+  #probkaBox:empty { display: none; }
+  #scianaBox > h2 { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  #scianaBox > h2::before { content: "5"; display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px;
+    background: var(--chip); color: var(--chip-text); font-size: 13px; font-weight: 700; letter-spacing: 0; flex: none; }
+  #scianaBox .scianaRow { padding-top: 10px; border-top: 1px solid var(--card-line); }
+  #scianaBox .scianaRow b { font-weight: 600; }
+  #scianaBox button.small { height: 32px; }
+  #scianaSuggest { width: 100% !important; }
+  .drop.over { border-color: var(--accent); background: var(--accent-soft); border-style: solid; }
+  .drop.has-file { padding: 14px 12px; }
+  button.small.icon { width: 34px; padding: 0; font-size: 18px; line-height: 1; letter-spacing: 0; }
+  button.small:disabled { background: transparent; color: var(--line-strong); border-color: var(--line); }
+  .canvas-wrap { position: relative; }
+  .canvas-wrap:has(canvas:not(.drag))::after { content: attr(data-empty); position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    padding: 24px; text-align: center; font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--v-ink); background: rgba(255,255,255,.72); pointer-events: none; }
+  .dl { flex-direction: column; align-items: stretch; }
+  .dl br { display: none; }
+  .dl a { justify-content: space-between; height: auto; min-height: 36px; padding: 8px 12px; background: var(--field-soft); color: var(--v-ink); border: 1px solid var(--card-line); }
+  #dl > a:first-child { background: var(--v-ink); color: #fff; border-color: var(--v-ink); text-transform: uppercase; letter-spacing: 1.5px; justify-content: center; }
+  .msg .ok { display: block; }
+  #calc { font-size: 13px; color: var(--muted); }
+  @media (max-width: 960px) { .stage { position: static; } }
+  .radios.seg .radio { align-items: center; }
+  .row4 > div, .row > div { display: flex; flex-direction: column; justify-content: flex-end; }
+  #scianaSuggest { height: auto !important; min-height: 34px; padding: 8px 12px; line-height: 1.35; }
+  .actions:has(.dl:not(:empty)) { position: static; }
+  td { white-space: nowrap; }
+  @media (max-width: 560px) { td, th { padding: 8px 6px; font-size: 13px; } th { letter-spacing: .6px; font-size: 11px; } }
+  .reset-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+  .reset-row .hint { margin: 0; }
+  button.link { width: auto; height: auto; padding: 0; background: none; color: var(--muted); font: 500 12px var(--font); letter-spacing: .5px; text-transform: none; text-decoration: underline; text-underline-offset: 3px; }
+  button.link:hover:not(:disabled) { background: none; color: var(--v-ink); }
+  /* Integracja modułów (2026-10-22) */
+  .radios.seg { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); }
+  #aiBox summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 10px;
+    font-size: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.2px; }
+  #aiBox summary::-webkit-details-marker { display: none; }
+  #aiBox summary::before { content: "AI"; display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; flex: none;
+    background: var(--v-green); color: var(--v-ink); font-size: 11px; font-weight: 700; letter-spacing: .5px; }
+  #aiBox summary::after { content: "+"; margin-left: 8px; font-size: 18px; font-weight: 400; color: var(--v-ink); }
+  #aiBox details[open] > summary::after { content: "−"; }
+  #aiBox summary .ai-opt { margin-left: auto; font-size: 12px; font-weight: 500; letter-spacing: .5px; text-transform: none; color: var(--muted); }
+  /* Galeria wzorów: nagłówek jak Grafika AI, siatka przewijana w miejscu (nie wydłuża panelu) */
+  details#galeriaBox > summary { font-size: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.2px; }
+  details#galeriaBox > summary::before { content: ""; flex: none; background: var(--v-green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='%23222A35'%3E%3Crect width='5' height='5'/%3E%3Crect x='7' width='5' height='5'/%3E%3Crect y='7' width='5' height='5'/%3E%3Crect x='7' y='7' width='5' height='5'/%3E%3C/svg%3E") center / 12px no-repeat; }
+  details#galeriaBox > summary::after { content: "+"; margin-left: 8px; font-size: 18px; font-weight: 400; color: var(--v-ink); }
+  details#galeriaBox[open] > summary::after { content: "−"; }
+  details#galeriaBox > summary .g-opt { letter-spacing: .5px; text-transform: none; }
+  /* Otwarta galeria: pasek z GENERUJ BRYTY nie przykleja się do dołu okna, żeby nie zasłaniać miniatur */
+  .panel:has(details#galeriaBox[open]) .actions { position: static; }
+  details#galeriaBox .g-grid { max-height: 412px; overflow-y: auto; overscroll-behavior: contain; padding-right: 2px; }
+  @media (max-width: 560px) { details#galeriaBox > summary .g-opt { display: none; } details#galeriaBox > summary::after { margin-left: auto; }
+    details#galeriaBox .g-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); max-height: 380px; } }
+  input[type=file]::file-selector-button { margin-right: 10px; padding: 7px 12px; border: 1px solid var(--v-ink); background: #fff; color: var(--v-ink);
+    font: 600 12px var(--font); letter-spacing: 1px; text-transform: uppercase; cursor: pointer; }
+  input[type=file]::file-selector-button:hover { background: var(--accent-soft); }
+  input[type=file] { font: 13px var(--font); color: var(--muted); max-width: 100%; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <svg class="valare-logo" xmlns="http://www.w3.org/2000/svg" viewBox="274 257.5 313 42" role="img" aria-label="Valare"><path class="v-ink" d="M 305.808594 298.71875 L 289.328125 258.289062 L 300.1875 258.289062 L 307.304688 277.535156 C 309.988281 284.820312 311.128906 288.734375 311.832031 291.3125 L 311.945312 291.3125 C 312.578125 288.976562 313.136719 287.265625 316.929688 276.804688 L 323.8125 258.289062 L 334.308594 258.289062 L 317.546875 298.71875 Z M 305.808594 298.71875"/><path class="v-ink" d="M 347.765625 289.542969 L 344.238281 298.71875 L 334.140625 298.71875 L 350.429688 258.285156 L 363.007812 258.285156 L 380.128906 298.71875 L 369.515625 298.71875 L 365.757812 289.542969 Z M 363.015625 281.675781 C 359.253906 272.410156 357.421875 267.6875 356.453125 264.601562 L 356.394531 264.601562 C 355.488281 267.625 353.34375 273.773438 350.304688 281.675781 Z M 363.015625 281.675781"/><path class="v-ink" d="M 389.167969 258.289062 L 398.972656 258.289062 L 398.972656 290.855469 L 421.609375 290.855469 L 420.320312 298.71875 L 389.167969 298.71875 Z M 389.167969 258.289062"/><path class="v-ink" d="M 442.535156 289.542969 L 439.007812 298.71875 L 428.914062 298.71875 L 445.199219 258.285156 L 457.78125 258.285156 L 474.898438 298.71875 L 464.289062 298.71875 L 460.53125 289.542969 Z M 457.789062 281.675781 C 454.027344 272.410156 452.191406 267.6875 451.222656 264.601562 L 451.167969 264.601562 C 450.261719 267.625 448.113281 273.773438 445.078125 281.675781 Z M 457.789062 281.675781"/><path class="v-ink" d="M 493.695312 283.136719 L 493.695312 298.71875 L 483.988281 298.71875 L 483.988281 258.289062 L 506.007812 258.289062 C 515.328125 258.289062 520.667969 262.886719 520.667969 269.835938 C 520.667969 275.054688 517.632812 278.128906 513.628906 279.398438 C 515.285156 280.054688 519.625 281.640625 519.625 288.90625 L 519.625 290.921875 C 519.625 293.695312 519.574219 296.808594 520.136719 298.71875 L 510.066406 298.71875 C 509.390625 296.9375 509.308594 294.546875 509.308594 290.257812 L 509.308594 288.929688 C 509.308594 284.84375 507.808594 283.136719 501.914062 283.136719 Z M 493.695312 275.78125 L 503.8125 275.78125 C 508.574219 275.78125 510.636719 274.0625 510.636719 270.652344 C 510.636719 267.457031 508.523438 265.644531 503.894531 265.644531 L 493.695312 265.644531 Z M 493.695312 275.78125"/><path class="v-ink" d="M 565.078125 281.660156 L 542.511719 281.660156 L 542.511719 290.859375 L 567.601562 290.859375 L 566.472656 298.71875 L 532.699219 298.71875 L 532.699219 258.289062 L 566.296875 258.289062 L 566.296875 266.144531 L 542.511719 266.144531 L 542.511719 273.800781 L 565.078125 273.800781 Z M 565.078125 281.660156"/><path class="v-slash" d="M 291.707031 298.71875 L 301.324219 298.71875 L 284.296875 258.289062 L 274.675781 258.289062 Z M 291.707031 298.71875"/><path class="v-ink" d="M 579.117188 264.566406 L 579.117188 266.742188 L 578.40625 266.742188 L 578.40625 261.503906 L 580.875 261.503906 C 581.464844 261.503906 581.917969 261.636719 582.242188 261.898438 C 582.5625 262.164062 582.722656 262.53125 582.722656 263.003906 C 582.722656 263.390625 582.609375 263.71875 582.382812 263.984375 C 582.15625 264.25 581.84375 264.417969 581.445312 264.488281 L 582.929688 266.742188 L 582.113281 266.742188 L 580.75 264.566406 Z M 582.007812 263.011719 C 582.007812 262.703125 581.90625 262.472656 581.699219 262.3125 C 581.488281 262.152344 581.191406 262.074219 580.804688 262.074219 L 579.117188 262.074219 L 579.117188 264.007812 L 580.832031 264.007812 C 581.207031 264.007812 581.496094 263.917969 581.699219 263.746094 C 581.90625 263.570312 582.007812 263.324219 582.007812 263.011719"/><path class="v-ink" d="M 580.453125 258.289062 C 582.066406 258.289062 583.523438 258.941406 584.578125 259.996094 C 585.636719 261.054688 586.289062 262.515625 586.289062 264.125 C 586.289062 265.734375 585.636719 267.191406 584.578125 268.25 C 583.523438 269.304688 582.066406 269.957031 580.453125 269.957031 C 578.84375 269.957031 577.382812 269.304688 576.328125 268.25 C 575.269531 267.191406 574.617188 265.734375 574.617188 264.125 C 574.617188 262.515625 575.269531 261.054688 576.328125 260 C 577.382812 258.941406 578.84375 258.289062 580.453125 258.289062 Z M 584.007812 260.570312 C 583.097656 259.664062 581.839844 259.101562 580.453125 259.101562 C 579.066406 259.101562 577.808594 259.664062 576.902344 260.570312 C 575.992188 261.480469 575.429688 262.734375 575.429688 264.125 C 575.429688 265.511719 575.992188 266.769531 576.898438 267.675781 C 577.808594 268.585938 579.066406 269.148438 580.453125 269.148438 C 581.839844 269.148438 583.097656 268.585938 584.003906 267.675781 C 584.914062 266.769531 585.476562 265.511719 585.476562 264.125 C 585.476562 262.734375 584.914062 261.480469 584.007812 260.570312"/></svg>
+    <span class="brand-name">Konfigurator <b>fototapet</b></span>
+  </div>
+</header>
+
+<main>
+  <div class="side-word" aria-hidden="true">V A L A R E &nbsp; P R E M I U M</div>
+  <div class="intro">
+    <h1>Podział fototapety <b>na bryty</b></h1>
+    <p class="sub">Najpierw ściana i materiał, potem zdjęcie lub gotowy wzór. Ustaw kadr i podział, a na końcu pobierz bryty gotowe do druku.</p>
+  </div>
+
+  <div class="grid">
+    <section class="panel" aria-label="Ustawienia">
+      <div class="step">
+        <div class="step-head"><span class="num">1</span><h2>Ściana i materiał</h2></div>
+        <div class="row">
+          <div><label for="wallW">Szerokość ściany [cm]</label><input id="wallW" type="number" min="1" step="0.1" value="350"></div>
+          <div><label for="wallH">Wysokość ściany [cm]</label><input id="wallH" type="number" min="1" step="0.1" value="270"></div>
+        </div>
+        <label for="material">Materiał (maks. szerokość druku, cennik Valare 2024)</label>
+        <select id="material"></select>
+        <div id="maxBox" hidden>
+          <label for="maxPrint">Maks. szerokość druku [cm]</label>
+          <input id="maxPrint" type="number" min="1" step="0.1" value="131">
+        </div>
+        <div class="hint">Szerokość brytu (naddatki i zakład razem) nie może przekroczyć maks. szerokości druku – nic nie wychodzi poza linię cięcia.</div>
+      </div>
+
+      <div class="step">
+        <div class="step-head"><span class="num">2</span><h2>Naddatek</h2><span class="step-note">0–10 cm, 0 = bez naddatku</span></div>
+        <div class="row4">
+          <div><label for="mT">Góra</label><select id="mT"><option value="0">0 cm</option><option value="0.5">0,5 cm</option><option value="1">1 cm</option><option value="1.5">1,5 cm</option><option value="2">2 cm</option><option value="2.5">2,5 cm</option><option value="3" selected>3 cm</option><option value="3.5">3,5 cm</option><option value="4">4 cm</option><option value="4.5">4,5 cm</option><option value="5">5 cm</option><option value="5.5">5,5 cm</option><option value="6">6 cm</option><option value="6.5">6,5 cm</option><option value="7">7 cm</option><option value="7.5">7,5 cm</option><option value="8">8 cm</option><option value="8.5">8,5 cm</option><option value="9">9 cm</option><option value="9.5">9,5 cm</option><option value="10">10 cm</option></select></div>
+          <div><label for="mB">Dół</label><select id="mB"><option value="0">0 cm</option><option value="0.5">0,5 cm</option><option value="1">1 cm</option><option value="1.5">1,5 cm</option><option value="2">2 cm</option><option value="2.5">2,5 cm</option><option value="3" selected>3 cm</option><option value="3.5">3,5 cm</option><option value="4">4 cm</option><option value="4.5">4,5 cm</option><option value="5">5 cm</option><option value="5.5">5,5 cm</option><option value="6">6 cm</option><option value="6.5">6,5 cm</option><option value="7">7 cm</option><option value="7.5">7,5 cm</option><option value="8">8 cm</option><option value="8.5">8,5 cm</option><option value="9">9 cm</option><option value="9.5">9,5 cm</option><option value="10">10 cm</option></select></div>
+          <div><label for="mL">Lewo</label><select id="mL"><option value="0">0 cm</option><option value="0.5">0,5 cm</option><option value="1">1 cm</option><option value="1.5">1,5 cm</option><option value="2">2 cm</option><option value="2.5">2,5 cm</option><option value="3" selected>3 cm</option><option value="3.5">3,5 cm</option><option value="4">4 cm</option><option value="4.5">4,5 cm</option><option value="5">5 cm</option><option value="5.5">5,5 cm</option><option value="6">6 cm</option><option value="6.5">6,5 cm</option><option value="7">7 cm</option><option value="7.5">7,5 cm</option><option value="8">8 cm</option><option value="8.5">8,5 cm</option><option value="9">9 cm</option><option value="9.5">9,5 cm</option><option value="10">10 cm</option></select></div>
+          <div><label for="mR">Prawo</label><select id="mR"><option value="0">0 cm</option><option value="0.5">0,5 cm</option><option value="1">1 cm</option><option value="1.5">1,5 cm</option><option value="2">2 cm</option><option value="2.5">2,5 cm</option><option value="3" selected>3 cm</option><option value="3.5">3,5 cm</option><option value="4">4 cm</option><option value="4.5">4,5 cm</option><option value="5">5 cm</option><option value="5.5">5,5 cm</option><option value="6">6 cm</option><option value="6.5">6,5 cm</option><option value="7">7 cm</option><option value="7.5">7,5 cm</option><option value="8">8 cm</option><option value="8.5">8,5 cm</option><option value="9">9 cm</option><option value="9.5">9,5 cm</option><option value="10">10 cm</option></select></div>
+        </div>
+        <div class="hint">Standard ARPI (uwagi z 28.10.2026): 3 cm z każdej strony = 2,5 cm naddatku do montażu + 0,5 cm spadu do cięcia.</div>
+      </div>
+
+      <div class="step">
+        <div class="step-head"><span class="num">3</span><h2>Łączenie brytów</h2></div>
+        <div class="radios seg" role="radiogroup" aria-label="Łączenie brytów">
+          <label class="radio"><input type="radio" name="join" value="overlap" checked> Zakład</label>
+          <label class="radio"><input type="radio" name="join" value="butt"> Na styk</label>
+        </div>
+        <label for="overlap">Zakład między brytami [cm]</label>
+        <input id="overlap" type="number" min="0" step="0.5" value="6">
+        <div class="hint">Standard ARPI (uwagi z 28.10.2026): zakład – sąsiednie bryty mają 6 cm wspólnej grafiki, na styk – 1 cm. Na zewnętrznych krawędziach tapety nie ma dodatkowej grafiki poza naddatkiem.</div>
+      </div>
+
+      <div class="step">
+        <div class="step-head"><span class="num">4</span><h2>Podział na bryty</h2></div>
+        <div class="radios seg" role="radiogroup" aria-label="Podział na bryty">
+          <label class="radio"><input type="radio" name="split" value="equal" checked> Równe bryty</label>
+          <label class="radio"><input type="radio" name="split" value="custom"> Własne szerokości</label>
+        </div>
+        <label for="count">Liczba brytów</label>
+        <input id="count" type="number" min="1" max="30" step="1" value="3">
+        <div id="customBox" hidden>
+          <label>Szerokość każdego brytu od lewej [cm]</label>
+          <div id="widthsBox" class="row4"></div>
+          <div class="hint">Szerokość brytu = szerokość druku razem z zakładem. Ostatnie pole możesz zostawić puste – program dopasuje ten bryt do reszty.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-head"><span class="num">5</span><h2>Zdjęcie i zlecenie</h2></div>
+        <label for="file" class="drop" id="drop">
+          <span class="drop-title" id="dropTitle">Wybierz zdjęcie</span>
+          <span class="drop-hint">albo przeciągnij je tutaj · JPG lub PNG</span>
+          <input id="file" type="file" accept="image/jpeg,image/png">
+        </label>
+        <div id="imgInfo" class="legend"></div>
+        <label for="order">Nazwa zlecenia (np. nazwisko klienta – trafia do nazw plików)</label>
+        <input id="order" type="text" value="Fototapeta">
+        <div class="sub-lead">Nie masz zdjęcia? Wybierz gotowy wzór dopasowany do ściany albo wygeneruj grafikę.</div>
+        <div id="galeriaBox" class="sub"></div>
+        <div id="aiBox" class="sub"></div>
+      </div>
+
+      <div class="step">
+        <div class="step-head"><span class="num">6</span><h2>Pliki do produkcji</h2></div>
+        <div class="row">
+          <div><label for="dpi">Rozdzielczość [DPI]</label><select id="dpi"><option value="100">100 DPI</option><option value="150" selected>150 DPI</option><option value="200">200 DPI</option><option value="300">300 DPI</option></select></div>
+          <div></div>
+        </div>
+        <label class="check"><input id="thru" type="checkbox"> Pasek thru cut 0,5 cm (góra i dół)</label>
+        <label class="check"><input id="pdf" type="checkbox" checked> Plik dla CorelDRAW w układzie jak DRUK 1 (schemat + bryty 1:1): .cdr, a gdy Corel jest niedostępny – PDF</label>
+        <div class="hint" id="cdrInfo">Sprawdzam, czy działa zapis .cdr…</div>
+      </div>
+
+      <div id="wycenaBox" class="step"></div>
+
+      <div class="actions">
+        <button id="go" disabled>Generuj bryty</button>
+        <div id="msg" class="msg" role="status" aria-live="polite"></div>
+        <div id="dl" class="dl"></div>
+        <div id="montazBox"></div>
+        <div class="reset-row"><button id="resetSettings" class="link" type="button">Przywróć ustawienia domyślne</button><span id="resetNote" class="hint" role="status"></span></div>
+      </div>
+      <div id="probkaBox" class="step"></div>
+    </section>
+
+    <section class="stage" aria-label="Podgląd">
+      <div class="stage-head">
+        <h2>Podgląd <b>i bryty</b></h2>
+        <div class="crop">
+          <label for="zoom">Powiększenie</label>
+          <button id="zoomOut" class="small icon" type="button" aria-label="Pomniejsz o 10%">−</button>
+          <input id="zoom" type="range" min="100" max="300" step="1" value="100">
+          <button id="zoomIn" class="small icon" type="button" aria-label="Powiększ o 10%">+</button>
+          <span id="zoomVal">100%</span>
+          <button id="center" class="small" type="button">Resetuj kadr</button>
+          <button id="lupaBtn" class="small" type="button" disabled title="Całe zdjęcie na pełnym ekranie, z powiększeniem">Lupa</button>
+        </div>
+      </div>
+      <div class="canvas-wrap" data-empty="Wgraj zdjęcie, aby zobaczyć podgląd i ustawić kadr"><canvas id="preview" width="900" height="500"></canvas></div>
+      <div class="legend">
+        <span class="chip"><span class="sw"><i style="background:rgba(220,38,38,.25)"></i></span>naddatek</span>
+        <span class="chip"><span class="sw"><i style="background:rgba(10,126,164,.35)"></i></span>zakład</span>
+        <span class="chip"><span class="sw"><i style="background:#0a7ea4"></i></span>linia styku</span>
+        <span class="chip"><span class="sw"><i style="background:rgb(0,163,212)"></i></span>thru cut</span>
+        <span class="chip"><span class="sw sw-frame"></span>wymiar ściany</span>
+        <span class="legend-tip">Kadr: przeciągnij zdjęcie na górnym podglądzie.</span>
+      </div>
+      <div class="summary">
+        <table id="tbl"></table>
+        <div id="calc" class="msg"></div>
+        <div id="jakoscBox" hidden></div>
+      </div>
+      <div id="wizBox" class="step"></div>
+    </section>
+  </div>
+</main>
+
+<script src="sciana.js"></script>
+<script src="montaz.js"></script>
+<script src="wycena.js"></script>
+<script src="probka.js"></script>
+<script src="jakosc.js"></script>
+<script src="bryty.js"></script>
+<script src="bryty-wyglad.js"></script>
+<script src="materialy.js"></script>
+<script src="pamiec.js"></script>
+<script src="galeria.js"></script>
+<script src="ai.js"></script>
+<script src="wizualizacja.js"></script>
+<script src="lupa.js"></script>
+<script src="kroki.js"></script>
+</body>
+</html>
