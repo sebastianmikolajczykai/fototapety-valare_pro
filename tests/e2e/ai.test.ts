@@ -42,7 +42,14 @@ const state = (page: Page): Promise<unknown> =>
           .join('');
       const imgs = [];
       for (const im of document.querySelectorAll<HTMLImageElement>('#aiGrid img, #avImg, #aiRefInfo img'))
-        imgs.push(im.src ? [im.id || im.alt, await hex(await (await fetch(im.src)).blob())] : [im.id, '']);
+        imgs.push([
+          im.id || im.alt,
+          im.src
+            ? await fetch(im.src)
+                .then(r => r.blob())
+                .then(hex, () => 'adres odwołany')
+            : '',
+        ]);
       const f = (document.getElementById('file') as HTMLInputElement).files?.[0];
       const G = (window as unknown as { GrafikaAI?: { CONFIG: unknown; target(): unknown } }).GrafikaAI;
       const val = (id: string): unknown => {
@@ -75,10 +82,9 @@ const fields = (page: Page, f: Record<string, string>): Promise<void> =>
     }
   }, f);
 const key = (page: Page, k: string): Promise<void> =>
-  page.evaluate(
-    k => document.dispatchEvent(new KeyboardEvent('keydown', { key: k, bubbles: true, cancelable: true })),
-    k,
-  );
+  page.evaluate(k => {
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: k, bubbles: true, cancelable: true }));
+  }, k);
 const waitText = (page: Page, sel: string, re: RegExp): Promise<unknown> =>
   page.waitForFunction(
     ([sel, r]) => new RegExp(r!).test(document.querySelector(sel!)?.textContent ?? ''),
@@ -155,7 +161,7 @@ describe.skipIf(!enabled)('grafika AI: stary vs nowy program', () => {
         await click(p, '#aiGen');
         await waitText(p, '#aiMsg', /AI niedostępne/);
       });
-      expect((o.imgs as unknown[]).length).toBe(2);
+      expect((o.imgs as string[][]).filter(x => x[0]!.startsWith('Propozycja'))).toHaveLength(2);
     });
     it('wybór propozycji 2 – pole poprawki', () => both(p => click(p, '#aiGrid .ai-thumb[data-i="1"]')));
     it('podgląd na cały ekran: następna strzałką, przybliżenie, wybór', () =>
@@ -184,7 +190,7 @@ describe.skipIf(!enabled)('grafika AI: stary vs nowy program', () => {
         await click(p, '#aiFixBtn');
         await waitText(p, '#aiMsg', /Możesz poprawić dalej/);
       });
-      expect((o.imgs as unknown[]).length).toBe(1);
+      expect((o.imgs as string[][]).filter(x => x[0]!.startsWith('Propozycja'))).toHaveLength(1);
     });
     it('„Użyj wybranej do podziału” – bez powiększania, plik grafika-ai.png', async () => {
       const o = await both(async p => {
@@ -312,7 +318,9 @@ describe.skipIf(!enabled)('grafika AI: stary vs nowy program', () => {
   });
 
   it('brak błędów JavaScript po obu stronach', () => {
+    // Odczyt obrazów przez test (fetch adresu blob:, który strona już zwolniła) – to nie błąd strony.
+    const own = (e: string): boolean => !e.includes('ERR_FILE_NOT_FOUND');
     expect(side.new.errors).toEqual(side.old.errors);
-    expect(side.new.errors).toEqual([]);
+    expect(side.new.errors.filter(own)).toEqual([]);
   });
 });
