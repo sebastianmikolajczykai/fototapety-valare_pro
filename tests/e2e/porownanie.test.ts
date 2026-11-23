@@ -126,7 +126,7 @@ const SCENARIOS: { name: string; s: FormSettings; generate: boolean; expectText?
     name: 'jakość: próg „za słaba” wyższy niż „dobra” zostaje obcięty; podgląd fragmentu 200%',
     s: { fields: { jqGood: '1500', jqMin: '4000' }, checks: { jqX2: true } },
     generate: false,
-    expectText: ['jq-badge jq-good'],
+    expectText: ['minimum 1500 px/m', '<span style="left:66.66666666666666%">1500</span>'],
   },
   {
     name: 'jakość: przeciągnięcie fragmentu 1:1 przesuwa zieloną ramkę na podglądzie',
