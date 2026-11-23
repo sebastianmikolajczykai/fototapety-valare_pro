@@ -199,3 +199,7 @@ export async function generate(page: Page, ov = 0): Promise<RunResult> {
 
 /** Tekst widoczny na stronie (porównanie komunikatów, ostrzeżeń, wyceny). */
 export const visibleText = (page: Page): Promise<string> => page.evaluate(() => document.body.innerText);
+
+/** Cały HTML strony (także zwiniętych kroków); adresy blob: zastąpione stałym tekstem (są losowe). */
+export const pageHtml = (page: Page): Promise<string> =>
+  page.evaluate(() => document.body.innerHTML.replace(/blob:[^"')\s]+/g, 'blob:X'));
