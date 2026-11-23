@@ -7,6 +7,7 @@ import {
   applySettings,
   canvasHashes,
   generate,
+  generateSample,
   launch,
   loadTestImage,
   OLD_REPO,
@@ -18,7 +19,14 @@ import {
   type RunningServer,
 } from './support';
 
-const SCENARIOS: { name: string; s: FormSettings; generate: boolean; expectText?: string[] }[] = [
+const SCENARIOS: {
+  name: string;
+  s: FormSettings;
+  generate: boolean;
+  /** Klik „Generuj próbkę” i porównanie pliku próbki. */
+  sample?: boolean;
+  expectText?: string[];
+}[] = [
   {
     name: '005-21: 350×270, naddatek 3, zakład 6, 3 bryty, Mural Canvas CT',
     s: {
@@ -137,6 +145,34 @@ const SCENARIOS: { name: string; s: FormSettings; generate: boolean; expectText?
     },
     generate: false,
   },
+  {
+    name: 'próbka: pionowo 40×60, 150 DPI, thru cut – plik bajt w bajt',
+    s: {
+      fields: { wallW: '350', wallH: '270', count: '3', dpi: '150', order: 'Próbka 1' },
+      radios: { split: 'equal', join: 'overlap' },
+      checks: { thru: true },
+    },
+    generate: false,
+    sample: true,
+    expectText: ['Gotowe: próbka 40 × 60 cm, 2363 × 3544 px, 150 DPI'],
+  },
+  {
+    name: 'próbka: poziomo 60×40, pokazana na podglądzie i przesunięta myszą, bez thru cut',
+    s: {
+      radios: { probkaOr: 'h' },
+      checks: { thru: false, probkaShow: true },
+      drag: { selector: '#preview', dx: 90, dy: -40 },
+    },
+    generate: false,
+    sample: true,
+    expectText: ['Gotowe: próbka 60 × 40 cm'],
+  },
+  {
+    name: 'próbka: ściana węższa niż próbka – ostrzeżenie',
+    s: { fields: { wallW: '30', count: '1' }, radios: { probkaOr: 'h' }, checks: { probkaShow: false } },
+    generate: false,
+    expectText: ['Ściana jest węższa niż próbka'],
+  },
 ];
 
 const enabled = !!OLD_REPO;
@@ -171,6 +207,7 @@ describe.skipIf(!enabled)('stary vs nowy program', () => {
         await applySettings(page, sc.s);
         await page.waitForTimeout(300);
         const result = sc.generate ? await generate(page) : null;
+        const sample = sc.sample ? await generateSample(page) : null;
         const disabled = await page.evaluate(() =>
           [...document.querySelectorAll('input, select, button')]
             .filter(e => (e as HTMLInputElement).disabled)
@@ -181,7 +218,15 @@ describe.skipIf(!enabled)('stary vs nowy program', () => {
           return M ? M.wybrany() : 'brak window.Materialy';
         });
         const canvases = await canvasHashes(page);
-        out[kind] = { text: await visibleText(page), html: await pageHtml(page), disabled, material, canvases, result };
+        out[kind] = {
+          text: await visibleText(page),
+          html: await pageHtml(page),
+          disabled,
+          material,
+          canvases,
+          result,
+          sample,
+        };
       }
       expect(out.new).toEqual(out.old);
       for (const t of sc.expectText ?? []) expect((out.new as { html: string }).html).toContain(t);
