@@ -240,7 +240,7 @@ const SCENARIOS: {
     s: {
       script:
         "Sciana.items.splice(0, Sciana.items.length, { type: 'door', x: NaN, w: 80, y: 0, h: NaN }, { type: 'window', x: 10, w: NaN, y: NaN, h: NaN }, { type: 'window', x: 300, w: 80, y: NaN, h: NaN }, { type: 'door', x: 10, w: 50, y: 100, h: 200 })",
-      fields: { count: '2' },
+      fields: { count: '3' },
     },
     generate: false,
     probe:
