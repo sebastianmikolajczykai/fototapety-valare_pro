@@ -7,7 +7,7 @@ Aktualizacja: 2026-11-23
 | 0    | Szkielet: TS strict, ESLint, Prettier, Vitest + pokrycie, CI, wzorce „golden” ze starego programu, `units`/`format` | PR #2        |
 | 1    | Domena: podział na bryty (`layout`) + złoty wzorzec recenzenta                                                      | PR #3        |
 | 2    | Domena: walidacja i ostrzeżenia                                                                                     | PR #4        |
-| 3    | Domena: materiały (PR #5), wycena (PR #6), jakość (PR #7), ściana, próbka, wizualizacja, teksty AI                  | do zrobienia |
+| 3    | Domena: materiały (PR #5), wycena (PR #6), jakość (PR #7), ściana (PR #8), próbka, wizualizacja, teksty AI          | do zrobienia |
 | 4    | Wyjście: JPG DPI, ZIP, PDF produkcyjny, zlecenie CDR, PDF montażu                                                   | do zrobienia |
 | 5    | Serwer: pliki, bezpieczeństwo, logowanie, AI na atrapach, CDR                                                       | do zrobienia |
 | 6    | Strona w TS (ten sam wygląd)                                                                                        | do zrobienia |
