@@ -10,6 +10,7 @@ declare const img: PageImage | null;
 declare const crop: Crop;
 declare function params(): WallParams;
 declare function render(): void;
+declare function changed(): void;
 declare function canvasPoint(e: PointerEvent): { x: number; y: number };
 declare function renderPano(L: Layout, maxW: number): Promise<{ blob: Blob; w: number; h: number }>;
 
@@ -19,6 +20,8 @@ export const page = {
   params: (): WallParams => params(),
   /** Przerysowanie podglądu bez kasowania wygenerowanych plików. */
   render: (): void => render(),
+  /** Zmiana ustawień: przeliczenie i skasowanie nieaktualnych plików. */
+  changed: (): void => changed(),
   canvasPoint: (e: PointerEvent): { x: number; y: number } => canvasPoint(e),
   /** Podgląd całości (JPG, bez pasków) o szerokości maks. maxW px. */
   renderPano: (L: Layout, maxW: number): Promise<{ blob: Blob; w: number; h: number }> => renderPano(L, maxW),

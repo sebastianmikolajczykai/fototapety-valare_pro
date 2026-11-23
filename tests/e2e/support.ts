@@ -91,6 +91,8 @@ export async function loadTestImage(page: Page): Promise<void> {
 }
 
 export interface FormSettings {
+  /** Kod uruchamiany na stronie przed ustawieniem pól (np. dane sekcji „Ściana”, która nie jest widoczna). */
+  script?: string;
   fields?: Record<string, string>;
   radios?: Record<string, string>;
   checks?: Record<string, boolean>;
@@ -105,6 +107,7 @@ export interface FormSettings {
 
 /** Ustawienia formularza przez DOM (zdarzenie input jak od użytkownika). */
 export async function applySettings(page: Page, s: FormSettings): Promise<void> {
+  if (s.script) await page.evaluate(s.script);
   await page.evaluate(s => {
     const fire = (e: Element, type = 'input'): boolean => e.dispatchEvent(new Event(type, { bubbles: true }));
     for (const [id, v] of Object.entries(s.fields ?? {})) {
