@@ -3,6 +3,7 @@
 import { describe, expect, it } from 'vitest';
 import { computeLayout } from '../../src/domain/layout';
 import { addWorkdays, areaM2, calcPrice, type PriceInput } from '../../src/domain/pricing';
+import { QualityAssessor } from '../../src/domain/quality';
 import { layoutWarnings, validate } from '../../src/domain/validation';
 import { reviewerGolden, withDefaults } from '../support/reviewer';
 
@@ -74,5 +75,12 @@ describe('złoty wzorzec recenzenta: powierzchnie, wyceny, terminy', () => {
       const r = addWorkdays(new Date(`${t.od}T12:00:00`), t.dni);
       expect(`${r.getFullYear()}-${pad(r.getMonth() + 1)}-${pad(r.getDate())}`, `${t.od}+${t.dni}`).toBe(t.wynik);
     }
+  });
+});
+
+describe('złoty wzorzec recenzenta: jakość zdjęcia', () => {
+  it('21 ocen', () => {
+    expect(G.jakosc).toHaveLength(21);
+    for (const j of G.jakosc) expect(new QualityAssessor().assess(j.pxPerM, j.zoom), JSON.stringify(j)).toEqual(j.out);
   });
 });
