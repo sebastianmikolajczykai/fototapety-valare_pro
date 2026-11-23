@@ -7,7 +7,7 @@ describe('lupa – powiększenie i przesuwanie zdjęcia (stary lupa.js)', () => 
   it('„Całe zdjęcie”: skala dopasowana do okna (maks. 100%), obraz na środku', () => {
     const v = new ZoomView(6000, 4000);
     v.fitAll(1200, 800);
-    expect([v.s, v.fitS, v.tx, v.ty]).toEqual([0.2, 0.2, 0, 100]);
+    expect([v.s, v.fitS, v.tx, v.ty]).toEqual([0.2, 0.2, 0, 0]);
     expect(v.label).toBe('20%');
     expect([v.canZoomOut, v.canZoomIn, v.pixelated]).toEqual([false, true, false]);
     const small = new ZoomView(300, 200);
