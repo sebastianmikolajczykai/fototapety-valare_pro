@@ -92,6 +92,13 @@ setx REPLICATE_API_TOKEN "tu-wklej-token"
 
 Albo: Start → „Edytuj zmienne środowiskowe dla konta” → Nowa. Klucza nie wpisuj do żadnego pliku w repo.
 
+## Usługa testowa na Renderze
+
+`render.yaml` opisuje osobną usługę testową `fototapety-valare-v2-test` (stara usługa `fototapety-valare` zostaje bez
+zmian). Utworzenie raz w panelu Rendera: **New → Blueprint** → repo `fototapety-valare_pro`, gałąź `render-test`,
+wpisać `APP_PASSWORD` (bez niego strona jest otwarta, a płatne AI wyłączone) i ewentualnie klucze AI. Na serwerze
+Rendera nie ma Corela, więc pliki produkcyjne wychodzą jako PDF (jak w starej wersji).
+
 ## Plik .cdr (CorelDRAW)
 
 Zapis .cdr działa tylko na komputerze z Windows, na którym jest zainstalowany licencjonowany CorelDRAW,

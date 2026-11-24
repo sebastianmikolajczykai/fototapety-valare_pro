@@ -1,0 +1,24 @@
+# Usługa TESTOWA nowej wersji (v2) na Renderze – osobna od starej usługi „fototapety-valare”.
+# Tworzy się ją raz w panelu Rendera: New → Blueprint → repo fototapety-valare_pro (gałąź render-test).
+# Sekrety (APP_PASSWORD, klucze AI) wpisuje się w panelu – nigdy w repo.
+services:
+  - type: web
+    name: fototapety-valare-v2-test
+    runtime: node
+    plan: free
+    branch: render-test
+    autoDeploy: true
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: '22'
+      - key: APP_PASSWORD
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: REPLICATE_API_TOKEN
+        sync: false
