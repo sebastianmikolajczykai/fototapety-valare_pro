@@ -25,6 +25,8 @@ export interface AssemblyBryt {
 export interface AssemblyModel extends AssemblyWall {
   n: number;
   ov: number;
+  /** Docięcie krawędzi zewnętrznych całości [cm]. */
+  cut?: { l: number; r: number; t: number; b: number };
   bryty: AssemblyBryt[];
   material: string;
 }
@@ -40,7 +42,12 @@ export interface AssemblyOptions<T> {
   now?: Date;
   /** Logo wektorowe; null = napis „VALARE” (jak gdy w stronie brakowało logo). */
   logo?: SvgLogo | null;
+  /** Docięcie każdego brytu z każdej strony [cm] (domyślnie ZUND_TRIM); 0 = jak w starym programie. */
+  trim?: number;
 }
+
+/** Docięcie na Zundzie: każdy bryt po 0,5 cm z każdej strony (Valare 27.11.2026). TODO: implementacja. */
+export const ZUND_TRIM = 0;
 
 export interface AssemblyPdf<T> {
   parts: (Uint8Array | T)[];
@@ -166,7 +173,14 @@ export function materialLabel(value: string, optionText: string | undefined): st
 }
 
 /** Dane do schematu (cm). Bryty liczone z dokładnych szerokości (bez zaokrąglenia do pikseli). */
-export function assemblyModel(p: WallParams, L: Layout, material = '', wall?: AssemblyWall): AssemblyModel {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function assemblyModel(
+  p: WallParams,
+  L: Layout,
+  material = '',
+  wall?: AssemblyWall,
+  _trim = ZUND_TRIM,
+): AssemblyModel {
   const n = L.bw.widths.length;
   const ov = p.overlap;
   const bryty: AssemblyBryt[] = [];
