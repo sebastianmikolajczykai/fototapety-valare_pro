@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { MaterialCatalog, MATERIAL_GROUPS, MATERIAL_SOURCE, TERMS } from '../../../src/domain/materials';
 import { asJson, golden } from '../../support/golden';
+import { materialyPoZmianach } from '../../support/zmiany';
 
 type G = {
   lista: Record<string, unknown>[];
@@ -25,6 +26,14 @@ describe('katalog materiałów (cennik Valare 2024/1)', () => {
     const m = cat.byId('mural-canvas-ct')!;
     expect([m.szerMaterialu, m.szerDruku, m.cenaBruttoM2, m.terminDni]).toEqual([137, 131, 279, 10]);
   });
+  it('Sand Dot GW: 279 zł brutto / 226,83 zł netto za m² we wszystkich rolkach (Valare 27.11.2026)', () => {
+    const sd = cat.list.filter(m => m.produkt === 'sand-dot-gw');
+    expect(sd.map(m => [m.cenaBruttoM2, m.cenaNettoM2])).toEqual([
+      [279, 226.83],
+      [279, 226.83],
+      [279, 226.83],
+    ]);
+  });
   it('materiał na zamówienie: 21 dni roboczych', () => {
     expect(cat.byId('diamante-ct')!.terminDni).toBe(21);
   });
@@ -45,7 +54,7 @@ describe('katalog materiałów (cennik Valare 2024/1)', () => {
 
 describe('zgodność ze starym programem', () => {
   it('lista, grupy, terminy, źródło i opcje formularza identyczne', () => {
-    expect(asJson(cat.list)).toEqual(G.lista);
+    expect(asJson(cat.list)).toEqual(materialyPoZmianach(G.lista));
     expect(MATERIAL_GROUPS).toEqual(G.grupy);
     expect(TERMS).toEqual(G.terminy);
     expect(MATERIAL_SOURCE).toBe(G.zrodlo);

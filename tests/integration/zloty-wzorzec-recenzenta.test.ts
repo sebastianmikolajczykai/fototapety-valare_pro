@@ -6,6 +6,7 @@ import { addWorkdays, areaM2, calcPrice, type PriceInput } from '../../src/domai
 import { QualityAssessor } from '../../src/domain/quality';
 import { layoutWarnings, validate } from '../../src/domain/validation';
 import { reviewerGolden, withDefaults } from '../support/reviewer';
+import { expectPriceLikeOld } from '../support/zmiany';
 
 const G = reviewerGolden();
 const valid = G.bryty.filter(c => c.layout !== null);
@@ -66,7 +67,10 @@ describe('złoty wzorzec recenzenta: powierzchnie, wyceny, terminy', () => {
   });
   it('1140 wycen', () => {
     expect(G.wycena).toHaveLength(1140);
-    for (const w of G.wycena) expect(calcPrice(w.in as unknown as PriceInput), JSON.stringify(w.in)).toEqual(w.out);
+    for (const w of G.wycena) {
+      const inp = w.in as unknown as PriceInput;
+      expectPriceLikeOld(inp, calcPrice(inp), w.out);
+    }
   });
   it('24 terminy w dniach roboczych', () => {
     expect(G.terminy).toHaveLength(24);
