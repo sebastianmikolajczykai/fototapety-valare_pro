@@ -83,7 +83,7 @@ describe('schemat montażu po docięciu na Zundzie (Valare 27.11.2026)', () => {
     expect(t).not.toContain('(276) Tj');
   });
   it('grafika przycięta do obrysu po docięciu (ścieżka przycinania), bez docięcia bez przycinania', () => {
-    expect(text(build(P005).parts)).toMatch(/re W n q [\d. ]+ cm \/Pano Do Q Q/);
+    expect(text(build(P005).parts)).toMatch(/re W n q [\d. ]+ cm \/Pano Do Q\nQ\n/);
     expect(text(build(P005, '', undefined, undefined, 0).parts)).not.toContain(' W n ');
   });
   it('naddatek mniejszy niż 0,5 cm: docięcie najwyżej do krawędzi ściany', () => {

@@ -28,8 +28,10 @@ const SCENARIOS: {
   generate: boolean;
   /** Klik „Generuj próbkę” i porównanie pliku próbki. */
   sample?: boolean;
-  /** Klik „Schemat montażu” i porównanie pliku PDF. */
+  /** Klik „Schemat montażu” i porównanie pliku PDF (nowy program z docięciem 0, jak stary). */
   assembly?: boolean;
+  /** Teksty w domyślnym schemacie nowego programu (po docięciu na Zundzie), zapis jak w treści PDF. */
+  assemblyText?: string[];
   /** Wyrażenie liczone na stronie po ustawieniach (porównywany wynik). */
   probe?: string;
   expectText?: string[];
@@ -199,6 +201,8 @@ const SCENARIOS: {
     generate: false,
     assembly: true,
     expectText: ['schemat-montazu_Fototapeta_360x260_23.11.2026.pdf (0.6 MB, 1 strona)'],
+    // 360 + 2 + 4 = 366 → 365 po docięciu; 260 + 3 + 3 = 266 → 265; zakład 6 → 5
+    assemblyText: ['z naddatkiem 365 \\327 265 cm', 'zak\\203ad 5 cm'],
   },
   {
     name: 'schemat montażu: na styk, 6 brytów, inny materiał',
@@ -208,6 +212,8 @@ const SCENARIOS: {
     },
     generate: false,
     assembly: true,
+    // styk 1 cm wspólnej grafiki znika po docięciu – bryty stykają się krawędziami
+    assemblyText: ['(\\203\\200czenie na styk) Tj'],
   },
   {
     name: 'schemat montażu: błąd w ustawieniach – przycisk wyłączony',
@@ -433,6 +439,16 @@ const formState = (page: Page): Promise<unknown> =>
 
 const enabled = !!OLD_REPO;
 let browser: Browser;
+type Bridge = { Montaz: { setTrim(cm: number): void } };
+
+/** Treść ostatnio wygenerowanego schematu (PDF bez kompresji, znaki jak w strumieniu strony). */
+const assemblyText = (page: Page): Promise<string> =>
+  page.evaluate(async () => {
+    const a = document.querySelector<HTMLAnchorElement>('#montazMsg a')!;
+    const buf = await (await fetch(a.href)).arrayBuffer();
+    return new TextDecoder('latin1').decode(buf);
+  });
+
 const side: Record<'old' | 'new', { server: RunningServer; page: Page; errors: string[] }> = {} as never;
 
 beforeAll(async () => {
@@ -458,12 +474,16 @@ describe.skipIf(!enabled)('stary vs nowy program', () => {
   for (const sc of SCENARIOS)
     it(sc.name, async () => {
       const out: Record<string, unknown> = {};
+      let trimmedText = '';
       for (const kind of ['old', 'new'] as const) {
         const { page } = side[kind];
         await applySettings(page, sc.s);
         await page.waitForTimeout(300);
         const result = sc.generate ? await generate(page) : null;
         const sample = sc.sample ? await generateSample(page) : null;
+        // Schemat po docięciu na Zundzie to świadoma zmiana (Valare 27.11.2026): nowy program porównany ze starym
+        // z docięciem 0, a domyślny schemat (0,5 cm) sprawdzony osobno – inny plik, wymiary po docięciu.
+        if (sc.assembly && kind === 'new') await page.evaluate(() => (window as unknown as Bridge).Montaz.setTrim(0));
         const assembly = sc.assembly ? await generateAssembly(page) : null;
         const disabled = await page.evaluate(() =>
           [...document.querySelectorAll('input, select, button')]
@@ -491,8 +511,18 @@ describe.skipIf(!enabled)('stary vs nowy program', () => {
           assembly,
           probe,
         };
+        if (sc.assembly && kind === 'new') {
+          await page.evaluate(() => (window as unknown as Bridge).Montaz.setTrim(0.5));
+          const trimmed = await generateAssembly(page);
+          expect(trimmed.files).toHaveLength(1);
+          expect(trimmed.files[0]!.name).toBe(assembly!.files[0]!.name);
+          expect(trimmed.files[0]!.sha256).not.toBe(assembly!.files[0]!.sha256);
+          trimmedText = await assemblyText(page);
+        }
       }
       expect(out.new).toEqual(staryPoZmianach(out.old));
+      if (sc.assembly) expect(trimmedText).toMatch(/z naddatkiem [\d,]+ \\327 [\d,]+ cm/);
+      for (const t of sc.assemblyText ?? []) expect(trimmedText).toContain(t);
       for (const t of sc.expectText ?? []) expect((out.new as { html: string }).html).toContain(t);
     });
   it('pamięć: po ponownym otwarciu strony wracają zapisane ustawienia (bez nazwy zlecenia)', async () => {

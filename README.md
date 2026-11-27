@@ -30,6 +30,10 @@ Zmiany względem starego programu, potwierdzone przez Valare. Wzorce nagrane ze 
 a testy nakładają na nie tylko te poprawki (`tests/support/zmiany.ts`):
 
 - **Cena Sand Dot GW: 279 zł brutto/m²** (Valare 27.11.2026; w cenniku 2024/1 była literówka 279,05).
+- **Schemat montażu po docięciu na Zundzie** (Valare 27.11.2026): każdy bryt jest docinany po 0,5 cm z każdej
+  strony, więc schemat dla klienta pokazuje wymiary po produkcji – zakład 6 → 5 cm, styk 1 cm → bryty stykają się
+  krawędziami bez wspólnej grafiki, bryt o 1 cm węższy i niższy, naddatek 3 → 2,5 cm. Plik produkcyjny (PDF/.cdr,
+  bryty JPG) bez zmian. Porównanie ze starym: schemat z `trim: 0` bajt w bajt.
 
 ## Stan
 
