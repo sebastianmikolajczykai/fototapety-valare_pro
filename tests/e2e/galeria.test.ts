@@ -5,6 +5,7 @@ import path from 'node:path';
 import type { Browser, Page } from 'playwright';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import { launch, loadTestImage, OLD_REPO, openPage, startServer, type RunningServer } from './support';
+import { staryPoZmianach } from '../support/zmiany';
 
 const enabled = !!OLD_REPO;
 const THUMB = fs.readFileSync(path.resolve('public/wzory/mini/c34259360.jpg'));
@@ -95,7 +96,7 @@ describe.skipIf(!enabled)('galeria wzorów: stary vs nowy program', () => {
       await page.waitForTimeout(400);
       out[kind] = await state(page);
     }
-    expect(out.new).toEqual(out.old);
+    expect(out.new).toEqual(staryPoZmianach(out.old));
     return out.new;
   };
   const html = (o: unknown): string => (o as { html: string }).html;
@@ -179,7 +180,7 @@ describe.skipIf(!enabled)('galeria wzorów: stary vs nowy program', () => {
       const body = fs.readFileSync((await d.path())!);
       out[kind] = { name: d.suggestedFilename(), body: body.toString('base64') };
     }
-    expect(out.new).toEqual(out.old);
+    expect(out.new).toEqual(staryPoZmianach(out.old));
     const b = Buffer.from((out.new as { body: string }).body, 'base64').toString('utf8');
     expect(b.startsWith('﻿Metryka wzoru fototapety\r\n')).toBe(true);
   });
@@ -203,7 +204,7 @@ describe.skipIf(!enabled)('galeria wzorów: stary vs nowy program', () => {
       out[kind] = await state(p2);
       await p2.close();
     }
-    expect(out.new).toEqual(out.old);
+    expect(out.new).toEqual(staryPoZmianach(out.old));
     expect(html(out.new)).toContain('Nie udało się wczytać galerii (brak pliku wzory/katalog.js).');
   });
   it('brak błędów JavaScript po obu stronach', () => {

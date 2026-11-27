@@ -24,6 +24,13 @@ Test porównawczy (`tests/e2e/bryty.test.ts`) sprawdza:
 - że poza tym jednym punktem oba programy wysyłają do Corela identyczne zlecenie;
 - że po włączeniu opcji zlecenie jest identyczne ze starym.
 
+## Świadome zmiany po uwagach Valare/ARPI
+
+Zmiany względem starego programu, potwierdzone przez Valare. Wzorce nagrane ze starego programu zostają bez zmian,
+a testy nakładają na nie tylko te poprawki (`tests/support/zmiany.ts`):
+
+- **Cena Sand Dot GW: 279 zł brutto/m²** (Valare 27.11.2026; w cenniku 2024/1 była literówka 279,05).
+
 ## Stan
 
 Prace trwają etapami, każdy moduł w osobnym pull requeście. Aktualny stan: [docs/STAN-PRAC.md](docs/STAN-PRAC.md).

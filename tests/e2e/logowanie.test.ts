@@ -3,6 +3,7 @@
 import type { Browser, Page } from 'playwright';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import { launch, OLD_REPO, openPage, startServer, type RunningServer } from './support';
+import { staryPoZmianach } from '../support/zmiany';
 
 const TEST_PASSWORD = 'haslo-tylko-do-testow';
 const enabled = !!OLD_REPO;
@@ -52,7 +53,7 @@ describe.skipIf(!enabled)('logowanie: stary vs nowy program', () => {
   const both = async (f: (page: Page) => Promise<unknown>): Promise<void> => {
     const out: Record<string, unknown> = {};
     for (const kind of ['old', 'new'] as const) out[kind] = await f(side[kind].page);
-    expect(out.new).toEqual(out.old);
+    expect(out.new).toEqual(staryPoZmianach(out.old));
   };
   it('strona logowania zamiast konfiguratora', () =>
     both(p => p.evaluate(() => [document.title, document.body.innerHTML])));

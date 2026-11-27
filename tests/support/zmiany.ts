@@ -31,3 +31,13 @@ export function expectPriceLikeOld(inp: PriceInput, now: PriceResult, old: unkno
   expect(b.doplata, label).toBe(r2((b.druk + b.styk) * o.termin.extra));
   expect(b.razem, label).toBe(r2(b.druk + b.styk + b.doplata));
 }
+
+/** Wynik strony starego programu (tekst, HTML, wartości) z nałożonymi świadomymi zmianami: cena Sand Dot GW. */
+export function staryPoZmianach<T>(v: T): T {
+  if (v === SAND_DOT_STARE) return SAND_DOT_BRUTTO as T;
+  if (typeof v === 'string') return v.replace(/279,05/g, '279,00') as T;
+  if (Array.isArray(v)) return v.map(staryPoZmianach) as T;
+  if (v && typeof v === 'object')
+    return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, staryPoZmianach(x)])) as T;
+  return v;
+}

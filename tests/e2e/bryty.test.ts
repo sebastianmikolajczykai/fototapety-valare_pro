@@ -19,6 +19,7 @@ import {
   type FormSettings,
   type RunningServer,
 } from './support';
+import { staryPoZmianach } from '../support/zmiany';
 
 const enabled = !!OLD_REPO;
 type Kind = 'old' | 'new';
@@ -90,7 +91,7 @@ describe.skipIf(!enabled)('strona główna: stary vs nowy program', () => {
       raw[kind] = JSON.stringify(st);
       out[kind] = strip ? JSON.parse(raw[kind].replace(strip, '')) : st;
     }
-    expect(out.new).toEqual(out.old);
+    expect(out.new).toEqual(staryPoZmianach(out.old));
     return { ...(out.new as Record<string, unknown>), raw };
   };
   const html = (o: Record<string, unknown>): string => o.html as string;

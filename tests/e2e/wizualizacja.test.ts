@@ -14,6 +14,7 @@ import {
   startServer,
   type RunningServer,
 } from './support';
+import { staryPoZmianach } from '../support/zmiany';
 
 const enabled = !!OLD_REPO;
 const THUMB = fs.readFileSync(path.resolve('public/wzory/mini/c34259360.jpg'));
@@ -141,7 +142,7 @@ describe.skipIf(!enabled)('wizualizacja we wnętrzu: stary vs nowy program', () 
       await page.waitForTimeout(400);
       out[kind] = await state(page);
     }
-    expect(out.new).toEqual(out.old);
+    expect(out.new).toEqual(staryPoZmianach(out.old));
     return out.new as Record<string, unknown>;
   };
   const html = (o: Record<string, unknown>): string => o.html as string;
