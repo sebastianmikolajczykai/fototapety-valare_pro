@@ -21,7 +21,7 @@ Aktualizacja: 2026-11-23
   `steps()/drawSteps()` i numeracja stron „strona i/n” w `montaz.js` (zawsze 1 strona), flaga `scaled` w PDF (zawsze false), jedna gałąź w `jakosc.js`.
 - Klucze API tylko ze zmiennych środowiskowych (stary program czytał też pliki `klucz-*.txt` obok serwera) – zgodnie z zasadą „sekrety tylko w env”; zmienione komunikaty o braku klucza.
 - Corel: gdy skrypt nie zapisał pliku, a proces nie zgłosił błędu, stary serwer pokazywał klientowi „null” – teraz „CorelDRAW nie zapisał pliku.”.
-- Cena Sand Dot GW 279,05 zł – DO WALIDACJI (możliwa literówka w cenniku).
+- Cena Sand Dot GW: 279 zł brutto/m² – CONFIRMED przez Valare 27.11.2026 (świadoma zmiana względem starego programu, który miał 279,05).
 - `window.Materialy` w nowym programie nie wystawia surowej listy `PRODUKTY` (żaden skrypt strony jej nie używa);
   reszta obiektu (`lista`, `GRUPY`, `TERMINY`, `ZRODLO`, `wybrany`, `init`, `sync`) – bez zmian.
 - `window.Montaz` w nowym programie nie ma `steps` (martwy kod, patrz wyżej); `widths`, `init`, `make`, `model` – bez zmian.

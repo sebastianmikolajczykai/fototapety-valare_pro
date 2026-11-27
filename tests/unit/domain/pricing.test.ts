@@ -14,6 +14,7 @@ import {
   type PriceResult,
 } from '../../../src/domain/pricing';
 import { golden } from '../../support/golden';
+import { expectPriceLikeOld, SAND_DOT_BRUTTO } from '../../support/zmiany';
 import { P005 } from '../../support/params';
 
 const ymd = (d: Date): string => `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
@@ -90,7 +91,7 @@ describe('wycena (cennik 2024/1)', () => {
   });
   it('cennik zgodny z katalogiem materiałów; styk 20 / 16,26 zł', () => {
     expect(Object.keys(PRICE_LIST)).toHaveLength(18);
-    expect(PRICE_LIST['Sand Dot GW']).toEqual([279.05, 226.83]);
+    expect(PRICE_LIST['Sand Dot GW']).toEqual([279, 226.83]);
     expect(BUTT_PER_M).toEqual([20, 16.26]);
   });
 });
@@ -124,12 +125,12 @@ type G = {
 describe('zgodność ze starym programem', () => {
   const G = golden<G>('pricing');
   it('cennik, styk i terminy', () => {
-    expect(PRICE_LIST).toEqual(G.cennik);
+    expect(PRICE_LIST).toEqual({ ...G.cennik, 'Sand Dot GW': [SAND_DOT_BRUTTO, G.cennik['Sand Dot GW']![1]] });
     expect(BUTT_PER_M).toEqual(G.stykMb);
     expect(PRICING_TERMS).toEqual(G.terminy);
   });
-  it('400 nagranych wycen', () => {
-    for (const c of G.calc) expect(calcPrice(c.inp), JSON.stringify(c.inp)).toEqual(c.out);
+  it('400 nagranych wycen (Sand Dot GW: netto jak w starym, brutto z ceny 279 zł)', () => {
+    for (const c of G.calc) expectPriceLikeOld(c.inp, calcPrice(c.inp), c.out);
   });
   it('powierzchnie', () => {
     for (const c of G.area) expect(areaM2(c.p, computeLayout(c.p), c.mode)).toBe(c.out);

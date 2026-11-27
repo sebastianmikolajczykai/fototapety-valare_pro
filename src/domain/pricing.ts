@@ -3,7 +3,8 @@
 //   ceny za 1 m² brutto/netto; „na zakładkę” w cenie; „na styk” 20,00 zł/mb brutto (16,26 netto);
 //   standard 10 dni rob., przyspieszony 7 (+15%), ekspres 3 (+30%); na zamówienie 21 dni rob.
 // DO WALIDACJI (ARPI): jaką powierzchnię liczyć, długość mb styku (łączenia × wysokość brytu), czy dopłata
-//   za termin obejmuje styk (tu: tak), zasada zaokrąglania (tu: ilości do 0,01), Sand Dot GW 279,05.
+//   za termin obejmuje styk (tu: tak), zasada zaokrąglania (tu: ilości do 0,01).
+// Sand Dot GW 279 zł brutto/m² – CONFIRMED przez Valare 27.11.2026 (w cenniku literówka 279,05).
 import type { Layout, WallParams } from './layout';
 import { MaterialCatalog, TERMS } from './materials';
 

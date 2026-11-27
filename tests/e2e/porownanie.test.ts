@@ -20,6 +20,7 @@ import {
   type FormSettings,
   type RunningServer,
 } from './support';
+import { staryPoZmianach } from '../support/zmiany';
 
 const SCENARIOS: {
   name: string;
@@ -491,7 +492,7 @@ describe.skipIf(!enabled)('stary vs nowy program', () => {
           probe,
         };
       }
-      expect(out.new).toEqual(out.old);
+      expect(out.new).toEqual(staryPoZmianach(out.old));
       for (const t of sc.expectText ?? []) expect((out.new as { html: string }).html).toContain(t);
     });
   it('pamięć: po ponownym otwarciu strony wracają zapisane ustawienia (bez nazwy zlecenia)', async () => {
@@ -505,7 +506,7 @@ describe.skipIf(!enabled)('stary vs nowy program', () => {
       out[kind] = { form: await formState(p2), html: await pageHtml(p2) };
       await p2.close();
     }
-    expect(out.new).toEqual(out.old);
+    expect(out.new).toEqual(staryPoZmianach(out.old));
     expect(JSON.stringify(out.new)).toContain('texile-stick-gw-107');
   });
   it('pamięć: „Przywróć ustawienia domyślne” kasuje zapis i wraca do wartości z formularza', async () => {
@@ -520,7 +521,7 @@ describe.skipIf(!enabled)('stary vs nowy program', () => {
         saved: await page.evaluate(() => localStorage.getItem('fototapety.ustawienia.v3')),
       };
     }
-    expect(out.new).toEqual(out.old);
+    expect(out.new).toEqual(staryPoZmianach(out.old));
     expect((out.new as { html: string }).html).toContain('Przywrócono ustawienia domyślne.');
   });
   it('brak błędów JavaScript po obu stronach', () => {
