@@ -8,6 +8,7 @@ import {
   assemblyModel,
   assemblyPdf,
   materialLabel,
+  ZUND_TRIM,
   type AssemblyModel,
   type AssemblyWall,
 } from '../output/assembly-pdf';
@@ -19,6 +20,8 @@ const escHtml = (s: string): string => s.replace(/[&<>]/g, c => ({ '&': '&amp;',
 
 export class AssemblyButton {
   private lastUrl: string | null = null;
+  /** Docięcie na Zundzie [cm] (wymiary po produkcji); 0 = schemat jak w starym programie (porównanie w testach). */
+  trim = ZUND_TRIM;
 
   constructor(private readonly win: Window & typeof globalThis) {}
 
@@ -56,7 +59,7 @@ export class AssemblyButton {
   }
 
   model(p: WallParams, L: Layout): AssemblyModel {
-    return assemblyModel(p, L, this.material(), this.wall(p, L));
+    return assemblyModel(p, L, this.material(), this.wall(p, L), this.trim);
   }
 
   async make(): Promise<{ blob: Blob; name: string; pages: number }> {
@@ -68,6 +71,7 @@ export class AssemblyButton {
       wall: this.wall(p, L),
       pano: { data: pano.blob, size: pano.blob.size, w: pano.w, h: pano.h },
       logo: this.logo(),
+      trim: this.trim,
     });
     return { blob: new Blob(r.parts as BlobPart[], { type: 'application/pdf' }), name: r.name, pages: r.pages };
   }
@@ -117,6 +121,10 @@ Object.assign(window, {
     init: () => button.init(),
     make: () => button.make(),
     model: (p: WallParams, L: Layout) => button.model(p, L),
+    /** Docięcie na Zundzie w schemacie [cm]; 0 = jak w starym programie (testy porównujące ze starym). */
+    setTrim: (cm: number) => {
+      button.trim = cm;
+    },
     /** Szerokości znaków Helvetica (/Widths w PDF), jak tekst w starym programie. */
     widths: (bold: boolean) => helveticaWidths(bold).join(' '),
   },

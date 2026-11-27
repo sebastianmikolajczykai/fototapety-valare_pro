@@ -25,6 +25,8 @@ export interface AssemblyBryt {
 export interface AssemblyModel extends AssemblyWall {
   n: number;
   ov: number;
+  /** Docięcie krawędzi zewnętrznych całości [cm] (najwyżej do krawędzi ściany). */
+  cut: { l: number; r: number; t: number; b: number };
   bryty: AssemblyBryt[];
   material: string;
 }
@@ -40,7 +42,16 @@ export interface AssemblyOptions<T> {
   now?: Date;
   /** Logo wektorowe; null = napis „VALARE” (jak gdy w stronie brakowało logo). */
   logo?: SvgLogo | null;
+  /** Docięcie każdego brytu z każdej strony [cm] (domyślnie ZUND_TRIM); 0 = jak w starym programie. */
+  trim?: number;
 }
+
+/**
+ * Docięcie na Zundzie: każdy bryt jest docinany do wewnątrz po 0,5 cm z każdej strony (Valare 27.11.2026).
+ * Schemat dla klienta pokazuje wymiary po produkcji: zakład 6 → 5 cm, styk 1 cm → bryty stykają się krawędziami,
+ * bryt o 1 cm węższy i niższy, naddatek 3 → 2,5 cm. Plik produkcyjny bez zmian (tam wymiary przed docięciem).
+ */
+export const ZUND_TRIM = 0.5;
 
 export interface AssemblyPdf<T> {
   parts: (Uint8Array | T)[];
@@ -93,6 +104,13 @@ class AssemblyPage {
 
   img(name: string, x: number, y: number, w: number, h: number): void {
     this.content += `q ${S(w)} 0 0 ${S(h)} ${X(x)} ${Y(y + h)} cm /${name} Do Q\n`;
+  }
+
+  /** Rysowanie przycięte do prostokąta (ścieżka przycinania). */
+  clipped(x: number, y: number, w: number, h: number, draw: () => void): void {
+    this.content += `q ${X(x)} ${Y(y + h)} ${S(w)} ${S(h)} re W n `;
+    draw();
+    this.content += 'Q\n';
   }
 
   rect(x: number, y: number, w: number, h: number, o: RectStyle = {}): void {
@@ -165,18 +183,33 @@ export function materialLabel(value: string, optionText: string | undefined): st
   return value && value !== 'own' && optionText ? optionText.split(' – ')[0]! : '';
 }
 
-/** Dane do schematu (cm). Bryty liczone z dokładnych szerokości (bez zaokrąglenia do pikseli). */
-export function assemblyModel(p: WallParams, L: Layout, material = '', wall?: AssemblyWall): AssemblyModel {
+/**
+ * Dane do schematu (cm), po docięciu na Zundzie (trim z każdej strony brytu; 0 = jak w starym programie).
+ * Bryty liczone z dokładnych szerokości (bez zaokrąglenia do pikseli); a, w = bryt po docięciu we współrzędnych
+ * pliku produkcyjnego; ov = wspólna grafika sąsiednich brytów po docięciu.
+ */
+export function assemblyModel(
+  p: WallParams,
+  L: Layout,
+  material = '',
+  wall?: AssemblyWall,
+  trim = ZUND_TRIM,
+): AssemblyModel {
   const n = L.bw.widths.length;
-  const ov = p.overlap;
+  const tj = Math.min(trim, p.overlap / 2); // na łączeniu: z każdego z dwóch brytów
+  const cut = { l: Math.min(trim, p.mL), r: Math.min(trim, p.mR), t: Math.min(trim, p.mT), b: Math.min(trim, p.mB) };
+  const ov = p.overlap - 2 * tj;
   const bryty: AssemblyBryt[] = [];
   let a = 0;
   for (let i = 0; i < n; i++) {
-    const w = L.bw.widths[i]!;
-    bryty.push({ nr: i + 1, a, w, from: Math.max(0, a - p.mL), to: Math.min(p.wallW, a + w - p.mL) });
-    a += w - ov;
+    const cl = i === 0 ? cut.l : tj;
+    const cr = i === n - 1 ? cut.r : tj;
+    const left = a + cl;
+    const w = L.bw.widths[i]! - cl - cr;
+    bryty.push({ nr: i + 1, a: left, w, from: Math.max(0, left - p.mL), to: Math.min(p.wallW, left + w - p.mL) });
+    a += L.bw.widths[i]! - p.overlap;
   }
-  return { n, ov, bryty, material, corners: wall?.corners ?? [], openings: wall?.openings ?? [] };
+  return { n, ov, cut, bryty, material, corners: wall?.corners ?? [], openings: wall?.openings ?? [] };
 }
 
 /** Rysunek jednej strony schematu montażu. */
@@ -186,7 +219,16 @@ class AssemblySheet {
     private readonly p: WallParams,
     private readonly L: Layout,
     private readonly M: AssemblyModel,
+    private readonly trimmed: boolean,
   ) {}
+
+  /** Szerokość i wysokość całości po docięciu [cm]. */
+  get totalW(): number {
+    return this.L.totalWcm - this.M.cut.l - this.M.cut.r;
+  }
+  get totalH(): number {
+    return this.L.totalHcm - this.M.cut.t - this.M.cut.b;
+  }
 
   logo(logo: SvgLogo | null, x: number, y: number, h: number): void {
     if (!logo) {
@@ -201,8 +243,8 @@ class AssemblySheet {
   /** Schemat: grafika z podziałem, naddatek, zakłady, wymiary, narożniki i otwory. Zwraca dół rysunku. */
   schema(top: number, maxH: number): number {
     const { d, p, L, M } = this;
-    const TW = L.totalWcm;
-    const TH = L.totalHcm;
+    const TW = this.totalW;
+    const TH = this.totalH;
     const bh = 0.38;
     const twoRows = M.ov > 0 && M.n > 1; // paski z szerokościami brytów nad rysunkiem (2 rzędy, gdy zakład)
     const barsH = twoRows ? 2 * bh + 0.07 : bh;
@@ -213,15 +255,19 @@ class AssemblySheet {
     const h = TH * k;
     const x0 = left + (availW - w) / 2;
     const y0 = top + barsH + 0.15;
-    const Xc = (cm: number): number => x0 + cm * k;
+    // współrzędne pliku produkcyjnego [cm] → strona; po docięciu całość zaczyna się od cut.l / cut.t
+    const Xc = (cm: number): number => x0 + (cm - M.cut.l) * k;
+    const Yc = (cm: number): number => y0 + (cm - M.cut.t) * k;
     const B = (L.band / p.dpi) * 2.54;
     const IH = (L.imgH / p.dpi) * 2.54;
 
     d.rect(x0, y0, w, h, { fill: WHITE });
-    d.img('Pano', x0, y0 + B * k, w, IH * k);
+    const pano = (): void => d.img('Pano', Xc(0), Yc(B), L.totalWcm * k, IH * k);
+    if (this.trimmed) d.clipped(x0, y0, w, h, pano);
+    else pano();
     // naddatek: jaśniejsze pole
     const wx = Xc(p.mL);
-    const wy = y0 + p.mT * k;
+    const wy = Yc(p.mT);
     const ww = p.wallW * k;
     const wh = p.wallH * k;
     const lite: RectStyle = { fill: WHITE, alpha: 'GSlite' };
@@ -240,7 +286,7 @@ class AssemblySheet {
       const oy = o.y || 0;
       const oh = o.h == null ? p.wallH - oy : o.h;
       const rx = Xc(p.mL + o.x);
-      const ry = y0 + (p.mT + p.wallH - oy - oh) * k;
+      const ry = Yc(p.mT + p.wallH - oy - oh);
       d.rect(rx, ry, o.w * k, oh * k, { fill: WHITE, alpha: 'GSopen', stroke: INK, lw: 0.025, dash: [0.12, 0.08] });
       d.text(o.label.toLowerCase(), rx + (o.w * k) / 2, ry + Math.min((oh * k) / 2, 0.5), PTS(7), { align: 'c' });
     }
@@ -325,7 +371,7 @@ class AssemblySheet {
 
   /** Tabela brytów; gdy brytów dużo, dzieli się na kolumny (wiersze niższe zamiast gubienia brytów). */
   table(x: number, y: number, maxW: number, maxH: number): void {
-    const { d, L, M } = this;
+    const { d, M } = this;
     const cols: [string, number][] = [
       ['Bryt', 1.1],
       ['Szerokość [cm]', 2.4],
@@ -352,7 +398,7 @@ class AssemblySheet {
       M.bryty.slice(g * perCol, (g + 1) * perCol).forEach((b, r) => {
         const ry = y + (r + 1) * rowH;
         d.line(gx, ry + rowH, gx + tabW, ry + rowH, LINE, 0.015);
-        const vals = [String(b.nr), fmt(b.w), fmt(L.totalHcm), `${fmt(b.from)} – ${fmt(b.to)}`];
+        const vals = [String(b.nr), fmt(b.w), fmt(this.totalH), `${fmt(b.from)} – ${fmt(b.to)}`];
         let vx = gx;
         vals.forEach((v, j) => {
           d.text(v, vx + 0.12, ry + rowH * 0.66, size, { bold: j === 0 });
@@ -363,19 +409,21 @@ class AssemblySheet {
   }
 
   header(logo: SvgLogo | null, date: string): void {
-    const { d, p, L, M } = this;
+    const { d, p, M } = this;
     this.logo(logo, MG, MG, 0.62);
     d.text('Schemat montażu fototapety', PW - MG, MG + 0.5, PTS(15), { align: 'r', bold: true });
     const join =
       M.n < 2
         ? '1 bryt'
         : p.join === 'butt'
-          ? `łączenie na styk (${fmt(p.overlap)} cm wspólnej grafiki)`
-          : `zakład ${fmt(p.overlap)} cm`;
+          ? M.ov > 0 || !this.trimmed
+            ? `łączenie na styk (${fmt(M.ov)} cm wspólnej grafiki)`
+            : 'łączenie na styk'
+          : `zakład ${fmt(M.ov)} cm`;
     const info = [
       `Zlecenie: ${p.orderName || p.order}`,
       `ściana ${fmt(p.wallW)} × ${fmt(p.wallH)} cm`,
-      `z naddatkiem ${fmt(L.totalWcm)} × ${fmt(L.totalHcm)} cm`,
+      `z naddatkiem ${fmt(this.totalW)} × ${fmt(this.totalH)} cm`,
       `${M.n} ${plural(M.n)}`,
       join,
       M.material ? `materiał: ${M.material}` : '',
@@ -427,13 +475,14 @@ function buildPdf<T>(pages: readonly AssemblyPage[], pano: PdfImage<T>): (Uint8A
 
 /** Schemat montażu (PDF). p i L muszą przejść walidację (jak przycisk w starym programie). */
 export function assemblyPdf<T>(p: WallParams, L: Layout, o: AssemblyOptions<T>): AssemblyPdf<T> {
-  const M = assemblyModel(p, L, o.material, o.wall);
+  const trim = o.trim ?? ZUND_TRIM;
+  const M = assemblyModel(p, L, o.material, o.wall, trim);
   const top = MG + 2.1;
   // Schemat dostaje miejsce, które zostaje nad tabelą (maks. 11 wierszy).
   const tableH = (Math.min(M.n, 11) + 1) * 0.46;
   const schemaMax = Math.max(7, Math.min(13, PH - 1.1 - top - 0.85 - 0.35 - tableH));
   const d = new AssemblyPage();
-  const sheet = new AssemblySheet(d, p, L, M);
+  const sheet = new AssemblySheet(d, p, L, M, trim > 0);
   const schemaBottom = sheet.schema(top, schemaMax);
   sheet.legend(schemaBottom + 0.25);
   const tTop = schemaBottom + 0.85;

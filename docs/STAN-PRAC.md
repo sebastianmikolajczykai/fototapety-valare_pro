@@ -26,4 +26,4 @@ Aktualizacja: 2026-11-23
   reszta obiektu (`lista`, `GRUPY`, `TERMINY`, `ZRODLO`, `wybrany`, `init`, `sync`) – bez zmian.
 - `window.Montaz` w nowym programie nie ma `steps` (martwy kod, patrz wyżej); `widths`, `init`, `make`, `model` – bez zmian.
 - **Świadoma zmiana (decyzja Sebastiana 23.11.2026):** plik .cdr domyślnie z obrazami osadzonymi (stary program od 31.10 wysyłał `link:true` – po przeniesieniu pliku brak obrazów); obrazy linkowane jako opcja. PDF zostaje podstawowym plikiem dla ARPI. Wprowadzone w PR #38 (przepisanie `bryty.js`): opcja „Obrazy w .cdr jako linki” (domyślnie wyłączona, tylko przy serwerze z Corelem), test e2e i opis w README.
-- PR #6 starego repo (schemat montażu: zakład 5 cm) nie jest scalony – wzorcem jest `main`.
+- PR #6 starego repo (schemat montażu: zakład 5 cm) nie jest scalony – wzorcem jest `main`. W v2 schemat po docięciu na Zundzie (0,5 cm z każdej strony: zakład 5 cm, styk bez wspólnej grafiki, bryty −1 cm, naddatek 2,5 cm) – odpowiedź Valare 27.11.2026, PR #41.
